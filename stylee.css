@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  user-select: none;
+}
+
+body {
+  background: mediumblue;
+  color: white;
+  line-height: 25px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.high {
+  background: black;
+  color: white;
+  font-style: italic;
+  padding: 1%;
+  border-radius: 2px;
+  user-select: auto;
+}
+
+#tem {
+  background: white;
+  margin-top: 90%;
+  box-shadow: black 0 30px 90px;
+  margin-bottom: 50%;
+  animation: show 1s infinite ease-in;
+  transition: 2s;
+  animation-delay: 3s;
+}
+
+#tell {
+  padding: 10%;
+  margin-bottom: 10%;
+  margin-top: 20%;
+  background: blue;
+  white-space: pre-line;
+}
+
+.open {
+  background: black;
+  color: red;
+  padding: 3%;
+  font-weight: bolder;
+}
+
+#det {
+  color: black;
+  margin: 0;
+  padding: 7%;
+}
+
+#syn {
+  border-top: 2px solid white;
+  font-weight: bolder;
+  letter-spacing: 1.1px;
+  background: black;
+  padding: 5%;
+  box-shadow: black 0 20px 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#own>a {
+  background: white;
+  color: black;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+#owny>a {
+  background: white;
+  color: black;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+#linksyn>a {
+  color: white;
+  background: blue;
+  padding: 1%;
+  border-radius: 2px;
+}
+
+@keyframes show {
+  0% {
+    transform: scale(1)
+  }
+
+  100% {
+    transform: scale(1.007)
+  }
+}
+
+
+/* On screens that are 750px wide or more */
+@media screen and (min-width: 790px) {
+  * {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+/* On screens that are 2000px wide or more */
+@media screen and (min-width: 2000px) {
+  * {
+    font-size: 60px;
+    line-height: 100px;
+  }
+}

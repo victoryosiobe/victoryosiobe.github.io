@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  user-select: none;
+}
+
+b {
+  background: red;
+  color: white;
+  line-height: 25px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: red;
+}
+
+.card-main-bg {
+  background: linear-gradient(to bottom, white, white, #E9E9E9, #060B3F);
+}
+
+.hide-element{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+.revealed-element, .card-main-bg{
+  opacity: 1;
+  transform: translateY(0);
+}

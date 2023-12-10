@@ -4,14 +4,73 @@
   <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="index.js">
-    index.js
-  </script>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-3" id="navbar">
+    <a class="text-bold text-primary h6" href="#">Victory Osiobe</a>
+    <span class="h6 badge bg-warning">Site Still Under Construction!</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+
+    </button>
+  </nav>
 </head>
 
-<body style="background: rgba(15, 16, 26, 1)">
+<body style="background: rgba(15, 16, 26, 1)" data-spy="scroll" data-target="#navbar" data-offset="50">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#section1">Section 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">Section 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">Section 3</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <section class="container-fluid vh-100" id="vicko-">
+    <div class="text-center" id="vicko-xp"> <!--Helper Div-->
+      <div class="h1 fw-bolder text-light text-shadow" style="text-shadow: 0 0 10px var(--bs-primary)">
+        <span class="trench">V</span>
+        <span class="trench">I</span>
+        <span class="trench">C</span>
+        <span class="trench">T</span>
+        <span class="trench">O</span>
+        <span class="trench">R</span>
+        <span class="trench">Y</span>
+      </div>
+      <div class="h1 fw-bolder text-light text-shadow" style="text-shadow: 0 0 10px var(--bs-primary)">
+        <span class="trench">O</span>
+        <span class="trench">S</span>
+        <span class="trench">I</span>
+        <span class="trench">O</span>
+        <span class="trench">B</span>
+        <span class="trench">E</span>
+      </div>
+    </div>
+  </section>
+
+  <div id="section1" class="container-fluid" style="margin-top: 70px;">
+    <h2>Section 1</h2>
+    <p>Content of Section 1 goes here.</p>
+  </div>
+
+  <div id="section2" class="container-fluid" style="margin-top: 70px;">
+    <h2>Section 2</h2>
+    <p>Content of Section 2 goes here.</p>
+  </div>
+
+  <div id="section3" class="container-fluid" style="margin-top: 70px;">
+    <h2>Section 3</h2>
+    <p>Content of Section 3 goes here.</p>
+  </div>
+
   <section class="container">
-    <h2 class="text-light">Few of my open source projects...</h2>
+    <p class="text-light">Few of my open source projects...</h2>
     <div class="row justify-content-center">
       <div class="card col-sm shadow p-0 w-75 m-3 hide-element ">
         <img class="card-img-top" src="./visuals/thevicko-lite.jpg" style="width:100%;" alt="Card image">
@@ -125,40 +184,4 @@
 </body>
 
 </html>
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="stylee.css">
-  <meta name="theme-color" content="mediumblue">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Victory Osiobe on github</title>
-  <div id="headme" class="open">Sorry, this site is currently under maintenance, viewing will be restored soon.</div>
-  <div id="next_headme" class="open"> <span style="background: red; color: white; padding: 2px; border-radius: 2px; ">Note:</span> this site is just for linking all <span id="own"> <a href="https://github.com/victoryosiobe/">Victory Osiobe</a></span> github repositories.</div>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5502155562017884" crossorigin="anonymous"></script> ADVERT 
-</head>
-
-<body>
-
-
-
-
-  <div id="tell">In the mean time, you can check other repositories of<span id="owny"> <a href="https://github.com/victoryosiobe/">Victory Osiobe</a></span></div>
-  
-  
-  
-  
-  
-  
-  <div>
-    <div id="tem">
-      <div id="syn">
-        <p> Kingchop </p>
-      </div>
-      <div id="det">Checkout this chatbot I made — <span id="linksyn"><a href="https://victoryosiobe.github.io/Kingchop/">Kingchop</a></span>. It's a simple chatbot that could do some calculations with just the keyword <span class="high">solve</span> or <span class="high">#maths</span>. It can also answer some question, but due to lack of data, knowledge, and some complex algorithms for the chatbot, it's very limited for now. Nevertheless, sooner or later, Kingchop would be able to use AI to behave like a real chatbot.</div>
-
-    </div>
-</body>
-
-</html> -->
+<script src="index.js" </script>

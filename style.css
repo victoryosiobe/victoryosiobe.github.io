@@ -3,26 +3,50 @@
   user-select: none;
 }
 
-b {
-  background: red;
-  color: white;
-  line-height: 25px;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: red;
+.trench {
+  font-size: 60;
+  display: inline-block;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: opacity 1s, transform 0.2s;
+}
+
+.high-life {
+  margin-top: 0px;
+  opacity: 1;
+  transform: translateY(0);
+  animation: outMan .4s ease-in;
+}
+
+@keyframes outMan {
+  100% {
+    scale: 1.2;
+    color: var(--bs-primary);
+    text-shadow: 0 0 20px white;
+  }
 }
 
 .card-main-bg {
   background: linear-gradient(to bottom, white, white, #E9E9E9, #060B3F);
 }
 
-.hide-element{
-  opacity: 0;
+.hide-element {
   transform: translateY(50px);
   transition: opacity 1s, transform 1s;
+  opacity: 0;
 }
 
-.revealed-element, .card-main-bg{
+.revealed-element {
   opacity: 1;
   transform: translateY(0);
+}
+
+#vicko- {
+  transition: opacity 1s;
+}
+
+#vicko-xp {
+  margin-top: 50%;
+  transform: translateY(50%);
+  transition: 1 all;
 }

@@ -16,7 +16,7 @@ async function highChars() {
 
 setTimeout(() => {
   vickoElement.style.opacity = '0'
-  setTimeout(() => vickoElement.style.display = 'none' , 1000)
+  setTimeout(() => vickoElement.style.display = 'none', 1000)
 }, 1500)
 
 

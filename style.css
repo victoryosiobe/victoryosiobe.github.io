@@ -3,6 +3,14 @@
   user-select: none;
 }
 
+#captain {
+  transition: opacity 1s;
+}
+
+.ho {
+    opacity: 1 !important;
+}
+
 .trench {
   font-size: 60;
   display: inline-block;
@@ -42,11 +50,18 @@
 }
 
 #vicko- {
-  transition: opacity 1s;
+  position: absolute;
+  height: 100vh;
+  transition: 1s !important;
 }
 
 #vicko-xp {
-  margin-top: 50%;
-  transform: translateY(50%);
+  margin-top: 50vh;
   transition: 1 all;
+  position: relative;
+  transform: translateY(-50%);
+}
+
+.card-stance{
+    object-fit: cover;
 }

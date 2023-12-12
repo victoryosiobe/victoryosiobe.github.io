@@ -1,3 +1,4 @@
+const bodyCap = document.getElementById('captain')
 const trenchElements = document.querySelectorAll('.trench')
 const revealElements = document.querySelectorAll('.hide-element')
 const vickoElement = document.getElementById('vicko-')
@@ -15,9 +16,13 @@ async function highChars() {
 }
 
 setTimeout(() => {
-  vickoElement.style.opacity = '0'
-  setTimeout(() => vickoElement.style.display = 'none', 1000)
-}, 1500)
+  vickoElement.classList.add('fade')
+  setTimeout(() => {
+    vickoElement.classList.add('d-none')
+    bodyCap.classList.remove('d-none')
+    setTimeout(() => bodyCap.classList.remove('opacity-0'), 10) //wait a while for broswer to didplay element
+  }, 1000)
+}, 2000)
 
 
 window.addEventListener('scroll', revealOnScroll);

@@ -35,7 +35,8 @@
 }
 
 .card-main-bg {
-  background: linear-gradient(to bottom, white, white, #E9E9E9, #060B3F);
+  /*background: linear-gradient(to bottom right, white, white, white, black); /*#E9E9E9, #060B3F);*/
+background: gainsboro;
 }
 
 .hide-element {

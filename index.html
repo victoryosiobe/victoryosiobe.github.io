@@ -4,15 +4,34 @@
   <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-3" id="navbar">
-    <a class="text-bold text-primary h6" href="#">Victory Osiobe</a>
-    <span class="h6 badge bg-warning">Site Still Under Construction!</span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
 
+  <nav class="navbar bg-light fixed-top p-3" id="navbar">
+    <a class="navbar-brand text-bold text-primary h6" href="#">
+      Victory Osiobe
+    </a>
+    <span class="h6 badge bg-warning">Site Still Under Construction!</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMore" aria-expanded="false" aria-controls="navBarMore">
+      <span class="navbar-toggler-icon"></span>
     </button>
+
+    <section>
+      <div class="collapse navbar-collapse" id="navBarMore">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#section1">Section 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">Section 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">Section 3</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
   </nav>
+
 
   <section class="container-fluid vh-100" id="vicko-">
     <div class="text-center" id="vicko-xp"> <!--Helper Div-->
@@ -35,30 +54,22 @@
       </div>
     </div>
   </section>
-
 </head>
 
-<body style="background: rgba(15, 16, 30, 1)" data-spy="scroll" data-target="#navbar" data-offset="50">
-  <main class="d-none opacity-0" id="captain">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#section1">Section 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section2">Section 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section3">Section 3</a>
-        </li>
-      </ul>
-    </div>
+<body style="background: rgba(15, 16, 30, 1)" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="50">
+
+  <main class="d-none opacity-0 mt-5 pt-5" id="captain">
 
 
 
 
 
-    <div id="section1" class="container-fluid" style="margin-top: 70px;">
+
+
+
+
+
+    <div id="section1" class="container-fluid" style="margin-top: px;">
       <h2>Section 1</h2>
       <p>Content of Section 1 goes here.</p>
     </div>
@@ -73,18 +84,20 @@
       <p>Content of Section 3 goes here.</p>
     </div>
 
+
+
     <section class="container">
       <p class="text-light">Few of my open source projects...</h2>
       <div class="row justify-content-center">
         <div class="card col-sm shadow p-0 w-75 m-3 hide-element ">
-       <img class="card-img-top" style="height: 20rem" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop" alt="Card image">
+          <img class="card-img-top" style="height: 20rem" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop" alt="Card image">
           <div class="card-body card-main-bg">
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text">Kingchop is a flexible, static text tokenizer for English, built with node JavaScript, and it is still maintained till date. I have been able to push better features despite English inconsistencies.</p>
             <p class="card-text">Kingchop as at of <span class="badge bg-primary">v1.0.6 (Aurora)</span>, had paragraph, sentence, sub-sentence, words, tokenizing abilities, with extra correct text method.</p>
             <div class="row">
-              <a href="#" class="btn btn-primary col m-2">Docs On GitHub</a>
-              <a href="#" class="btn btn-primary col m-2">View On NPM</a>
+              <a href="#" class="btn btn-outline-primary col m-2">Docs On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">View On NPM</a>
             </div>
           </div>
         </div>
@@ -95,8 +108,8 @@
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
-              <a href="#" class="btn btn-primary col m-2">Source On GitHub</a>
-              <a href="#" class="btn btn-primary col m-2">View On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">Source On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">View On GitHub</a>
             </div>
           </div>
         </div>
@@ -110,8 +123,8 @@
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
-              <a href="#" class="btn btn-primary col m-2">Source On GitHub</a>
-              <a href="#" class="btn btn-primary col m-2">View On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">Source On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">View On GitHub</a>
             </div>
           </div>
         </div>
@@ -122,8 +135,8 @@
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
-              <a href="#" class="btn btn-primary col m-2">Source On GitHub</a>
-              <a href="#" class="btn btn-primary col m-2">View On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">Source On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">View On GitHub</a>
             </div>
           </div>
         </div>
@@ -137,8 +150,8 @@
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
-              <a href="#" class="btn btn-primary col m-2">Source On GitHub</a>
-              <a href="#" class="btn btn-primary col m-2">View On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">Source On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">View On GitHub</a>
             </div>
           </div>
         </div>
@@ -149,8 +162,8 @@
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
-              <a href="#" class="btn btn-primary col m-2">Source On GitHub</a>
-              <a href="#" class="btn btn-primary col m-2">View On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">Source On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">View On GitHub</a>
             </div>
           </div>
         </div>
@@ -164,8 +177,8 @@
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
-              <a href="#" class="btn btn-primary col m-2">Source On GitHub</a>
-              <a href="#" class="btn btn-primary col m-2">View On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">Source On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">View On GitHub</a>
             </div>
           </div>
         </div>
@@ -176,8 +189,8 @@
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
-              <a href="#" class="btn btn-primary col m-2">Source On GitHub</a>
-              <a href="#" class="btn btn-primary col m-2">View On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">Source On GitHub</a>
+              <a href="#" class="btn btn-outline-primary col m-2">View On GitHub</a>
             </div>
           </div>
         </div>

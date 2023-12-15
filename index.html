@@ -5,7 +5,7 @@
   <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
 
-  <nav class="navbar bg-light fixed-top p-3" id="navbar">
+  <nav class="navbar bg-light fixed-top p-2" id="navbar">
     <a class="navbar-brand text-bold text-primary h6" href="#">
       Victory Osiobe
     </a>
@@ -14,28 +14,26 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <section>
-      <div class="collapse navbar-collapse" id="navBarMore">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#section1">Section 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section2">Section 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#section3">Section 3</a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <div class="collapse navbar-collapse" id="navBarMore">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#section1">Section 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section2">Section 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section3">Section 3</a>
+        </li>
+      </ul>
+    </div>
 
   </nav>
 
 
   <section class="container-fluid vh-100" id="vicko-">
-    <div class="text-center" id="vicko-xp"> <!--Helper Div-->
-      <div class="h1 fw-bolder text-light text-shadow" style="text-shadow: 0 0 10px var(--bs-primary)">
+    <div class="h1 text-center fw-bolder text-light text-shadow" id="vicko-xp" style="text-shadow: 0 0 10px var(--bs-primary)">
+      <div>
         <span class="trench">V</span>
         <span class="trench">I</span>
         <span class="trench">C</span>
@@ -44,7 +42,7 @@
         <span class="trench">R</span>
         <span class="trench">Y</span>
       </div>
-      <div class="h1 fw-bolder text-light text-shadow" style="text-shadow: 0 0 10px var(--bs-primary)">
+      <div>
         <span class="trench">O</span>
         <span class="trench">S</span>
         <span class="trench">I</span>
@@ -56,7 +54,7 @@
   </section>
 </head>
 
-<body style="background: rgba(15, 16, 30, 1)" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="50">
+<body style="background: rgba(15, 16, 35, 1)" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="50">
 
   <main class="d-none opacity-0 mt-5 pt-5" id="captain">
 
@@ -89,9 +87,9 @@
     <section class="container">
       <p class="text-light">Few of my open source projects...</h2>
       <div class="row justify-content-center">
-        <div class="card col-sm shadow p-0 w-75 m-3 hide-element ">
-          <img class="card-img-top" style="height: 20rem" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop" alt="Card image">
-          <div class="card-body card-main-bg">
+        <div class="card col-sm shadow p-0 w-75 m-3 hide-element">
+          <img class="card-img-top" style="height: auto" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop" alt="Card image">
+          <div class="card-body card-main-bg rounded-bottom">
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text">Kingchop is a flexible, static text tokenizer for English, built with node JavaScript, and it is still maintained till date. I have been able to push better features despite English inconsistencies.</p>
             <p class="card-text">Kingchop as at of <span class="badge bg-primary">v1.0.6 (Aurora)</span>, had paragraph, sentence, sub-sentence, words, tokenizing abilities, with extra correct text method.</p>
@@ -104,7 +102,7 @@
 
         <div class="card col-sm shadow p-0 w-75 m-3 hide-element">
           <img class="card-img-top" src="visuals/thevicko-lite.jpg" alt="Card image">
-          <div class="card-body card-main-bg">
+          <div class="card-body card-main-bg rounded-bottom">
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
@@ -119,7 +117,7 @@
       <div class="row justify-content-center">
         <div class="card col-sm shadow p-0 w-75 m-3 hide-element">
           <img class="card-img-top" src="./visuals/thevicko-lite.jpg" style="width:100%;" alt="Card image">
-          <div class="card-body card-main-bg">
+          <div class="card-body card-main-bg rounded-bottom">
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
@@ -131,7 +129,7 @@
 
         <div class="card col-sm shadow p-0 w-75 m-3 hide-element">
           <img class="card-img-top" src="./visuals/thevicko-lite.jpg" alt="Card image">
-          <div class="card-body card-main-bg">
+          <div class="card-body card-main-bg rounded-bottom">
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
@@ -146,7 +144,7 @@
       <div class="row justify-content-center">
         <div class="card col-sm shadow p-0 w-75 m-3 hide-element">
           <img class="card-img-top" src="./visuals/thevicko-lite.jpg" style="width:100%;" alt="Card image">
-          <div class="card-body card-main-bg">
+          <div class="card-body card-main-bg rounded-bottom">
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
@@ -158,7 +156,7 @@
 
         <div class="card col-sm shadow p-0 w-75 m-3 hide-element">
           <img class="card-img-top" src="./visuals/thevicko-lite.jpg" alt="Card image">
-          <div class="card-body card-main-bg">
+          <div class="card-body card-main-bg rounded-bottom">
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
@@ -173,7 +171,7 @@
       <div class="row justify-content-center">
         <div class="card col-sm shadow p-0 w-75 m-3 hide-element">
           <img class="card-img-top" src="./visuals/thevicko-lite.jpg" style="width:100%;" alt="Card image">
-          <div class="card-body card-main-bg">
+          <div class="card-body card-main-bg rounded-bottom">
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">
@@ -185,7 +183,7 @@
 
         <div class="card col-sm shadow p-0 w-75 m-3 hide-element">
           <img class="card-img-top" src="./visuals/thevicko-lite.jpg" alt="Card image">
-          <div class="card-body card-main-bg">
+          <div class="card-body card-main-bg rounded-bottom">
             <h4 class="card-title text-primary">Kingchop</h4>
             <p class="card-text"></p>
             <div class="row">

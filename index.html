@@ -31,7 +31,7 @@
   </nav>
 
 
-  <section class="container-fluid vh-100" id="vicko-">
+  <section class="container-fluid vh-100 fixed-top" id="vicko-">
     <div class="h1 text-center fw-bolder text-light text-shadow" id="vicko-xp" style="text-shadow: 0 0 10px var(--bs-primary)">
       <div>
         <span class="trench">V</span>
@@ -55,8 +55,8 @@
 </head>
 
 <body style="background: rgba(15, 16, 35, 1)" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="50">
-  <main class="d-none opacity-0 mt-5 pt-5" id="captain">
-    <section class="container-fluid text-light fw-semibold mb-5 p-3">
+  <main class="d-none opacity-0" id="captain">
+    <section class="container text-light text-center fw-semibold mb-5 p-3">
       <div class="h2 text-center fw-bold py-3">Welcome To, you know...</div>
       <div class="">Yeah, you know I’m Victory Osiobe by now. I fall amongst the creatives, building and giving life to unique sites for whoever needs them. But, I recently found pleasure releasing open-sources, especially ones I feel are lacking features across the internet.</div>
       <div class="">Majorly I handle front-end operations while I avidly top my back-end skills. I use technologies like:
@@ -77,7 +77,7 @@
 
       <div class="h2 fw-bolder text-light text-center py-4">Compiled Open Sources</div>
 
-      <div class="container-fluid mb-5">
+      <div class="container-fluid pb-5">
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 g-4">
 
@@ -195,49 +195,56 @@
           </div>
 
         </div>
-
       </div>
-
     </section>
-    <footer>
-      <div class="accordion" id="accordionPanelsStayOpenExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-              Accordion Item #1
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-            <div class="accordion-body">
-              Content Goes In Here
+
+    <section class="bg-danger p-5 my-5">
+      Main Contact Card Under Development
+    </section>
+
+    <footer class="bg-info p-3 text-light">
+      <section class="py-3">
+        <div class="h2 fw-bolder text-center">FAQ</div>
+        <div class="accordion shadow-lg" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                What Am I Interested In?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                I would say majorly, Artificial Intelligence and Machine Learning. For now, I use Node.js and Python as primary languages when building applications related to AI and ML.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                What's my Stack?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                I express great expertise with HTML, CSS, JavaScript. Months Ago, I delved into the backend world, utilizing NodeJs and Python.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                What Other Languages Do I intend on learning?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Not quite precise on answer, but it depends majorly on what I may indulge in in future; I admire Rust, Dart, and Go, but they're much, considering the Libraries and Frameworks I would have to learn.
+              </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-              Accordion Item #2
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Content Goes In Here
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Content Goes In Here
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
+      <div class="h6 py-3 text-center">Powered By GitHub. Styled With Bootstrap. Put Together By Victory Osiobe. ©2023</div>
     </footer>
   </main>
 </body>

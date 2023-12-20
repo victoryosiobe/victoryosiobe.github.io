@@ -71,7 +71,7 @@
       <div class="">This page shows a list of open-sources and projects I have released to the public. I arranged them properly below for easy viewing.</div>
     </section>
 
-    <section class="container-fluid bg-primary bg-opacity-10 mb-5">
+    <section class="container-fluid bg-primary mb-5" id="out-I-">
 
       <div class="h2 fw-bolder text-light text-center py-4">Compiled Open Sources</div>
 
@@ -196,11 +196,12 @@
       </div>
     </section>
 
-    <section class="bg-danger p-5 my-5">
+    <section class="p-4 my-5" id="bg--merge">
+      <div class="h2 fw-bolder text-center text-light py-3">Victory Osiobe</div>
       <div class="card shadow-lg hide-element">
         <img class="card-img-top" src="./visuals/thevicko-lite.jpg" alt="Card image">
         <div class="card-body card-main-bg rounded-bottom">
-          <p class="card-title h4 text-primary">Victory Osiobe</p>
+          <p class="card-title h4 text-primary">Contact</p>
           <p class="card-text">You should contact me by email. It's better and I would reply faster!</p>
           <div class="input-group mb-3">
             <span class="input-group-text">@</span>
@@ -213,20 +214,22 @@
               </svg>
             </span>
           </div>
-          <script>
-            function copyInputContent() {
-              const inputField = document.getElementById('readOnlyInput');
-
-              // Select the text in the input field
-              inputField.select();
-              inputField.setSelectionRange(0, 99999); // For mobile devices
-
-              // Copy the selected text
-              document.execCommand('copy');
-            }
-          </script>
+          <div class="card-footer bg-transparent">
+            Facebook Github Stack Overflow Kofi
+          </div>
         </div>
       </div>
+      <script>
+        function copyInputContent() {
+          const inputField = document.getElementById('readOnlyInput');
+          // Select the text in the input field
+          inputField.select();
+          inputField.setSelectionRange(0, 99999); // For mobile devices
+          // Copy the selected text
+          document.execCommand('copy');
+          setTimeout(() => inputField.setSelectionRange(0, 0), 1000); // Wait For Copying To Complete Before unSelecting
+        }
+      </script>
     </section>
 
 
@@ -243,7 +246,7 @@
             </h2>
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
               <div class="accordion-body">
-                I would say majorly, Artificial Intelligence and Machine Learning. For now, I use Node.js and Python as primary languages when building applications related to AI and ML.
+                I would say majorly, Artificial Intelligence and Machine Learning. For now, I use NodeJs and Python as primary languages when building applications related to AI and ML.
               </div>
             </div>
           </div>

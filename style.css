@@ -57,3 +57,7 @@
   position: relative;
   transform: translateY(-50%);
 }
+
+#bg--merge {
+  background: linear-gradient(to bottom, var(--bs-info) 50%, var(--bs-primary) 50%);
+}

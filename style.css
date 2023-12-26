@@ -3,8 +3,13 @@
   user-select: none;
 }
 
+#navbar {
+  transition: background 1s;
+}
+
 #captain {
   transition: opacity 1s;
+  margin-top: 5em;
 }
 
 .trench {

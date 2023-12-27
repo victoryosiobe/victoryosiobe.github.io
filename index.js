@@ -26,14 +26,17 @@ setTimeout(() => {
       bodyCap.classList.remove('opacity-0')
       navGear.classList.remove('bg-primary')
       navGear.classList.add('bg-light')
-      brandNameEl.classList.remove('text-light')
+      brandNameEl.style.animation = '1s ease row-me'
       brandNameEl.classList.add('text-primary')
-    }, 10) //wait a while for broswer to didplay element
+    }, 10) //wait a while for broswer to display element
   }, 1000)
 }, 2000)
 
 
-window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('scroll', () => {
+  bgWind()
+  revealOnScroll()
+})
 
 function revealOnScroll() {
   const windowHeight = window.innerHeight;
@@ -49,8 +52,6 @@ function revealOnScroll() {
     window.removeEventListener('scroll', revealOnScroll);
   }
 }
-
-window.addEventListener('scroll', bgWind)
 
 function bgWind() {
   const observer = new IntersectionObserver(entry => (entry[0].boundingClientRect.top < 70) ? navGear.classList.add('bg-opacity-50') : navGear.classList.remove('bg-opacity-50'))

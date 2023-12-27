@@ -7,9 +7,7 @@
 
   <nav class="navbar navbar-expand-md bg-primary fixed-top p-2" id="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand text-bold text-light h6" id="brand-n" href="#">
-        Victory Osiobe
-      </a>
+      <div class="navbar-brand"><a href="#sectionX"><img alt="Vicko Pic" src="/visuals/thevicko-lite.jpg" class="rounded-5" height="40" width="40" id="brand-n"></a></div>
       <span class="h6 badge bg-warning">Site Still Under Construction!</span>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMore">
         <span class="navbar-toggler-icon"></span>
@@ -197,7 +195,7 @@
       </div>
     </section>
 
-    <section class="p-4 my-5" id="bg--merge">
+    <section class="p-4 my-5" id="sectionX">
       <div class="h2 fw-bolder text-center text-light py-3">Victory Osiobe</div>
       <div class="card shadow-lg hide-element">
         <img class="card-img-top" src="./visuals/thevicko-lite.jpg" alt="Card image">
@@ -286,10 +284,17 @@
           </div>
         </div>
       </section>
-      <div class="h6 py-3 text-center">Powered By GitHub. Styled With Bootstrap. Put Together By Victory Osiobe. ©2023</div>
+      <div class="h6 py-3 text-center">Powered By GitHub. Styled With Bootstrap. Designed By Victory Osiobe. ©<span id="d-v-g"></span></div>
     </footer>
   </main>
 </body>
-<script src="index.js"></script>
+<script>
+  function dater() {
+    const dateEl = document.getElementById('d-v-g');
+    const year = new Date().getFullYear();
+    (year == '2023') ? dateEl.textContent = year: dateEl.textContent = '2023 - ' + year;
+  }
+</script>
+<script src="index.js" onload="dater()"></script>
 
 </html>

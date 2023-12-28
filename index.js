@@ -26,7 +26,7 @@ setTimeout(() => {
       bodyCap.classList.remove('opacity-0')
       navGear.classList.remove('bg-primary')
       navGear.classList.add('bg-light')
-      brandNameEl.style.animation = '1s ease row-me'
+      brandNameEl.style.animation = '1s ease-in-out row-me'
       brandNameEl.classList.add('text-primary')
     }, 10) //wait a while for broswer to display element
   }, 1000)

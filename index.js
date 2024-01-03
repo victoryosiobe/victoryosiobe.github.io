@@ -2,11 +2,13 @@ const navGear = document.getElementById('navbar')
 const brandNameEl = document.getElementById('brand-n')
 const bodyCap = document.getElementById('captain')
 const trenchElements = document.querySelectorAll('.trench')
-const revealElements = document.querySelectorAll('.hide-element')
+const revealElementsX = document.querySelectorAll('.hide-element-x')
+const revealElementsY = document.querySelectorAll('.hide-element-y')
 const vickoElement = document.getElementById('vicko-')
 const sectionComp = document.getElementById('out-I-')
 const autoHigh = 'high-life';
-const revealedCl = 'revealed-element';
+const revealedClX = 'revealed-element-x';
+const revealedClY = 'revealed-element-y';
 
 (async () => {
   for (const element of trenchElements) {
@@ -40,15 +42,24 @@ window.addEventListener('scroll', () => {
 
 function revealOnScroll() {
   const windowHeight = window.innerHeight;
-  revealElements.forEach(element => {
+  revealElementsX.forEach(element => {
     const revealTop = element.getBoundingClientRect().top;
     if (revealTop < windowHeight / 1.5) {
-      element.classList.add(revealedCl);
+      element.classList.add(revealedClX);
+    }
+  });
+  revealElementsY.forEach(element => {
+    const revealTop = element.getBoundingClientRect().top;
+    if (revealTop < windowHeight / 1.5) {
+      element.classList.add(revealedClY);
     }
   });
 
   // Remove the event listener once all elements are revealed
-  if ([...revealElements].every(element => element.classList.contains(revealedCl))) {
+  if ([...revealElementsX].every(element => element.classList.contains(revealedClX))) {
+    window.removeEventListener('scroll', revealOnScroll);
+  }
+  if ([...revealElementsY].every(element => element.classList.contains(revealedClY))) {
     window.removeEventListener('scroll', revealOnScroll);
   }
 }

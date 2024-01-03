@@ -57,13 +57,24 @@
   background: aliceblue;
 }
 
-.hide-element {
+.hide-element-x {
+  transform: translateX(50px);
+  transition: opacity 1s, transform 1s;
+  opacity: 0;
+}
+
+.hide-element-y {
   transform: translateY(50px);
   transition: opacity 1s, transform 1s;
   opacity: 0;
 }
 
-.revealed-element {
+.revealed-element-x {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.revealed-element-y {
   opacity: 1;
   transform: translateY(0);
 }

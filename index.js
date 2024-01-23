@@ -6,6 +6,7 @@ const revealElementsX = document.querySelectorAll('.hide-element-x')
 const revealElementsY = document.querySelectorAll('.hide-element-y')
 const vickoElement = document.getElementById('vicko-')
 const sectionComp = document.getElementById('out-I-')
+const progressOr = document.getElementById('progressor')
 const autoHigh = 'high-life';
 const revealedClX = 'revealed-element-x';
 const revealedClY = 'revealed-element-y';
@@ -19,21 +20,27 @@ const revealedClY = 'revealed-element-y';
   }
 })()
 
-setTimeout(() => {
-  vickoElement.classList.add('fade')
+setTimeout(()=>{
+  progressOr.textContent = 'Building...'
+  setTimeout(()=>{
+   progressOr.textContent = 'Organizing...'
   setTimeout(() => {
-    vickoElement.classList.add('d-none')
-    bodyCap.classList.remove('d-none')
-    setTimeout(() => {
-      bodyCap.classList.remove('opacity-0')
-      navGear.classList.remove('bg-primary')
-      navGear.classList.add('bg-light')
-      brandNameEl.style.animation = '1s ease-in-out row-me'
-      brandNameEl.classList.add('text-primary')
-    }, 10) //wait a while for broswer to display element
-  }, 1000)
-}, 2000)
-
+    vickoElement.classList.add('fade')
+    progressOr.textContent = 'Rendering...'
+     setTimeout(() => {
+      vickoElement.classList.add('d-none')
+      bodyCap.classList.remove('d-none')
+      setTimeout(() => {
+        bodyCap.classList.remove('opacity-0')
+        navGear.classList.remove('bg-primary')
+        navGear.classList.add('bg-light')
+        brandNameEl.style.animation = '1s ease-in-out row-me'
+        brandNameEl.classList.add('text-primary')
+      }, 10) //wait a while for broswer to display element
+    }, 1000)
+   }, 1700)
+ }, 1600)
+}, 1000)
 
 window.addEventListener('scroll', () => {
   bgWind()

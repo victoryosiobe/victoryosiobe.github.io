@@ -17,7 +17,9 @@
   display: inline-block;
   transform: translateY(200px);
   opacity: 0;
-  transition: opacity 1s, transform 0.2s;
+  transition:
+    opacity 1s,
+    transform 0.2s;
 }
 
 .high-life {
@@ -25,7 +27,7 @@
   margin-top: 0px;
   opacity: 1;
   transform: translateY(0);
-  animation: outMan .4s ease-in;
+  animation: outMan 0.4s ease-in;
 }
 
 @keyframes outMan {
@@ -37,7 +39,6 @@
 }
 
 @keyframes row-me {
-
   /*Used By Javascript*/
   25% {
     transform: rotate(50deg);
@@ -58,14 +59,18 @@
 }
 
 .hide-element-x {
-  transform: translateX(50px);
-  transition: opacity 1s, transform 1s;
+  transform: translateX(10px);
+  transition:
+    opacity 1s,
+    transform 1s;
   opacity: 0;
 }
 
 .hide-element-y {
   transform: translateY(50px);
-  transition: opacity 1s, transform 1s;
+  transition:
+    opacity 1s,
+    transform 1s;
   opacity: 0;
 }
 
@@ -91,5 +96,10 @@
 }
 
 #sectionX {
-  background: linear-gradient(to bottom, var(--bs-info) 50%, var(--bs-primary) 50%);
+  background: linear-gradient(
+    to bottom,
+    var(--bs-info) 50%,
+    var(--bs-primary) 50%
+  );
 }
+

@@ -111,7 +111,49 @@
   background: linear-gradient(to bottom, var(--bs-primary), var(--bs-info));
 }
 
+#glow-flow- {
+  transition: 1s all;
+  animation: gflow 1.5s infinite ease-in-out;
+  /* transition: 1s all; */
+  border-radius: 10%;
+}
+
+@keyframes gflow {
+  0% {
+    transition: 1s all;
+    background: linear-gradient(to left, var(--bs-info), var(--bs-primary));
+  }
+  80% {
+    background: linear-gradient(to left, var(--bs-primary), var(--bs-info));
+  }
+}
+
+#glow-flow {
+  background-image: linear-gradient(
+    to right,
+    var(--bs-primary),
+    var(--bs-info)
+  );
+  background-size: 200%, auto;
+  border-radius: 0.5rem;
+  animation: slideBackground 5s linear infinite;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.6rem;
+  cursor: pointer;
+}
+
+@keyframes slideBackground {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 footer {
   background: linear-gradient(to bottom, var(--bs-info), var(--bs-primary));
 }
-

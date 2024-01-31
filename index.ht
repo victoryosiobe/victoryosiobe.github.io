@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smooth Background Transition</title>
+    <style>
+      .smooth-background {
+        display: inline-block;
+        background-image: linear-gradient(
+          to right,
+          red,
+          blue,
+        );
+        color: white;
+        padding: 0.2em 0.5em;
+        background-size: 200% auto;
+        animation: smoothBackground 10s linear infinite;
+      }
+
+      @keyframes smoothBackground {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 100% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <span class="smooth-background">Smooth Transition</span>
+  </body>
+</html>

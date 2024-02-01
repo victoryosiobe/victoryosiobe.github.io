@@ -82,8 +82,8 @@ function revealOnScroll() {
 function bgWind() {
   const observer = new IntersectionObserver((entry) =>
     entry[0].boundingClientRect.top < 70
-      ? navGear.classList.add("bg-opacity-50")
-      : navGear.classList.remove("bg-opacity-50"),
+      ? (navGear.style.background = "rgba(235, 245, 255, 0.4)")
+      : (navGear.style.background = "rgba(235, 245, 255, 1)"),
   );
   observer.observe(sectionComp);
 }

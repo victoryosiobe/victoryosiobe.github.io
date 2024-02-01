@@ -1,6 +1,7 @@
 * {
   margin: 0;
   user-select: none;
+  scroll-behavior: smooth;
 }
 
 #navbar {
@@ -132,25 +133,25 @@
   background-image: linear-gradient(
     to right,
     var(--bs-primary),
+    var(--bs-info),
+    var(--bs-primary),
     var(--bs-info)
   );
-  background-size: 200%, auto;
+  background-size: 400%, 100%;
+  background-repeat: repeat-x;
   border-radius: 0.5rem;
-  animation: slideBackground 5s linear infinite;
+  animation: slideBackground 3s linear infinite;
   padding: 0.35rem 0.7rem;
   font-size: 0.6rem;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 @keyframes slideBackground {
   0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 100% 0;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0 0;
+    background-position: 10% 50%;
   }
 }
 

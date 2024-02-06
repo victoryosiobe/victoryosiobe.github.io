@@ -3,7 +3,9 @@
   user-select: none;
   scroll-behavior: smooth;
 }
-
+:root {
+  --adapt: rgba(100, 180, 245);
+}
 #navbar {
   transition: background 1s;
   box-shadow: 0 0 5px var(--bs-dark);
@@ -16,8 +18,7 @@
 #out-I- {
   background: linear-gradient(
     to bottom,
-    rgba(100, 180, 245) 1%,
-    var(--bs-info) 34%,
+    var(--adapt) 35%,
     var(--bs-primary) 65%
   );
 }
@@ -44,7 +45,7 @@
 }
 
 @keyframes outMan {
-  100% {
+  0% {
     scale: 1.2;
     color: var(--bs-primary);
     text-shadow: 0 0 20px white;
@@ -97,45 +98,21 @@
   transform: translateY(0);
 }
 
-#vicko- {
-  transition: 1s !important;
-}
-
 #vicko-xp {
-  margin-top: 50vh;
   transition: 1 all;
-  position: relative;
-  transform: translateY(-50%);
 }
 
 #sectionX {
-  background: linear-gradient(to bottom, var(--bs-primary), var(--bs-info));
-}
-
-#glow-flow- {
-  transition: 1s all;
-  animation: gflow 1.5s infinite ease-in-out;
-  /* transition: 1s all; */
-  border-radius: 10%;
-}
-
-@keyframes gflow {
-  0% {
-    transition: 1s all;
-    background: linear-gradient(to left, var(--bs-info), var(--bs-primary));
-  }
-  80% {
-    background: linear-gradient(to left, var(--bs-primary), var(--bs-info));
-  }
+  background: linear-gradient(to bottom, var(--bs-primary), var(--adapt));
 }
 
 #glow-flow {
   background-image: linear-gradient(
     to right,
     var(--bs-primary),
-    var(--bs-info),
+    var(--adapt),
     var(--bs-primary),
-    var(--bs-info)
+    var(--adapt)
   );
   background-size: 400%, 100%;
   background-repeat: repeat-x;
@@ -143,7 +120,10 @@
   animation: slideBackground 3s linear infinite;
   padding: 0.35rem 0.7rem;
   font-size: 0.6rem;
-  cursor: pointer !important;
+}
+
+#glow-flow::hover {
+  cursor: pointer;
 }
 
 @keyframes slideBackground {
@@ -156,5 +136,5 @@
 }
 
 footer {
-  background: linear-gradient(to bottom, var(--bs-info), var(--bs-primary));
+  background: linear-gradient(to bottom, var(--adapt), var(--bs-primary));
 }

@@ -20,8 +20,8 @@ const revealedClY = "revealed-element-y";
 setTimeout(() => {
   navGear.classList.remove("bg-primary");
   navGear.classList.add("bg-light-comf");
-  brandNameEl.style.animation = "1s ease-in-out row-me";
-  brandNameEl.classList.add("text-primary");
+//  brandNameEl.style.animation = "1s ease-in-out row-me";
+  //brandNameEl.classList.add("text-primary"); 
 }, 1500); //wait a while for broswer to display element
 
 window.addEventListener("scroll", () => {

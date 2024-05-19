@@ -3,9 +3,12 @@
   user-select: none;
   scroll-behavior: smooth;
 }
+
 :root {
   --adapt: rgba(100, 180, 245);
+  --bg-main: rgba(9, 10, 55, 0.99);
 }
+
 #navbar {
   transition: background 1s;
   box-shadow: 0 0 5px var(--bs-dark);
@@ -15,13 +18,15 @@
   transition: opacity 1s;
   margin-top: 5em;
 }
+
 #out-I- {
-  background: linear-gradient(
-    to bottom,
-    var(--adapt) 35%,
-    var(--bs-primary) 65%
-  );
+  background: linear-gradient(to bottom,
+      var(--adapt) 35%,
+      var(--bs-primary) 65%);
+
+  position: relative;
 }
+
 .trench {
   font-size: 60;
   display: inline-block;
@@ -29,7 +34,7 @@
   opacity: 0;
   transition:
     opacity 1s,
-    transform 0.2s;
+    transform 0.3s;
 }
 
 .high-life {
@@ -37,7 +42,7 @@
   margin-top: 0px;
   opacity: 1;
   transform: translateY(0);
-  animation: outMan 0.4s ease-in;
+  animation: outMan 0.1s ease-in;
 }
 
 .bg-light-comf {
@@ -53,6 +58,7 @@
 }
 
 @keyframes row-me {
+
   /*Used By Javascript*/
   25% {
     transform: rotate(50deg);
@@ -76,7 +82,7 @@
   transform: translateX(10px);
   transition:
     opacity 1s,
-    transform 1s;
+    transform 0.5s;
   opacity: 0;
 }
 
@@ -84,7 +90,7 @@
   transform: translateY(50px);
   transition:
     opacity 1s,
-    transform 1s;
+    transform 0.5s;
   opacity: 0;
 }
 
@@ -107,19 +113,14 @@
 }
 
 #glow-flow {
-  background-image: linear-gradient(
-    to right,
-    var(--bs-primary),
-    var(--adapt),
-    var(--bs-primary),
-    var(--adapt)
-  );
+  background-image: linear-gradient(to right,
+      var(--bs-primary),
+      var(--adapt),
+      var(--bs-primary),
+      var(--adapt));
   background-size: 400%, 100%;
   background-repeat: repeat-x;
-  border-radius: 0.5rem;
   animation: slideBackground 3s linear infinite;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.6rem;
 }
 
 #glow-flow::hover {
@@ -130,6 +131,7 @@
   0% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 10% 50%;
   }
@@ -137,4 +139,36 @@
 
 footer {
   background: linear-gradient(to bottom, var(--adapt), var(--bs-primary));
+}
+
+/*
+#line-so-p {
+  border-left: solid white 0.3rem;
+  border-bottom: solid white 0.3rem;
+  border-bottom-left-radius: 1rem;
+  position: relative;
+}
+#line-so-p:after{
+  content: "";
+  position: absolute;
+  height: 0.4rem;
+  background: var(--bs-primary);
+  top: 100%;
+  width: 50%;
+  right: -0.3rem;
+  transform: translateY(-2px);
+}
+*/
+
+#card-park{
+  position: relative ;
+}
+
+#stroller{
+  position: absolute;
+  height: 100%;
+  background: linear-gradient(to bottom, white , var(--bs-primary), var(--adapt));
+  width: 0.3rem;
+  border-radius: 1rem;
+  transform: translateX(-200%);
 }

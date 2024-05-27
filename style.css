@@ -73,8 +73,6 @@
   }
 }
 
-.card {}
-
 .card {
   /*background: linear-gradient(to bottom right, white, white, white, black); /*#E9E9E9, #060B3F);*/
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.65), 70%, rgba(255, 255, 255, 0.25));
@@ -83,7 +81,7 @@
   color: var(--bg-main);
 }
 
-.hide-element-xt {
+.hide-element-x {
   transform: translateX(10px);
   transition:
     opacity 1s,
@@ -91,7 +89,7 @@
   opacity: 0;
 }
 
-.hide-element-yt {
+.hide-element-y {
   transform: translateY(50px);
   transition:
     opacity 1s,
@@ -99,12 +97,12 @@
   opacity: 0;
 }
 
-.revealed-element-xt {
+.revealed-element-x {
   opacity: 1;
   transform: translateX(0);
 }
 
-.revealed-element-yt {
+.revealed-element-y {
   opacity: 1;
   transform: translateY(0);
 }

@@ -3,6 +3,7 @@ const brandNameEl = document.getElementById("brand-n");
 const trenchElements = document.querySelectorAll(".trench");
 const revealElementsX = document.querySelectorAll(".hide-element-x");
 const revealElementsY = document.querySelectorAll(".hide-element-y");
+const faqHeads = document.querySelectorAll(".head-faq");
 const sectionComp = document.getElementById("out-I-");
 const autoHigh = "high-life";
 const revealedClX = "revealed-element-x";
@@ -20,7 +21,7 @@ const revealedClY = "revealed-element-y";
 setTimeout(() => {
   navGear.classList.remove("bg-primary");
   navGear.classList.add("bg-light-comf");
-//  brandNameEl.style.animation = "1s ease-in-out row-me";
+  //  brandNameEl.style.animation = "1s ease-in-out row-me";
   //brandNameEl.classList.add("text-primary"); 
 }, 1500); //wait a while for broswer to display element
 
@@ -63,9 +64,28 @@ function revealOnScroll() {
 
 function bgWind() {
   const observer = new IntersectionObserver((entry) =>
-    entry[0].boundingClientRect.top < 750
-      ? (navGear.style.background = "rgba(235, 245, 255, 0.4)")
-      : (navGear.style.background = "rgba(235, 245, 255, 1)"),
+    entry[0].boundingClientRect.top < 750 ?
+    (navGear.style.background = "rgba(235, 245, 255, 0.4)") :
+    (navGear.style.background = "rgba(235, 245, 255, 1)"),
   );
   observer.observe(sectionComp);
+}
+
+for (const element of faqHeads) {
+  element.addEventListener("click", (e) => {
+    const root = document.documentElement;
+
+    // Change the value of the CSS variable
+
+
+    const foldableDiv = e.target.nextElementSibling
+    if (foldableDiv.style.height && foldableDiv.style.height !== '0px') {
+      foldableDiv.style.height = '0px';
+      e.target.title = "+"
+    } else {
+      const scrollHeight = foldableDiv.scrollHeight;
+      foldableDiv.style.height = scrollHeight + 'px';
+      e.target.title = "-"
+    }
+  })
 }

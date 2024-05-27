@@ -7,6 +7,7 @@
 :root {
   --adapt: rgba(100, 180, 245);
   --bg-main: rgb(8, 18, 35);
+  --bg-white: white;
 }
 
 #navbar {
@@ -140,8 +141,8 @@
   }
 }
 
-footer {
-  background: rgb(8, 18, 35);
+#end-note {
+  font-size: 0.8rem
 }
 
 /*
@@ -188,6 +189,19 @@ footer {
   font-size: 1.1rem;
 }
 
+.mod-foot-l>:first-child:after {
+  content: attr(title);
+  position: absolute;
+  right: 0;
+  padding-right: 2rem;
+}
+
 .mod-foot-l>:nth-child(2) {
   font-size: 0.85rem;
+}
+
+.foldable {
+  overflow: hidden;
+  transition: height 0.5s ease;
+  height: 0;
 }

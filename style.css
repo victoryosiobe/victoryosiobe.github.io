@@ -6,7 +6,7 @@
 
 :root {
   --adapt: rgba(100, 180, 245);
-  --bg-main: rgba(9, 10, 55, 0.99);
+  --bg-main: rgb(8, 18, 35);
 }
 
 #navbar {
@@ -75,7 +75,8 @@
 
 .card-main-bg {
   /*background: linear-gradient(to bottom right, white, white, white, black); /*#E9E9E9, #060B3F);*/
-  background: aliceblue;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
 }
 
 .hide-element-x {
@@ -138,7 +139,7 @@
 }
 
 footer {
-  background: rgb(8,18,35);
+  background: rgb(8, 18, 35);
 }
 
 /*
@@ -160,28 +161,31 @@ footer {
 }
 */
 
-#card-park{
-  position: relative ;
+#card-park {
+  position: relative;
 }
 
-#stroller{
+#stroller {
   position: absolute;
   height: 100%;
-  background: linear-gradient(to bottom, white , var(--bs-primary), var(--adapt));
+  background: linear-gradient(to bottom, white, var(--bs-primary), var(--adapt));
   width: 0.3rem;
   border-radius: 1rem;
   transform: translateX(-200%);
 }
-.mod-foot-l{
+
+.mod-foot-l {
   margin: 1rem 0;
 }
-.mod-foot-l>:first-child{
+
+.mod-foot-l>:first-child {
   border-bottom: 0.05rem solid white;
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
   font-size: 1.1rem;
 }
-.mod-foot-l>:nth-child(2){
+
+.mod-foot-l>:nth-child(2) {
   font-size: 0.85rem;
 }

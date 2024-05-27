@@ -77,7 +77,7 @@
 .card {
   /*background: linear-gradient(to bottom right, white, white, white, black); /*#E9E9E9, #060B3F);*/
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.65), 70%, rgba(255, 255, 255, 0.25));
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 1);
   backdrop-filter: blur(10px) saturate(100%);
   color: var(--bg-main);
 }

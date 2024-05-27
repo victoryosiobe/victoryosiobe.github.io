@@ -34,13 +34,13 @@ function revealOnScroll() {
   const windowHeight = window.innerHeight;
   revealElementsX.forEach((element) => {
     const revealTop = element.getBoundingClientRect().top;
-    if (revealTop < windowHeight / 1.5) {
+    if (revealTop < windowHeight / 1.3) {
       element.classList.add(revealedClX);
     }
   });
   revealElementsY.forEach((element) => {
     const revealTop = element.getBoundingClientRect().top;
-    if (revealTop < windowHeight / 1.5) {
+    if (revealTop < windowHeight / 1.3) {
       element.classList.add(revealedClY);
     }
   });

@@ -5,8 +5,11 @@
 }
 
 :root {
-  --adapt: rgba(100, 180, 245);
+  --adapt: rgba(40, 90, 255);
+  --adaptL: rgba(40, 90, 255, 0.8);
   --bg-main: rgb(8, 18, 35);
+  --prim: rgb(13, 110, 253);
+  --primL: rgba(13, 110, 253, 0.8);
   --bg-white: white;
 }
 
@@ -22,8 +25,8 @@
 
 #out-I- {
   background: linear-gradient(to bottom,
-      var(--adapt) 35%,
-      var(--bs-primary) 65%);
+      var(--adaptL) 35%,
+      var(--primL) 65%);
 
   position: relative;
 }
@@ -76,10 +79,12 @@
 
 .card {
   /*background: linear-gradient(to bottom right, white, white, white, black); /*#E9E9E9, #060B3F);*/
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.65), 70%, rgba(255, 255, 255, 0.25));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.69), 70%, rgba(255, 255, 255, 0.45));
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 1);
   backdrop-filter: blur(10px) saturate(100%);
   color: var(--bg-main);
+  outline: none !important;
+  border: none !important;
 }
 
 .hide-element-x {
@@ -171,7 +176,7 @@
 #stroller {
   position: absolute;
   height: 100%;
-  background: linear-gradient(to bottom, white, var(--bs-primary), var(--adapt));
+  background: white;
   width: 0.3rem;
   border-radius: 1rem;
   transform: translateX(-200%);

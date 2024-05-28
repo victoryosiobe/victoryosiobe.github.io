@@ -4,6 +4,14 @@
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Varela Round";
+}
+
+.head-view {
+  font-family: "Tajawal" !important;
+}
+
 :root {
   --adapt: rgba(40, 90, 255);
   --adaptL: rgba(40, 90, 255, 0.8);
@@ -147,7 +155,7 @@
 }
 
 #end-note {
-  font-size: 0.8rem
+  font-size: 0.6rem;
 }
 
 /*
@@ -201,9 +209,7 @@
   padding-right: 2rem;
 }
 
-.mod-foot-l>:nth-child(2) {
-  font-size: 0.85rem;
-}
+.mod-foot-l>:nth-child(2) {}
 
 .foldable {
   overflow: hidden;

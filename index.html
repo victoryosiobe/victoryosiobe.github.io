@@ -1,14 +1,23 @@
 <html>
 
 <head>
+  <link rel="prefetch" href="https://fonts.googleapis.com">
+  <link rel="prefetch" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="prefetch" href="https://fonts.googleapis.com">
+  <link rel="prefetch" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="prefetch" href="https://fonts.googleapis.com">
+  <link rel="prefetch" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Victory Osiobe's Site</title>
+  <title>Portfolio—Victory Osiobe</title>
   <link href="./res/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="./res/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 
-  <nav class="navbar navbar-expand-md bg-primary fixed-top p-2" id="navbar">
+  <nav class="navbar navbar-expand-md bg-primary fixed-top " id="navbar">
     <div class="container-fluid">
       <!--  <div class="navbar-brand">
           <a href="#sectionX"
@@ -22,12 +31,12 @@
           /></a>
         </div>-->
       <span class="h6 badge bg-warning">Under Construction!</span>
-      <span class="h6 mx-1 badge fw-bold text-light cursor-pointer " id="glow-flow">Resume—Unavailable</span>
+      <span class="h6 mx-1 badge fw-bold text-light cursor-pointer" id="glow-flow">Resume—Unavailable</span>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMore">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navBarMore">
+      <div class="collapse navbar-collapse text-light" id="navBarMore">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="#captain">Start</a>
@@ -49,10 +58,10 @@
 
 <body style="background: var(--bg-main)" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="50">
   <main class="" id="captain">
-    <section class="container-fluid text-light fw-semibold my-5 p-3">
-      <section class="row row-cols-1 row-cols-md-2 g-5">
+    <section class="container-fluid text-light my-5 p-3">
+      <section class="row row-cols-1 row-cols-md-2 g-3">
         <section class="col">
-          <div class="h1 text-left fw-bolder text-light text-shadow" id="vicko-xp" style="text-shadow: 0 0 5px var(--adapt)">
+          <div class="h1 text-left fw-bolder text-light text-shadow " id="vicko-xp" style="text-shadow: 0 0 5px var(--adapt)">
             <div>
               <span class="trench">V</span>
               <span class="trench">I</span>
@@ -72,7 +81,7 @@
             </div>
           </div>
 
-          <section>
+          <section class="head-view">
             <div class="pt-3">
               I'm sure it's clear who I am now. Don't be mistaken — Not just
               that I fall amongst the creatives, building blablabla, I express
@@ -80,8 +89,8 @@
               plug could be me.
             </div>
             <div class="pt-3">
-              Front-end operations are what I handle very well while I avidly
-              top my back-end skills. I use technologies like:
+              I handle very well while avidly
+              topping my back-end skills. I use technologies like:
               <li class="badge bg-warning mb-2">JavaScript</li>
               <li class="badge bg-danger mb-2">HTML</li>
               <li class="badge bg-primary mb-2">CSS</li>
@@ -326,7 +335,7 @@
         <div>
           <div class="mod-foot-l">
             <div class="head-faq" title="+">What Intrests Me?</div>
-            <div class="foldable">
+            <div class="foldable head-view">
               <p>Artificial Intelligence, Natural Language Processing, and Machine Learning. </p>
               <p>For now, I use NodeJs and Python as primary backend languages when building applications related to AI, NLP, and ML.</p>
               <p>I'm into frontend development as well. It's kind of when the inspiration comes. :)</p>
@@ -334,7 +343,7 @@
           </div>
           <div class="mod-foot-l">
             <div class="head-faq" title="+">What's My Stack?</div>
-            <div class="foldable">
+            <div class="foldable head-view">
               <p>I am solid with HTML, CSS, JavaScript.</p>
               <p>React and Bootstrap also amongst, but I need to get top notch with them. </p>
               <p>Months Ago, I delved into the backend world, utilizing both NodeJs and Python.</p>
@@ -342,14 +351,14 @@
           </div>
           <div class="mod-foot-l">
             <div class="head-faq" title="+">What Other Languages Or Tools Do I Intend Learning?</div>
-            <div class="foldable">
+            <div class="foldable head-view">
               <p>Not quite precise on answer, but it depends largely on what I indulge in, in the future; I admire Rust, Dart, and Go, languages but they're much, considering the Libraries and Frameworks I would have to learn. React Native is also on this list.</p>
               <p>I've kick started with Rust though, Go, Dart, React Native, maybe some other time.</p>
             </div>
           </div>
         </div>
       </section>
-      <div class="text-uppercase pt-3 text-center" id="end-note">
+      <div class="text-uppercase pt-3 text-left" id="end-note">
         Designed by, Victory Osiobe
         ©<span id="d-v-g"></span>
       </div>
@@ -362,7 +371,7 @@
     const year = new Date().getFullYear();
     year == "2023" ?
       (dateEl.textContent = year) :
-      (dateEl.textContent = "2023 - " + year);
+      (dateEl.textContent = "2023—" + year);
   }
 </script>
 <script src="index.js" onload="dater()"></script>

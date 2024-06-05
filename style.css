@@ -16,7 +16,7 @@ body {
   --adapt: rgba(40, 90, 255);
   --adaptL: rgba(40, 90, 255, 0.8);
   --bg-main: rgb(8, 18, 35);
-  --bg-mainH: rgb(5, 25, 75);
+  --bg-mainH: rgb(0, 10, 75);
   --prim: rgb(13, 110, 253);
   --primL: rgba(13, 110, 253, 0.8);
   --bg-white: white;
@@ -124,6 +124,11 @@ body {
 
 #vicko-xp {
   transition: 1s all;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 #sectionX {

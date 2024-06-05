@@ -96,20 +96,20 @@ body {
   border: none !important;
 }
 
-.hide-element-x {
-  transform: translateX(10px);
+.hide-element-x,
+.hide-element-y {
   transition:
     opacity 1s,
-    transform 0.5s;
+    transform 1s;
   opacity: 0;
+}
+
+.hide-element-x {
+  transform: translateX(10px);
 }
 
 .hide-element-y {
   transform: translateY(50px);
-  transition:
-    opacity 1s,
-    transform 0.5s;
-  opacity: 0;
 }
 
 .revealed-element-x {
@@ -123,7 +123,7 @@ body {
 }
 
 #vicko-xp {
-  transition: 1 all;
+  transition: 1s all;
 }
 
 #sectionX {

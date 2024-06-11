@@ -53,14 +53,24 @@ function revealCards() {
 }
 
 function brightenCardImg() {
-  const windowHeight = window.innerHeight;
-  cards.forEach(e => {
-    if (e.querySelector('.gitStatImg')) {
-      const revealTop = e.getBoundingClientRect().top;
-      if (revealTop < windowHeight / 1.3) e.querySelector('.gitStatImg').classList.add(bright);
-      else e.querySelector('.gitStatImg').classList.remove(bright)
-    }
-  });
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      const e = entry.target
+      if (e.querySelector('.gitStatImg')) {
+        if (entry.isIntersecting) {
+          e.querySelector('.gitStatImg').classList.add(bright);
+          //console.log('Element is in view!');
+          // observer.unobserve(entry.target); // Uncomment if you want to stop observing after first intersection
+        } else {
+          //console.log('Element is out of view!');
+          e.querySelector('.gitStatImg').classList.remove(bright)
+        }
+      }
+    });
+  }, { threshold: 0.7 }); // 90% visibility
+
+
+  cards.forEach(card => observer.observe(card));
 }
 
 function highlightImg() {
@@ -94,4 +104,3 @@ for (const element of faqHeads) {
     }
   })
 }
-

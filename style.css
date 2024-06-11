@@ -86,23 +86,22 @@ body {
   /*background: linear-gradient(to bottom right, white, white, white, black); /*#E9E9E9, #060B3F);*/
   background: var(--secColor);
   /* linear-gradient(90deg, var(--secColor), 70%, var(--secColor));*/
-  filter: drop-shadow(0 0 10px black) saturate(150%) !important;
+  filter: drop-shadow(0 0 10px black) saturate(120%);
   color: ghostwhite;
   outline: none !important;
   border: none !important;
 }
 
 .gitStatImg {
-  filter: contrast(110%) brightness(90%)
+  filter: contrast(110%) brightness(70%)
 }
 
 .gitStatImg:hover {
-
   filter: contrast(110%) brightness(100%)
 }
 
 .bright-full {
-  filter: contrast (110%) brightness(150%) !important
+  filter: brightness(100%);
 }
 
 .hide-element-x,
@@ -138,18 +137,22 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-    filter: drop-shadow(0 0 3px var(--bs-primary)) !important;
+  font-weight: bolder;
+  font-size: 5em !important;
+  filter: drop-shadow(0 0 3px var(--bs-primary)) !important;
 }
-.s-img{
-  height: 48px ;
+
+.s-img {
+  height: 48px;
   width: 48px;
 }
+
 #sectionX {
-  /background: linear-gradient(to bottom, var(--bs-primary), var(--adapt));
+  /*background: linear-gradient(to bottom, var(--bs-primary), var(--adapt));*/
 }
 
 .flow {
-  /*background-image: linear-gradient(to right,
+  /*  background-image: linear-gradient(to right,
       var(--bg-main),
       var(--bg-mainH),
       var(--bg-main),

@@ -94,3 +94,4 @@ for (const element of faqHeads) {
     }
   })
 }
+

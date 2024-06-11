@@ -1,17 +1,19 @@
 <html>
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore the portfolio and projects of the mystique, Victory Osiobe, a full stack developer specializing in web development, AI, and ML.">
+  <meta name="theme-color" content="">
+  <title>Portfolio—The Mystique, Victory Osiobe</title>
+  <link href="./res/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="./res/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+
   <link rel="prefetch" href="https://fonts.googleapis.com">
   <link rel="prefetch" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Explore the portfolio and projects of Victory Osiobe, a full stack developer specializing in web development, AI, and robotics.">
-  <title>Portfolio—Victory Osiobe</title>
-  <link href="./res/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="./res/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="style.css" />
 
   <nav class="navbar navbar-expand-md bg-primary fixed-top " id="navbar">
     <div class="container-fluid">
@@ -415,6 +417,11 @@
   </main>
 </body>
 <script>
+  const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+  const rootStyle = getComputedStyle(document.documentElement);
+  const themeColor = rootStyle.getPropertyValue('--secColor');
+  if (metaThemeColor) metaThemeColor.setAttribute('content', themeColor);
+
   function dater() {
     const dateEl = document.getElementById("d-v-g");
     const year = new Date().getFullYear();
@@ -423,6 +430,7 @@
       (dateEl.textContent = "2023—" + year);
   }
 </script>
+
 <script src="index.js" onload="dater()"></script>
 
 </html>

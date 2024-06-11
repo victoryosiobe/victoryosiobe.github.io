@@ -3,11 +3,13 @@ const brandNameEl = document.getElementById("brand-n");
 const trenchElements = document.querySelectorAll(".trench");
 const revealElementsX = document.querySelectorAll(".hide-element-x");
 const revealElementsY = document.querySelectorAll(".hide-element-y");
+const cards = document.querySelectorAll('.card')
 const faqHeads = document.querySelectorAll(".head-faq");
 const sectionComp = document.getElementById("out-I-");
 const autoHigh = "high-life";
 const revealedClX = "revealed-element-x";
 const revealedClY = "revealed-element-y";
+const bright = 'bright-full';
 
 (async () => {
   for (const element of trenchElements) {
@@ -27,39 +29,42 @@ setTimeout(() => {
 
 window.addEventListener("scroll", () => {
   bgWind();
-  revealOnScroll();
+  revealCards()
+  brightenCardImg()
+  highlightImg()
 });
 
-function revealOnScroll() {
+function revealCards() {
   const windowHeight = window.innerHeight;
-  revealElementsX.forEach((element) => {
-    const revealTop = element.getBoundingClientRect().top;
-    if (revealTop < windowHeight / 1.3) {
-      element.classList.add(revealedClX);
-    }
+  revealElementsX.forEach((e) => {
+    const revealTop = e.getBoundingClientRect().top;
+    if (revealTop < windowHeight / 1.3)
+      e.classList.add(revealedClX);
   });
-  revealElementsY.forEach((element) => {
-    const revealTop = element.getBoundingClientRect().top;
-    if (revealTop < windowHeight / 1.3) {
-      element.classList.add(revealedClY);
-    }
+  revealElementsY.forEach((e) => {
+    const revealTop = e.getBoundingClientRect().top;
+    if (revealTop < windowHeight / 1.3)
+      e.classList.add(revealedClX);
   });
+  //Stop Triggering
+  if (([...revealElementsX].every(e => e.classList.contains(revealedClX))) && ([...revealElementsY].every((element) => element.classList.contains(revealedClY)))) {
+    window.removeEventListener('scroll', revealCards)
+  }
+}
 
-  // Remove the event listener once all elements are revealed
-  if (
-    [...revealElementsX].every((element) =>
-      element.classList.contains(revealedClX),
-    )
-  ) {
-    window.removeEventListener("scroll", revealOnScroll);
-  }
-  if (
-    [...revealElementsY].every((element) =>
-      element.classList.contains(revealedClY),
-    )
-  ) {
-    window.removeEventListener("scroll", revealOnScroll);
-  }
+function brightenCardImg() {
+  const windowHeight = window.innerHeight;
+  cards.forEach(e => {
+    if (e.querySelector('.gitStatImg')) {
+      const revealTop = e.getBoundingClientRect().top;
+      if (revealTop < windowHeight / 1.3) e.querySelector('.gitStatImg').classList.add(bright);
+      else e.querySelector('.gitStatImg').classList.remove(bright)
+    }
+  });
+}
+
+function highlightImg() {
+  // Tab to edit
 }
 
 function bgWind() {

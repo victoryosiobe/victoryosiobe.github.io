@@ -15,11 +15,12 @@ body {
 :root {
   --adapt: rgba(40, 90, 255);
   --adaptL: rgba(40, 90, 255, 0.8);
-  --bg-main: rgb(8, 18, 35);
+  --bg-main: rgb(15, 23, 45);
   --bg-mainH: rgb(0, 10, 75);
   --prim: rgb(13, 110, 253);
   --primL: rgba(13, 110, 253, 0.8);
   --bg-white: white;
+  --secColor: rgba(12, 23, 60, 0.8);
 }
 
 #navbar {
@@ -33,10 +34,11 @@ body {
 }
 
 #out-I- {
-  background: linear-gradient(to bottom,
+  //background: var(--secColor);
+  /*background: linear-gradient(to bottom,
       var(--adaptL) 35%,
       var(--primL) 65%);
-
+*/
   position: relative;
 }
 
@@ -51,7 +53,6 @@ body {
 }
 
 .high-life {
-  /*Name Animator*/
   margin-top: 0px;
   opacity: 1;
   transform: translateY(0);
@@ -88,12 +89,27 @@ body {
 
 .card {
   /*background: linear-gradient(to bottom right, white, white, white, black); /*#E9E9E9, #060B3F);*/
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.69), 70%, rgba(255, 255, 255, 0.45));
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 1);
-  backdrop-filter: blur(5px) saturate(150%);
-  color: var(--bg-main);
+  background: var(--secColor);
+  /* linear-gradient(90deg, var(--secColor), 70%, var(--secColor));*/
+  filter: drop-shadow(0 0 10px black) !important;
+  backdrop-filter: saturate(150%);
+  color: ghostwhite;
   outline: none !important;
   border: none !important;
+}
+
+.gitStatImg {
+
+  filter: contrast(110%) brightness(90%)
+}
+
+.gitStatImg:hover {
+
+  filter: contrast(110%) brightness(100%)
+}
+
+.bright-full {
+  filter: contrast (110%) brightness(150%) !important
 }
 
 .hide-element-x,
@@ -129,21 +145,23 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+    filter: drop-shadow(0 0 3px var(--bs-primary)) !important;
 }
 
 #sectionX {
-  background: linear-gradient(to bottom, var(--bs-primary), var(--adapt));
+  /background: linear-gradient(to bottom, var(--bs-primary), var(--adapt));
 }
 
 .flow {
-  background-image: linear-gradient(to right,
+  /*background-image: linear-gradient(to right,
       var(--bg-main),
       var(--bg-mainH),
       var(--bg-main),
-      var(--bg-mainH));
+      var(--bg-mainH));*/
+  background: var(--bg-main);
   background-size: 400%, 100%;
   background-repeat: repeat-x;
-  animation: slideBackground 5s linear infinite;
+  animation: slideBackgroundx 5s linear infinite;
 }
 
 #glow-flow {

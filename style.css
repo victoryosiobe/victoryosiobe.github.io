@@ -34,11 +34,6 @@ body {
 }
 
 #out-I- {
-  //background: var(--secColor);
-  /*background: linear-gradient(to bottom,
-      var(--adaptL) 35%,
-      var(--primL) 65%);
-*/
   position: relative;
 }
 
@@ -91,8 +86,7 @@ body {
   /*background: linear-gradient(to bottom right, white, white, white, black); /*#E9E9E9, #060B3F);*/
   background: var(--secColor);
   /* linear-gradient(90deg, var(--secColor), 70%, var(--secColor));*/
-  filter: drop-shadow(0 0 10px black) !important;
-  backdrop-filter: saturate(150%);
+  filter: drop-shadow(0 0 10px black) saturate(150%) !important;
   color: ghostwhite;
   outline: none !important;
   border: none !important;

@@ -214,12 +214,10 @@ body {
 }
 
 #stroller {
-  position: absolute;
-  height: 100%;
-  background: white;
-  width: 0.3rem;
-  border-radius: 1rem;
-  transform: translateX(-200%);
+  background: linear-gradient(to bottom, var(--secColor), white, var(--secColor));
+  height: inherit;
+  width: 0.125rem;
+  border-radius: 2rem;
 }
 
 .mod-foot-l {

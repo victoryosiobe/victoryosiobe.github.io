@@ -1,5 +1,6 @@
 const navGear = document.getElementById("navbar");
 const brandNameEl = document.getElementById("brand-n");
+const outliners = [...document.querySelectorAll(".outliner"), ...document.querySelectorAll(".outlinera")]
 const trenchElements = document.querySelectorAll(".trench");
 const revealElementsX = document.querySelectorAll(".hide-element-x");
 const revealElementsY = document.querySelectorAll(".hide-element-y");
@@ -10,6 +11,10 @@ const autoHigh = "high-life";
 const revealedClX = "revealed-element-x";
 const revealedClY = "revealed-element-y";
 const bright = 'bright-full';
+for (const element of outliners) {
+  const classes = "gradT" 
+  colorizeLastLetter(element, classes)
+}
 
 (async () => {
   for (const element of trenchElements) {
@@ -21,7 +26,7 @@ const bright = 'bright-full';
 })();
 
 setTimeout(() => {
-  navGear.classList.remove("bg-primary");
+  navGear.classList.remove("bg-secondary");
   navGear.classList.add("bg-light-comf");
   //  brandNameEl.style.animation = "1s ease-in-out row-me";
   //brandNameEl.classList.add("text-primary"); 
@@ -103,4 +108,37 @@ for (const element of faqHeads) {
       e.target.title = "-"
     }
   })
+}
+
+function colorizeLastLetter(element, gradT) {
+  // Check if element exists
+  if (element) {
+    // Get the current text content
+    let text = element.textContent.trim();
+
+    // Ensure there is text content
+    if (text.length > 0) {
+      // Get the last character
+      let lastLetter = text.slice(-1);
+
+      // Get the text content without the last letter
+      let textWithoutLastLetter = text.slice(0, -1);
+
+      // Create a span element to wrap the last letter with colored style
+      let coloredLastLetter = document.createElement('span');
+      coloredLastLetter.textContent = lastLetter;
+      coloredLastLetter.classList.add(gradT); // Change color to whatever you want
+
+      // Append the colored last letter back to the text
+      element.textContent = '';
+      element.appendChild(document.createTextNode(textWithoutLastLetter));
+      element.appendChild(coloredLastLetter);
+
+      // Return the modified text
+      return element.textContent;
+    }
+  }
+
+  // Return null if element or text content is empty
+  return null;
 }

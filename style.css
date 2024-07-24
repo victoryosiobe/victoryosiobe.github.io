@@ -23,6 +23,10 @@ body {
   --primL: rgba(13, 110, 253, 0.8);
   --bg-white: white;
   --secColor: rgba(12, 23, 60, 0.8);
+
+  --trails: {
+    outline: 1px dashed dimgray;
+  }
 }
 
 #navbar {
@@ -143,6 +147,7 @@ body {
   filter: drop-shadow(0 0 3px var(--bs-primary)) !important;
 }
 
+
 .s-img {
   height: 48px;
   width: 48px;
@@ -214,7 +219,7 @@ body {
 }
 
 #stroller {
-  background: linear-gradient(to bottom, var(--secColor), white, var(--secColor));
+  background: linear-gradient(to bottom, transparent, var(--bs-primary), transparent, var(--bs-primary), transparent, var(--bs-primary), transparent);
   height: inherit;
   width: 0.125rem;
   border-radius: 2rem;
@@ -245,4 +250,36 @@ body {
   overflow: hidden;
   transition: height 0.5s ease;
   height: 0;
+}
+
+.outliner,
+.outlinera {
+  position: relative;
+  display: inline-block;
+}
+
+.outliner:after,
+.outlinera:after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  left: 0;
+  background:color-mix(in srgb, var(--bs-primary) 40%, transparent);
+  height: 0.15rem;
+  width: inherit;
+  border-radius: 10px;
+}
+
+.outlinera:after {
+  height: 2px;
+  bottom: -2px;
+}
+
+.gradT{
+  /* background-image: linear-gradient(to right, var(--bs-light), var(--bs-primary)) !important;
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text; */
+  color: var(--bs-primary);
 }

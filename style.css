@@ -251,29 +251,24 @@ body {
   height: 0;
 }
 
-.outliner,
 .outlinera {
   position: relative;
   display: inline-block;
 }
 
-.outliner:after,
 .outlinera:after {
   content: '';
   position: absolute;
   bottom: 15px;
   right: 25px;
-  left: 0;
+  left: 0;height: 2px;
+  bottom: -2px;
   background: color-mix(in srgb, var(--bs-primary) 30%, transparent);
   height: 0.15rem;
   width: inherit;
   border-radius: 10px;
 }
 
-.outlinera:after {
-  height: 2px;
-  bottom: -2px;
-}
 
 .gradT {
   /* background-image: linear-gradient(to right, var(--bs-light), var(--bs-primary)) !important;

@@ -11,10 +11,6 @@ const autoHigh = "high-life";
 const revealedClX = "revealed-element-x";
 const revealedClY = "revealed-element-y";
 const bright = 'bright-full';
-for (const element of outliners) {
-  const classes = "gradT" 
-  colorizeLastLetter(element, classes)
-}
 
 (async () => {
   for (const element of trenchElements) {
@@ -110,35 +106,3 @@ for (const element of faqHeads) {
   })
 }
 
-function colorizeLastLetter(element, gradT) {
-  // Check if element exists
-  if (element) {
-    // Get the current text content
-    let text = element.textContent.trim();
-
-    // Ensure there is text content
-    if (text.length > 0) {
-      // Get the last character
-      let lastLetter = text.slice(-1);
-
-      // Get the text content without the last letter
-      let textWithoutLastLetter = text.slice(0, -1);
-
-      // Create a span element to wrap the last letter with colored style
-      let coloredLastLetter = document.createElement('span');
-      coloredLastLetter.textContent = lastLetter;
-      coloredLastLetter.classList.add(gradT); // Change color to whatever you want
-
-      // Append the colored last letter back to the text
-      element.textContent = '';
-      element.appendChild(document.createTextNode(textWithoutLastLetter));
-      element.appendChild(coloredLastLetter);
-
-      // Return the modified text
-      return element.textContent;
-    }
-  }
-
-  // Return null if element or text content is empty
-  return null;
-}

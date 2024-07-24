@@ -219,7 +219,6 @@ body {
 }
 
 #stroller {
-  background: linear-gradient(to bottom, transparent, var(--bs-primary), transparent, var(--bs-primary), transparent, var(--bs-primary), transparent);
   height: inherit;
   width: 0.125rem;
   border-radius: 2rem;
@@ -265,7 +264,7 @@ body {
   bottom: 15px;
   right: 25px;
   left: 0;
-  background:color-mix(in srgb, var(--bs-primary) 40%, transparent);
+  background: color-mix(in srgb, var(--bs-primary) 30%, transparent);
   height: 0.15rem;
   width: inherit;
   border-radius: 10px;
@@ -276,7 +275,7 @@ body {
   bottom: -2px;
 }
 
-.gradT{
+.gradT {
   /* background-image: linear-gradient(to right, var(--bs-light), var(--bs-primary)) !important;
   color: transparent !important;
   -webkit-background-clip: text;

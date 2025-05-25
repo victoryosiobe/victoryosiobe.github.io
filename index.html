@@ -1,536 +1,540 @@
 <!DOCTYPE html>
 <html>
 
-<head lang="en">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BKYP7NPXXN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-BKYP7NPXXN');
-  </script>
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Cache-control" content="public">
-  <meta name="description" content="Explore the portfolio and projects of the mystique, Victory Osiobe, a web developer, projecting to the AI, ML path.">
-  <meta name="theme-color" content="">
-  <title>Portfolio—The Mystique, Victory Osiobe</title>
-  <link href="./res/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="./res/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <meta name="description" content="Explore the port and public projects of the mystique, Victory Osiobe, a software developer, who is actively on Web Tech.">
+  <meta name="theme-color" content="#00171F">
+  <title></title>
+  <script src="./tailwind@3.4.16.js"></script>
   <link rel="stylesheet" href="style.css" />
-
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Varela+Round&display=swap" rel="stylesheet">
-
-  <nav class="navbar navbar-expand-md bg-secondary fixed-top" id="navbar">
-    <div class="container-fluid">
-      <span class="h6 badge bg-warning text-danger">Under Construction! X</span>
-      <span class="h6 mx-1 badge fw-bold text-warning cursor-pointer" id="glow-flow">Resume—Unavailable</span>
-      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navBarMore">
-        <span class="navbar-toggler-icon" style="font-size: 0.7rem"></span>
-      </button>
-
-      <div class="collapse navbar-collapse text-light" id="navBarMore">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#captain">Start</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#out-I-">Compilation</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sectionX">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#foot">FAQ</a>
-          </li>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <header class="relative bg-transparent dark:bg-gray-900 z-[999]">
+    <nav class="w-[92%] flex justify-between items-center text-white mx-auto p-2 py-1">
+      <div class="h-14 w-14 rounded-full overflow-hidden border-4 border-gray-600">
+        <img class="object-cover w-full h-full" src="./visuals/thevicko-lite.jpg" alt="Image Of Victory Osiobe" />
+      </div>
+      
+      <div class="navMore collapsed absolute md:static bg-gray-900 md:bg-transparent md:min-h-fit left-0 top-[4rem] w-full md:w-auto flex">
+        <ul class="flex flex-col w-full h-full p-5 md:flex-row md:items-center md:gap-[2vw] gap-10">
+          <li><a class="hover:text-gray-500" href="">Home</a></li>
+          <li><a class="hover:text-gray-500" href="">Home</a></li>
+          <li><a class="hover:text-gray-500" href="">Home</a></li>
+          <li><a class="hover:text-gray-500" href="">Home</a></li>
+          <li><a class="hover:text-gray-500" href="">Home</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
+      <div class=""><button class="bg-yellow-400 p-1.5 rounded-lg hover:bg-yellow-500">Site always under construction</button></div>
+      <div class="flex items-center md:hidden">
+        <button class=""><ion-icon name="menu" class="text-2xl cursor-pointer" onclick="toggleMenu(this)"></ion-icon></button>
+      </div>
+    </nav>
+  </header>
 </head>
 
-<body class="flow" style="" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="50">
-  <main class="text-white" id="captain">
-    <!--
-    <div class="vh-100 vw-100 d-flex align-items-center justify-content-center text-left" style="background-image: url('wine-glass.jpg'); background-size: cover; background-position: center;">
-      <div class="container-fluid bg-dark bg-opacity-50 p-3 rounded">
-        <h6 class="h1 text-secondary head-view">Name is,</h6>
-        <div class="h1 text-uppercase fw-bolder ">Victory Osiobe</div>
-        <div class="h6 lead head-view">
-          <p>
-            I'm a Web Developer and Yes, I don't fall amongst the creatives, building just anything.
-            Real deal is, I build for purpose.
-          </p>
-          <p class="h6">
-            A site for drugs, and fashion designs ought not to look, or feel same, but if you build
-            regardless, the demographics will tell.
-          </p>
-          <p class="h6">
-            Recently started releasing open-sources, and this page displays
-            some of them;
-            if you follow me, you may have heard of
-            some that you won't see here, and that's because they're on
-            private repositories on Github or are currently in early stages.
-          </p>
-        </div>
+<body class="body-gradient">
+  <section>
+    <div class="relative min-h-svh flex flex-col gap-5 items-center justify-center text-white text-center abc">
+      <div class="text-lg font-bold uppercase">It's <span class="underline decoration-2 decoration-blue-500">H-I-M!</span></div>
+      <div class="text-6xl font-bold uppercase">Victory Osiobe</div>
+      <div class="flex flex-wrap items-center justify-around gap-5 m-3">
+        <div class="text-xl fobt-bold p-3 border-4 rounded-lg uppercase">I build</div>
+        <div class="text-xl fobt-bold p-3 border-4 border-blue-500 rounded-lg uppercase">I code</div>
+        <div class="text-2xl fobt-bold p-3 border-4 rounded-lg uppercase">I design</div>
       </div>
     </div>
--->
-    <section class="container-fluid text-light my-5 py-5 p-3">
-      <div class="row row-cols-1 row-cols-md-2">
-        <div class="col">
-          <div id="vicko-xp">
-            <div>
-              <span class="trench">V</span>
-              <span class="trench">I</span>
-              <span class="trench">C</span>
-              <span class="trench">T</span>
-              <span class="trench">O</span>
-              <span class="trench">R</span>
-              <span class="trench">Y</span>
-            </div>
-            <div>
-              <span class="trench">O</span>
-              <span class="trench">S</span>
-              <span class="trench">I</span>
-              <span class="trench">O</span>
-              <span class="trench">B</span>
-              <span class="trench">E</span>
-            </div>
-          </div>
-        </div>
-        <div class="col head-view py-3">
-          <div class="pt-3">
-            Not just
-            that I fall amongst the creatives, building blablabla, I build for purpose.
-            A site for drugs, and fashion designs ought not to look, or feel same, but if you build
-            regardless, the demographics will tell.
-          </div>
-          <div class="pt-3">
-            Recently started releasing open-sources, and this page displays a
-            some of them;
-            if you follow me, you may have heard of
-            some that you won't see here, and that's because they're on
-            private repositories on Github or are currently in early stages.
-          </div>
-        </div>
-        <!--    <section class="col d-none d-md-flex justify-content-center align-items-center">
-          <img class="img-fluid" src="images/nerdy.png" alt="An Image Of A Nerd 🤞" style="
-                display: grid;
-                max-width: 90%;
-                max-height: 90%;
-                border-radius: 50%;
-                box-shadow: 0 0 0.1rem var(--bs-primary);
-              " id="modI" />
-        </section>-->
-      </div>
-    </section>
-    <section class="container-fluid my-5 p-3 text-light" id="">
-      <div class="h1 text-uppercase fw-bolder text-light text-left  py-3">
+  </section>
+  
+  <main>
+    <section class="my-5 p-2 text-white uppercase" id="">
+      <div class="text-4xl font-bold text-center py-5">
         Stack & Tech
       </div>
-      <section class="container-fluid">
-        <div class="d-flex flex-row flex-wrap justify-content-around gap-5 text-center">
+      <div class="">
+        <div class="flex flex-col flex-wrap items-center gap-5 text-center">
+          
+          <div class="flex flex-row flex-wrap justify-around gap-10 text-center p-5 px-10 rounded-xl">
+            
+            <div>
+              <img class="s-img" src="/visuals/stack/html5.svg" alt="Html Image">
+              <div class=" pt-2">HTML</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/css3.svg" alt="Css Image">
+              <div class=" pt-2">CSS</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/js.svg" alt="JavaScript Image">
+              <div class=" pt-2">JavaScript</div>
+            </div>
+          </div>
+          
+          <!-- <div class="my-5 text-sm">Then I took a leap to learn...</div> -->
+          
+          <div class="flex flex-row flex-wrap justify-around gap-10 text-center  p-5 px-10 mx-5 rounded-xl">
+            
+            <div>
+              <img class="s-img" src="/visuals/stack/nodejs.svg" alt="NodeJs Image">
+              <div class=" pt-2">nodeJs</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/expressjs.svg" alt="Express Image">
+              <div class=" pt-2">expressJS</div>
+            </div>
+          </div>
+          
+          <!-- <div class="my-5 text-sm">Afterwards, came back to...</div> -->
+          
+          <div class="flex flex-row flex-wrap justify-around gap-10 text-center  p-5 px-10 mx-5 rounded-xl">
+            
+            <div>
+              <img class="s-img" src="/visuals/stack/bootstrap.svg" alt="Bootstrap Image">
+              <div class=" pt-2">bootstrap</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/tailwind.svg" alt="Tailwind Image">
+              <div class=" pt-2">tailwind</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/react.svg" alt="React Image">
+              <div class=" pt-2">reactJs</div>
+            </div>
+          </div>
+          
+          <!-- <div class="my-5 text-sm">And all these led me to tools like...</div> -->
+          
+          <div class="flex flex-row flex-wrap justify-around gap-10 text-center  p-5 px-10 mx-5 rounded-xl">
+            
+            <div>
+              <img class="s-img" src="/visuals/stack/vite.svg" alt="Vite Image">
+              <div class=" pt-2">vite</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/git.svg" alt="Git Image">
+              <div class=" pt-2">git</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/github.svg" alt="Github Image">
+              <div class=" pt-2">github</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/render.svg" alt="Render Image">
+              <div class=" pt-2">render</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/vercel.svg" alt="Vercel Image">
+              <div class=" pt-2">vercel</div>
+            </div>
+          </div>
+          
+          <!-- <div class="my-5 text-sm">While not in active usage, I also picked up...</div> -->
+          
+          <div class="flex flex-row flex-wrap justify-around gap-10 text-center  p-5 px-10 mx-5 rounded-xl">
+            
+            <div>
+              <img class="s-img" src="/visuals/stack/typescript.svg" alt="Typescript Image">
+              <div class=" pt-2">typescript</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/nextjs.svg" alt="NextJs Image">
+              <div class=" pt-2">nextjs</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/mongoose.svg" alt="Mongoose Image">
+              <div class=" pt-2">mongoose</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/python.svg" alt="Python Image">
+              <div class=" pt-2">python</div>
+            </div>
+          </div>
+          
+          
+          <div class="flex flex-row flex-wrap justify-around gap-10 text-center  p-5 px-10 mx-5 rounded-xl">
+            
+            <div>
+              <img class="s-img" src="/visuals/stack/telegram.svg" alt="Telegram Image">
+              <div class=" pt-2">telegram bot API</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/ngrok.svg" alt="Ngrok Image">
+              <div class=" pt-2">Ngrok</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/solana.svg" alt="Solana Image">
+              <div class=" pt-2">Solana web3 API</div>
+            </div>
+            <div>
+              <img class="s-img" src="/visuals/stack/redis.svg" alt="Redis Image">
+              <div class=" pt-2">Redis</div>
+            </div>
+          </div>
+          <div class="my-5 text-sm">In addition to...</div>
+          
+          
+          <!-- <div class="flex flex-col flex-wrap justify-center gap-10 text-center p-5 px-10 rounded-xl">
+          
           <div>
-            <img class="s-img" src="/visuals/stack/html5.svg" alt="Html Image">
-            <div class="text-uppercase pt-2">HTML</div>
+            <div class="flex flex-col">
+              <div class="text-left">
+                <img class="s-img-" src="/visuals/stack/telegram.svg" alt="Telegram Image">
+                <div class="pt-2">telegram bot API</div>
+              </div>
+              <div class=" pt-2 text-sm text-left normal-case">Wanted to know how bots were setup on telegram, and that led me to learning how to use their api to build telegram bots.</div>
+            </div>
           </div>
+          
+                    <div>
+            <div class="flex flex-col">
+              <div class="text-left">
+                <img class="s-img-" src="/visuals/stack/ngrok.svg" alt="Ngrok Image">
+                <div class="pt-2">ngrok</div>
+              </div>
+              <div class=" pt-2 text-sm text-left normal-case"><p class="my-2">You see, i got to a point that tests had to be done with services online, like the telegram api, which would wanna reach your code over the internet and Ngrok helps expose your software with free limited domains.</p><p class="my-2">Ngrok also helped when i was testing remote notifications. </p></div>
+            </div>
+          </div>
+        
           <div>
-            <img class="s-img" src="/visuals/stack/css3.svg" alt="Css Image">
-            <div class="text-uppercase pt-2">CSS</div>
+            <div class="flex flex-col">
+              <div class="text-left">
+                <img class="s-img-" src="/visuals/stack/solana.svg" alt="Solana Image">
+                <div class="pt-2">SOL web3 API</div>
+              </div>
+              <div class=" pt-2 text-sm text-left normal-case"><p class="my-2">While everyone thought i was probably dead when i stopped contributing to my public github and socials, I was on the solana blockchain, doing, you know... until i thought i could actually build stuff on solana, and that led me to learn to use the nodeJS SDK to interact with the blockchain because I'm not as solid with the rust language.</p> <p class="my-2">Unfortunately, all projects I've done yet with this are on non-disclosure, but you could find some helper tools I built on my main GitHub repos.</p></div>
+            </div>
           </div>
+          
+          
           <div>
-            <img class="s-img" src="/visuals/stack/js.svg" alt="JavaScript Image">
-            <div class="text-uppercase pt-2">JavaScript</div>
+            <div class="flex flex-col">
+              <div class="text-left">
+                <img class="s-img-" src="/visuals/stack/ngrok.svg" alt="Ngrok Image">
+                <div class="pt-2">ngrok</div>
+              </div>
+              <div class=" pt-2 text-sm text-left normal-case">You see, i got to a point that tests had to be done with services online, like the telegram api, which would wanna reach your code over the internet and Ngrok helps expose your software with free limited domains.</div>
+            </div>
           </div>
-          <!--  <div>
-            <img class="s-img" src="/visuals/stack/php.svg" alt="Php Image">
-            <div class="text-uppercase pt-2">php</div>
-          </div>
-<div>
-            <img class="s-img" src="/visuals/stack/python.svg" alt="Python Image">
-            <div class="text-uppercase pt-2">python</div>
-          </div>
-<div>
-            <img class="s-img" src="/visuals/stack/typescript.svg" alt="Typescript Image">
-            <div class="text-uppercase pt-2">typescript</div>
-          </div>
-        -->
-          <div>
-            <img class="s-img" src="/visuals/stack/nodejs.svg" alt="NodeJs Image">
-            <div class="text-uppercase pt-2">nodeJs</div>
-          </div>
-          <div>
-            <img class="s-img" src="/visuals/stack/expressjs.svg" alt="Express Image">
-            <div class="text-uppercase pt-2">expressJS</div>
-          </div>
-          <!-- <div>
-            <img class="s-img" src="/visuals/stack/mongodb.svg" alt="MongoDB Image">
-            <div class="text-uppercase pt-2">mongodb</div>
-          </div>
-          <div>
-            <img class="s-img" src="/visuals/stack/mongoose.svg" alt="Mongoose Image">
-            <div class="text-uppercase pt-2">mongoose</div>
-          </div>
-       -->
-          <div>
-            <img class="s-img" src="/visuals/stack/bootstrap.svg" alt="Bootstrap Image">
-            <div class="text-uppercase pt-2">bootstrap</div>
-          </div>
-          <div>
-            <img class="s-img" src="/visuals/stack/tailwind.svg" alt="Tailwind Image">
-            <div class="text-uppercase pt-2">tailwind</div>
-          </div>
-          <div>
-            <img class="s-img" src="/visuals/stack/react.svg" alt="React Image">
-            <div class="text-uppercase pt-2">reactJs</div>
-          </div>
-          <!--    <div>
-            <img class="s-img" src="/visuals/stack/nextjs.svg" alt="NextJS Image">
-            <div class="text-uppercase pt-2">nextJS</div>
-          </div>
-        -->
-          <div>
-            <img class="s-img" src="/visuals/stack/vite.svg" alt="Vite Image">
-            <div class="text-uppercase pt-2">vite</div>
-          </div>
-          <div>
-            <img class="s-img" src="/visuals/stack/git.svg" alt="Git Image">
-            <div class="text-uppercase pt-2">git</div>
-          </div>
-          <div>
-            <img class="s-img" src="/visuals/stack/github.svg" alt="Github Image">
-            <div class="text-uppercase pt-2">github</div>
-          </div>
-          <div>
-            <img class="s-img" src="/visuals/stack/render.svg" alt="Render Image">
-            <div class="text-uppercase pt-2">render</div>
-          </div>
-          <div>
-            <img class="s-img" src="/visuals/stack/vercel.svg" alt="Vercel Image">
-            <div class="text-uppercase pt-2">vercel</div>
-          </div>
+        
+        </div> -->
+          
         </div>
-        <div class="my-3" style="font-size: 0.7rem">
-          Failed To Highlight:
-          *typescript
-          *php
-          *python
-          *mongodb
-          *mongoose
-          *nextJS
-        </div>
-      </section>
+      </div>
     </section>
-
-    <section class="container-fluid my-5 p-3 h-100" id="out-I-">
-      <div class="h1 text-uppercase fw-bolder text-light text-left py-3 ">
+    
+    <section class="my-5 p-2 text-white uppercase bg-gray-900" id="">
+      <div class="text-4xl font-bold text-center py-5">
         Source Pool
       </div>
-      <div class="d-flex">
-        <div id="stroller"></div>
-
-        <div class="container-fluid py-3 ps-3" id="card-park">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-5">
-            <div class="col">
-              <div class="card shadow p-0 hide-element-y">
-                <img class="card-img-top gitStatImg" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop" alt="Kingchop GitHub Stats Image" />
-                <div class="card-body card-main-bg rounded-bottom">
-                  <div class="card-title text-uppercase h4 outlinera">Kingchop</div>
-                  <p class="card-text">
-                    Kingchop a library, is a flexible, static text tokenizer for
-                    English, built with node JavaScript, and it is still
-                    maintained till date. I have been able to push more features
-                    despite English inconsistencies.
-                  </p>
-                  <p class="card-text">
-                    Kingchop as at of
-                    <span class="badge bg-primary">v1.0.6 (Aurora)</span>, had
-                    paragraph, sentence, sub-sentence, words, tokenizing
-                    abilities, with extra correct text method.
-                  </p>
-                  <div class="card-footer bg-transparent g-4 border-0 row">
-                    <a href="https://github.com/victoryosiobe/kingchop" class="btn btn-outline-primary col p-2 mx-1">Docs On GitHub</a>
-                    <a href="https://npmjs.com/package/kingchop" class="btn btn-outline-primary t col p-2 mx-1">View On NPM</a>
-                  </div>
-                </div>
-              </div>
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 md:flex-row md:flex-wrap p-10 pt-5">
+        
+        <div class="flex flex-col p-0">
+          <img class="rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop" alt="Kingchop GitHub Stats Image" />
+          <div class="bg-gray-800 rounded-b-2xl p-5 relative z-[1]">
+            <div class="uppercase text-xl font-bold my-1">Kingchop</div>
+            <div class="normal-case text-sm my-1">
+              <p>
+                Kingchop a library, is a flexible, static text tokenizer for
+                English, built with node JavaScript, and it is still
+                maintained till date. I have been able to push more features
+                despite English inconsistencies.
+              </p>
+              <p>
+                Kingchop as of
+                <span class="px-1 py-0.5 rounded-md bg-white text-gray-800">v1.0.6 (Aurora)</span>, had
+                paragraph, sentence, sub-sentence, words, tokenizing
+                abilities, with extra correct text method.
+              </p>
             </div>
-
-            <div class="col">
-              <div class="card shadow p-0 hide-element-x">
-                <img class="card-img-top gitStatImg" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/nrrverse" alt="Nrrverse GitHub Stats Image" />
-                <div class="card-body card-main-bg rounded-bottom">
-                  <div class="card-title text-uppercase h4 outlinera">Nrrverse</div>
-                  <p class="card-text">
-                    A react site, supposedly to be filled with elements designed by open source, and contributions.
-                    I thought ahead with all the competitions out there, no way this was going to be a success. Oh well, I built what it would be like, with some actual functioning parts.
-                  </p>
-                  <p class="card-text">
-                    The goal was for devs from all around including me to contribute to the project, showcasing their abilities, taking the opportunity to get sponsored on their “Buy me a coffee” links, or on socials.
-                  </p>
-                  <p class="card-text">
-                    I also needed to do some API for the application, that devs could use to show their designs on whatever site. But limited to frontend and no clue on how to pay for server operations, I achieved it on FRONTEND.
-                  </p>
-                  <p class="card-text">
-                    Who does that? Me! Well, with the help of Vercel free hosting and domain, and config, so anyone could iframe their design to any site.
-                  </p>
-                  <div class="card-footer bg-transparent g-4 border-0 row">
-                    <a href="https://github.com/victoryosiobe/nrrverse" class="btn btn-outline-primary col p-2 mx-1">Source On GitHub</a>
-                    <a href="https://nrrverse.vercel.app" class="btn btn-outline-primary t col p-2 mx-1">View On Vercel</a>
-                  </div>
-                </div>
-              </div>
+            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
+              <a href="https://github.com/victoryosiobe/kingchop" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs on GitHub</a>
+              <a href="https://npmjs.com/package/kingchop" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On NPM</a>
             </div>
-
-            <div class="col">
-              <div class="card shadow p-0 hide-element-x">
-                <img class="card-img-top gitStatImg" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/zrang" alt="Zrang GitHub Stats Image" />
-                <div class="card-body card-main-bg rounded-bottom">
-                  <div class="card-title text-uppercase h4 outlinera">Zrang</div>
-                  <p class="card-text">
-                    A web, 2D, game made with canvas. The idea was from a game, my mentor in my early days gave to me, instructing to write from scratch. I did so, but this was no copy and paste. I only needed to know the rules of the game, then write it for zrang.
-                  </p>
-                  <p class="card-text">
-                    This game took me about 4 days to build despite not knowing anything about canvas. I was just learning and doing. Try the game out, at least, before you continue with this site.
-                  </p>
-                  <div class="card-footer bg-transparent g-4 border-0 row">
-                    <a href="https://github.com/victoryosiobe/zrang" class="btn btn-outline-primary col p-2 mx-1">Source On GitHub</a>
-                    <a href="https://victoryosiobe.github.io/zrang" class="btn btn-outline-primary t col p-2 mx-1">Play On GitPages</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <!--
-          <div class="col">
-            <div class="card shadow p-0 hide-element-y">
-              <img class="card-img-top gitStatImg" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/rage" alt="Rage GitHub Stats Image" />
-              <div class="card-body card-main-bg rounded-bottom">
-                <div class="card-title text-uppercase h4 outlinera">Rage</div>
-                <p class="card-text"> Cool Name? Probably. This was a project that a developer from Facebook, outsourced to me. A frontend of the page directly on this domain: <a href="https://prostanourish.com">Prostanourish</a>.</p>
-                <p class="card-text">I was about finishing (cloning, not even making it better) when he told me he'd given someone else (in-person), the job. I asked for a feedback on how I did, but he said I wasn't the problem. Then he decided to pay 60% less (compensation). But at end, I didn't get paid, and he blocked me, though he didn't get the files. I know better now.</p>
-                <p class="card-text">I got all resources from that live site (though might have changed), and it was built with WordPress which made the site unnecessarily dense of Html. I spent 3-4 days to build this, and it deverses a spot here. But I'd never update it.</p>
-                <div class="card-footer bg-transparent g-2 border-0 row">
-                  <a href="https://github.com/victoryosiobe/rage" class="btn btn-outline-primary col p-2 mx-1">Source On GitHub</a>
-                  <a href="https://victoryosiobe.github.io/rage" class="btn btn-outline-primary col p-2 mx-1">View On GitPages</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          -->
-
-            <div class="col">
-              <div class="card shadow p-0 hide-element-y">
-                <img class="card-img-top gitStatImg" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/betabi" alt="BetAbi GitHub Stats Image" />
-                <div class="card-body card-main-bg rounded-bottom">
-                  <div class="card-title text-uppercase h4 outlinera">BetAbi</div>
-                  <p class="card-text">
-                    An arbitrage calculator, for placing bets on bookmakers. It
-                    let's you know, when you loose, win, or make nothing, out of the 2 opposite dependent event, all based on odds
-                  </p>
-                  <p class="card-text"><span class="badge bg-primary">General Advice:</span> Bet responsibly please. 3 losses a day on bets or casinos is enough, 1 win is enough. Don't martingale your life out.</p>
-                  <div class="card-footer bg-transparent g-2 border-0 row">
-                    <a href="https://github.com/victoryosiobe/betabi" class="btn btn-outline-primary col p-2 mx-1">Source On GitHub</a>
-                    <a href="https://victoryosiobe.github.io/betabi" class="btn btn-outline-primary col p-2 mx-1">View On GitPages</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-
-
-            <div class="col">
-              <div class="card shadow p-0 hide-element-x">
-                <img class="card-img-top gitStatImg" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/blueuniverse" alt="Blue Universe GitHub Stats Image" />
-                <div class="card-body card-main-bg rounded-bottom">
-                  <div class="card-title text-uppercase h4 outlinera">Blue Universe</div>
-                  <p class="card-text">
-                    This one is a single-paged responsive site I put up when I
-                    was starting out with web development. I didn't use any
-                    library or framework for building it. It's only built with
-                    vanilla HTML, CSS, and JavaScript.
-                  </p>
-                  <div class="card-footer bg-transparent g-2 border-0 row">
-                    <a href="https://github.com/victoryosiobe/blueuniverse" class="btn btn-outline-primary col p-2 mx-1">Source On GitHub</a>
-                    <a href="https://victoryosiobe.github.io/blueuniverse" class="btn btn-outline-primary col p-2 mx-1">View On GitPages</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card shadow p-0 hide-element-y">
-                <img class="card-img-top gitStatImg" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/copik" alt="Copik GitHub Stats Image" />
-                <div class="card-body card-main-bg rounded-bottom">
-                  <div class="card-title text-uppercase h4 outlinera">Copik</div>
-                  <p class="card-text">
-                    I found it hard to write Hex color codes. Maybe I
-                    was too lazy to learn how to, but since I've got the abilities, why not build a color picker?
-                  </p>
-                  <p class="card-text">
-                    See, that's how workarounds work!
-                  </p>
-                  <div class="card-footer bg-transparent g-2 border-0 row">
-                    <a href="https://github.com/victoryosiobe/copik" class="btn btn-outline-primary col p-2 mx-1">Source On GitHub</a>
-                    <a href="https://victoryosiobe.github.io/copik" class="btn btn-outline-primary col p-2 mx-1">View On GitPages</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card shadow p-0 hide-element-x">
-                <img class="card-img-top gitStatImg" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/repli" alt="Repli GitHub Stats Image" />
-                <div class="card-body card-main-bg rounded-bottom">
-                  <div class="card-title text-uppercase h4 outlinera">Repli</div>
-                  <p class="card-text">
-                    An algorithm that checks 2 sentences to tell their
-                    similarity. It's a basic static algorithm, with different
-                    modes.
-                  </p>
-                  <p class="card-text">
-                    It's amongst the projects I built when I was starting out
-                    with Natural Language Processing (NLP).
-                  </p>
-                  <div class="card-footer bg-transparent g-2 border-0 row">
-                    <a href="https://github.com/victoryosiobe/repli" class="btn btn-outline-primary col p-2 mx-1">Source On GitHub</a>
-                    <a href="https://victoryosiobe.github.io/repli" class="btn btn-outline-primary col p-2 mx-1">View On GitPages</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="card shadow p-0 hide-element-y">
-                <img class="card-img-top gitStatImg" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/sently" alt="Sently GitHub Stats Image" />
-                <div class="card-body card-main-bg rounded-bottom">
-                  <div class="card-title text-uppercase h4 outlinera">Sently</div>
-                  <p class="card-text">
-                    Amongst the projects I built when starting out with NLP is
-                    sently, a basic algorithm for giving sentiment scores for
-                    sentences you input.
-                  </p>
-                  <p class="card-text">
-                    While I don't have a frontend specially built for it, you
-                    could copy the <code>sentimental.js</code> file and
-                    incorporate it in your projects.
-                  </p>
-                  <div class="card-footer bg-transparent g-2 border-0 row">
-                    <a href="https://github.com/victoryosiobe/sently" class="btn btn-outline-primary col p-2 mx-1">Source On GitHub</a>
-                    <a href="https://victoryosiobe.github.io/sently" class="btn btn-outline-primary col p-2 mx-1">View On GitPages</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0 hover:-rotate-45 hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
           </div>
         </div>
-        <div id="stroller"></div>
-
+        
+        <div class="flex flex-col p-0">
+          <img class="rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/nrrverse" alt="Nrrvese GitHub Stats Image" />
+          <div class="bg-gray-800 rounded-b-2xl p-5 relative z-[1]">
+            <div class="uppercase text-xl font-bold my-1">Nrrverse</div>
+            <div class="normal-case text-sm my-1">
+              <p>
+                A react site, supposedly to be filled with elements designed by open source, and contributions. I thought ahead with all the competitions out there, no way this was going to be a success. Oh well, I built what it would be like, with some actual functioning parts.
+              </p>
+              <p>
+                The goal was for devs from all around including me to contribute to the project, showcasing their abilities, taking the opportunity to get sponsored on their “Buy me a coffee” links, or on socials.
+              </p>
+              <p>
+                I also needed to do some API for the application, that devs could use to show their designs on whatever site. But limited to frontend and no clue on how to pay for server operations, I achieved it on FRONTEND.
+              </p>
+              
+              <p>
+                Who does that? Me! Well, with the help of Vercel free hosting and domain, and config, so anyone could iframe their design to any site.
+              </p>
+            </div>
+            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
+              <a href="https://github.com/victoryosiobe/nrrverse" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+              <a href="https://nrrverse.vercel.app" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On Vercel</a>
+            </div>
+            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0 hover:-rotate-45 hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col p-0">
+          <img class="rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/zrang" alt="Zrang GitHub Stats Image" />
+          <div class="bg-gray-800 rounded-b-2xl p-5 relative z-[1]">
+            <div class="uppercase text-xl font-bold my-1">Zrang</div>
+            <div class="normal-case text-sm my-1">
+              <p>
+                A web, 2D, game made with canvas. The idea was from a game, my mentor in my early days gave to me, instructing to write from scratch. I did so, but this was no copy and paste. I only needed to know the rules of the game, then write it for zrang.
+              </p>
+              <p>
+                This game took me about 4 days to build despite not knowing anything about canvas. I was just learning and doing. Try the game out, at least, before you continue with this site.
+              </p>
+            </div>
+            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
+              <a href="https://github.com/victoryosiobe/zrang" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+              <a href="https://victoryosiobe.github.io/zrang" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Play On GitPages</a>
+            </div>
+            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0 hover:-rotate-45 hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col p-0">
+          <img class="rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/betabi" alt="BetAbi GitHub Stats Image" />
+          <div class="bg-gray-800 rounded-b-2xl p-5 relative z-[1]">
+            <div class="uppercase text-xl font-bold my-1">BetAbi</div>
+            <div class="normal-case text-sm my-1">
+              <p>
+                An arbitrage calculator, for placing bets on bookmakers. It
+                let's you know, when you loose, win, or make nothing, out of the 2 opposite dependent event, all based on odds.
+              </p>
+              <p> <span class="px-1 py-0.5 rounded-md bg-white text-gray-800">General Advice:</span>
+                Gambling at casinos/bookmakers is shit. Arbitaging, maybe not, but you have a terribly low probability of profiting at other stuff. Martingale-ing too, based off losses isn't really wise, and that gets you to zero quickly. Want a good life? Call it quits for gambling at casinos/bookmakers, but yeah, every other thing in life is a low-key gamble.
+              </p>
+            </div>
+            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
+              <a href="https://github.com/victoryosiobe/betabi" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+              <a href="https://victoryosiobe.github.io/betabi" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On GitPages</a>
+            </div>
+            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] scale-x-[-1] rotate-0 hover:-rotate-45 hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col p-0">
+          <img class="rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/blueuniverse" alt="Blue Universe GitHub Stats Image" />
+          <div class="bg-gray-800 rounded-b-2xl p-5 relative z-[1]">
+            <div class="uppercase text-xl font-bold my-1">Blue Universe</div>
+            <div class="normal-case text-sm my-1">
+              <p>
+                This one is a single-paged responsive site I put up when I
+                was starting out with web development. I didn't use any
+                library or framework for building it. It's only built with
+                vanilla HTML, CSS, and JavaScript.
+              </p>
+            </div>
+            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
+              <a href="https://github.com/victoryosiobe/blueuniverse" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+              <a href="https://victoryosiobe.github.io/blueuniverse" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Vew On GitPages</a>
+            </div>
+            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0 hover:-rotate-45 hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col p-0">
+          <img class="rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/copik" alt="Blue Universe GitHub Stats Image" />
+          <div class="bg-gray-800 rounded-b-2xl p-5 relative z-[1]">
+            <div class="uppercase text-xl font-bold my-1">Copik</div>
+            <div class="normal-case text-sm my-1">
+              <p>
+                I found it hard to write Hex color codes. Maybe I
+                was too lazy to learn how to, but since I've got the abilities, why not build a color picker?
+              </p>
+              <p>
+                See, that's how workarounds work.
+              </p>
+            </div>
+            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
+              <a href="https://github.com/victoryosiobe/copik" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+              <a href="https://victoryosiobe.github.io/copik" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Vew On GitPages</a>
+            </div>
+            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0 hover:-rotate-45 hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col p-0">
+          <img class="rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/repli" alt="Blue Universe GitHub Stats Image" />
+          <div class="bg-gray-800 rounded-b-2xl p-5 relative z-[1]">
+            <div class="uppercase text-xl font-bold my-1">Repli</div>
+            <div class="normal-case text-sm my-1">
+              <p>
+                An algorithm that checks 2 sentences to tell their
+                similarity. It's a basic static algorithm, with different
+                modes.
+              </p>
+              <p>
+                It's amongst the projects I built when I was starting out
+                with Natural Language Processing (NLP).
+              </p>
+            </div>
+            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
+              <a href="https://github.com/victoryosiobe/repli" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+              <a href="https://victoryosiobe.github.io/repli" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Vew On GitPages</a>
+            </div>
+            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0 hover:-rotate-45 hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col p-0">
+          <img class="rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/sently" alt="Blue Universe GitHub Stats Image" />
+          <div class="bg-gray-800 rounded-b-2xl p-5 relative z-[1]">
+            <div class="uppercase text-xl font-bold my-1">Sently</div>
+            <div class="normal-case text-sm my-1">
+              <p>
+                Amongst the projects I built when starting out with NLP is
+                sently, a basic algorithm for giving sentiment scores for
+                sentences you input.
+              </p>
+              <p>
+                While I don't have a frontend specially built for it, you
+                could copy the <code>sentimental.js</code> file and
+                incorporate it in your projects.
+              </p>
+            </div>
+            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
+              <a href="https://github.com/victoryosiobe/sently" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+              <a href="https://victoryosiobe.github.io/sently" class="border-2 border-blue-500 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Vew On GitPages</a>
+            </div>
+            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0 hover:-rotate-45 hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
+          </div>
+        </div>
+        
       </div>
     </section>
-
-    <section class="p-3 my-5" id="sectionX">
-      <div class="h1 text-uppercase fw-bolder text-left text-light py-3 ">
+    
+    <section class="my-5 p-2 text-white uppercase">
+      <div class="text-4xl font-bold text-center py-5">
         About
       </div>
-      <div class="card m-1 shadow-lg hide-element-x">
-        <!--  <img class="card-img-top gitStatImg" src="./visuals/thevicko-lite.jpg" alt="Image Of Victory Osiobe" />-->
-        <div class="card-body card-main-bg rounded-bottom">
-          <p class="card-title text-uppercase h4 outlinera">Victory Osiobe</p>
-          <p class="card-text">
-            A Freelance Web Developer with expertise in web designs—UI, UX, PWAs, and Backend development.
-          </p>
-          <div class="card-footer bg-transparent text-primary text-center d-flex flex-row flex-wrap justify-content-around">
-            <div>
-              <a href="https://github.com/victoryosiobe">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                </svg>
-              </a>
-            </div>
-
-            <div>
-              <a href="https://stackoverflow.com/users/20313640/victory-osiobe">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stack-overflow" viewBox="0 0 16 16">
-                  <path d="M12.412 14.572V10.29h1.428V16H1v-5.71h1.428v4.282h9.984z" />
-                  <path d="M3.857 13.145h7.137v-1.428H3.857zM10.254 0 9.108.852l4.26 5.727 1.146-.852zm-3.54 3.377 5.484 4.567.913-1.097L7.627 2.28l-.914 1.097zM4.922 6.55l6.47 3.013.603-1.294-6.47-3.013-.603 1.294zm-.925 3.344 6.985 1.469.294-1.398-6.985-1.468-.294 1.397z" />
-                </svg>
-              </a>
-            </div>
-
-            <div>
-              <a href="https://facebook.com/victoryosiobe.official">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
-                </svg>
-              </a>
+      <div class="relative flex flex-col gap-4 m-5 p-5 justify-center items-center bg-gray-800 bg-opacity-30 rounded-xl shadow-lg">
+        <div class="absolute h-full w-full opacity-[0.03] z-[1] hover:opacity-[0.1]  transition duration-1000 overflow-hidden"><img class="object-cover w-full h-full hover:scale-110 transition duration-1000" src="./visuals/wine-glass.jpg" alt="Image Of Glass Wine" onerror="this.classList.add('hidden')" />
+        </div>
+        <div class="relative flex flex-wrap gap-2 items-center z-[2]">
+          <div class="">
+            <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-gray-600">
+              <img class="object-cover w-full h-full" src="./visuals/thevicko-lite.jpg" alt="Image Of Victory Osiobe" />
             </div>
           </div>
+          <div class="">
+            <div class="text-xl font-bold pb-0.5">Victory Osiobe</div>
+            <div class="text-sm normal-case py-0.5">
+              A Freelance Web Developer with expertise in web designs—UI, UX, PWAs, and Backend development.</div>
+          </div>
         </div>
+        <div class="flex flex-wrap justify-center items-center gap-10 bg-red-">
+          <div>
+            <a href="https://github.com/victoryosiobe">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+              </svg>
+            </a>
+          </div>
+          
+          <div>
+            <a href="https://stackoverflow.com/users/20313640/victory-osiobe">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stack-overflow" viewBox="0 0 16 16">
+                <path d="M12.412 14.572V10.29h1.428V16H1v-5.71h1.428v4.282h9.984z" />
+                <path d="M3.857 13.145h7.137v-1.428H3.857zM10.254 0 9.108.852l4.26 5.727 1.146-.852zm-3.54 3.377 5.484 4.567.913-1.097L7.627 2.28l-.914 1.097zM4.922 6.55l6.47 3.013.603-1.294-6.47-3.013-.603 1.294zm-.925 3.344 6.985 1.469.294-1.398-6.985-1.468-.294 1.397z" />
+              </svg>
+            </a>
+          </div>
+          
+          <div>
+            <a href="https://facebook.com/victoryosiobe.official">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
       </div>
-      <script>
-        function copyInputContent() {
-          const inputField = document.getElementById("readOnlyInput");
-          // Select the text in the input field
-          inputField.select();
-          inputField.setSelectionRange(0, 99999); // For mobile devices
-          // Copy the selected text
-          document.execCommand("copy");
-          setTimeout(() => inputField.setSelectionRange(0, 0), 1000); // Wait For Copying To Complete Before unSelecting
-        }
-      </script>
     </section>
-
-    <footer class="p-3 text-light" id="foot">
-      <section class="py-3">
-        <div class="h1 text-uppercase fw-bolder text-left pb-3 ">FAQ</div>
-        <div>
-          <div class="mod-foot-l">
-            <div class="head-faq" title="+">What Intrests Me?</div>
-            <div class="foldable head-view">
-              <p>Artificial Intelligence, Natural Language Processing, and Machine Learning. </p>
-              <p>For now, I use NodeJs and Python as primary backend languages when building applications related to AI, NLP, and ML.</p>
-              <p>I'm into frontend development as well. It's kind of when the inspiration comes. :)</p>
-            </div>
-          </div>
-          <div class="mod-foot-l">
-            <div class="head-faq" title="+">What's My Stack?</div>
-            <div class="foldable head-view">
-              <p>I am solid with HTML, CSS, JavaScript.</p>
-              <p>React and Bootstrap also amongst, but I need to get top notch with them. </p>
-              <p>Months Ago, I delved into the backend world, utilizing both NodeJs and Python.</p>
-            </div>
-          </div>
-          <div class="mod-foot-l">
-            <div class="head-faq" title="+">What Other Languages Or Tools Do I Intend Learning?</div>
-            <div class="foldable head-view">
-              <p>Not quite precise on answer, but it depends largely on what I indulge in, in the future; I admire Rust, Dart, and Go, languages but they're much, considering the Libraries and Frameworks I would have to learn. React Native is also on this list.</p>
-              <p>I've kick started with Rust though, Go, Dart, React Native, maybe some other time.</p>
-            </div>
+    
+  </main>
+  
+  <footer class="bg-gray-900">
+    <section class="my-5 p-5 pb-0 text-white">
+      <div class="text-4xl font-bold text-center py-5 uppercase">
+        FAQ</div>
+      <div class="space-y-4 bg-gray-800 p-5 rounded-2xl my-5" id="faq">
+        <div class="border-b border-gray-700 overflow-hidden">
+          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+            <span>What Interests Me?</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+            <p>Artificial Intelligence, Natural Language Processing, and Machine Learning.</p>
+            <p>I use NodeJs and Python as primary backend languages.</p>
+            <p>Frontend development? Only when the vibes align.</p>
           </div>
         </div>
-      </section>
-      <div class="text-uppercase mt-3 text-left text-muted mark d-inline-block" style="font-size: 0.7rem">
-        Designed by, Victory Osiobe
-        ©<span id="d-v-g"></span>
+        
+        <div class="border-b border-gray-700 overflow-hidden">
+          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+            <span>What's My Stack?</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+            <p>HTML, CSS, JavaScript — the usual suspects.</p>
+            <p>React and Bootstrap are in the mix.</p>
+            <p>Backend with NodeJs and Python? Been there, building that.</p>
+          </div>
+        </div>
+        
+        <div class="border-b border-gray-700 overflow-hidden">
+          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+            <span>What Other Languages or Tools?</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+            <p>Rust, Dart, Go, React Native — future interests.</p>
+            <p>Already tinkering with Rust. The others? Soon maybe.</p>
+          </div>
+        </div>
       </div>
-    </footer>
-  </main>
+      <div class="uppercase text-center text-xs bg-gold-500 w-ft p-2">
+        <p>Designed by, Victory Osiobe.</p>
+        <p>©<span id="d-v-g">2023—till date.</span></p>
+      </div>
+    </section>
+  </footer>
+  
+  </footer>
 </body>
+<script>
+  const navMore = document.querySelector(".navMore");
+  
+  function toggleMenu(e) {
+    e.name = e.name === "close" ? "menu" : "close"
+    
+    if (navMore.style.maxHeight) {
+      navMore.style.maxHeight = null;
+    } else {
+      navMore.style.maxHeight = navMore.scrollHeight + "px";
+    }
+  }
+</script>
 <script>
   const metaThemeColor = document.querySelector('meta[name="theme-color"]');
   const rootStyle = getComputedStyle(document.documentElement);
   const themeColor = rootStyle.getPropertyValue('--secColor');
   if (metaThemeColor) metaThemeColor.setAttribute('content', themeColor);
-
+  
   function dater() {
     const dateEl = document.getElementById("d-v-g");
     const year = new Date().getFullYear();
@@ -539,8 +543,24 @@
       (dateEl.textContent = "2023—" + year);
   }
 </script>
+<script>
+  document.querySelectorAll('.faq-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling
+      const icon = btn.querySelector('.icon')
+      
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null
+        icon.textContent = '+'
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px'
+        icon.textContent = '–'
+      }
+    })
+  })
+</script>
 
 <script src="index.js" onload="dater()"></script>
-<script src="y.js" type="module"></script>
+
 
 </html>

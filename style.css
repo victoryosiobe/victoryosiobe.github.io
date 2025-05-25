@@ -4,6 +4,7 @@ body {
   margin: 0;
   background: linear-gradient(to bottom, #0D1117, #0A0F1A);
   font-family: "Varela Round";
+  color-scheme: light;
 }
 
 .navMore {

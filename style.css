@@ -26,7 +26,7 @@ li {
 .abc {
   background-image: linear-gradient(rgba(0, 0, 0, 0.78),
       #0D1117),
-    url("./src/images/the-v.jpg") !important;
+    url("./src/images/the-v.webp") !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;

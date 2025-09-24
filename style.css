@@ -5,6 +5,7 @@ body {
   background: linear-gradient(to bottom, #0D1117, #0A0F1A);
   font-family: "Varela Round";
   color-scheme: dark;
+  scroll-behavior: smooth;
 }
 
 .navMore {
@@ -24,13 +25,13 @@ li {
 }
 
 .abc {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.78),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75),
       #0D1117),
-    url("./src/images/the-v.webp") !important;
+    url("./src/images/open/the-v.webp") !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-  animation: bgSlide 20s ease-in-out infinite alternate;
+animation: bgSlide 30s ease-in-out infinite alternate;
 }
 
 

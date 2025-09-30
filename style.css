@@ -31,7 +31,7 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-animation: bgSlide 30s ease-in-out infinite alternate;
+  animation: bgSlide 30s ease-in-out infinite alternate;
 }
 
 
@@ -59,4 +59,9 @@ animation: bgSlide 30s ease-in-out infinite alternate;
 p {
   margin-top: 0.35rem !important;
   margin-bottom: 0.35rem !important;
+}
+
+footer {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
 }

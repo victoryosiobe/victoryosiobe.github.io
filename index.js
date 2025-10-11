@@ -1,3 +1,5 @@
+import { saveImage, getAllImages  } from "./src/utils/imageCacher.js"
+
 const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 const rootStyle = getComputedStyle(document.documentElement);
 const themeColor = rootStyle.getPropertyValue('--secColor');
@@ -5,7 +7,7 @@ if (metaThemeColor) metaThemeColor.setAttribute('content', themeColor);
 
 const SCREENSHOT_API_URL_READY = "https://peekabooo.vercel.app/screenshot?url=";
 
-async function fetchImage(url) {
+async function fetchImage(url, id) {
   try {
     const res = await fetch(url);
     
@@ -19,6 +21,8 @@ async function fetchImage(url) {
     }
     
     const blob = await res.blob();
+    await saveImage(blob, id);
+    
     const imgURL = URL.createObjectURL(blob);
     
     console.log("Image is valid.");
@@ -30,19 +34,34 @@ async function fetchImage(url) {
 }
 
 async function updateImages(previewImageEls) {
-  const jobs = previewImageEls.map(async (imageEl) => {
+  const dbImages = await getAllImages(); // from IndexedDB
+  const cacheMap = new Map(dbImages.map(({ tag, blob }) => [String(tag), blob]));
+  
+  const jobs = previewImageEls.map(async (imageEl, index) => {
     const pLink = imageEl.getAttribute("data-link");
-    const imgURL = await fetchImage(SCREENSHOT_API_URL_READY + pLink);
+    const tag = String(index); // use index per image
+    
+    // check cache first
+    if (cacheMap.has(tag)) {
+      const blob = cacheMap.get(tag);
+      imageEl.src = URL.createObjectURL(blob);
+      console.log(`✅ Loaded cached image [${tag}]`);
+      return;
+    }
+    
+    // else fetch and auto-save inside fetchImage()
+    const imgURL = await fetchImage(SCREENSHOT_API_URL_READY + pLink, tag);
     
     if (imgURL) {
       imageEl.src = imgURL;
+      console.log(`📸 Fetched + saved [${tag}]`);
     } else {
       console.warn(`Image failed for: ${pLink}`);
     }
   });
   
   await Promise.all(jobs);
-  console.log("All images processed.");
+  console.log("✅ All images processed.");
 }
 
 function dater() {

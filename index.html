@@ -13,16 +13,15 @@
   <script src="./src/renderEngine/tailwind@3.4.16.js"></script>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://kit.fontawesome.com/1e399e86d6.js" crossorigin="anonymous"></script>
   <header class="fixed top-0 w-full bg-gray-900/80 z-[100]">
-    <nav class="w-full flex justify-between items-center text-white mx-auto p-3">
+    <nav class="w-full flex justify-between items-center text-white mx-auto p-3 px-5">
       <div class="flex justify-center items-center gap-2">
         <div class="h-14 w-14 rounded-full overflow-hidden border-4 border-gray-600">
           <img class="object-cover w-full h-full" src="../src/images/open/thevicko-lite.webp" alt="Image Of Victory Osiobe" />
         </div>
-        <div class="">
-          <button class="bg-yellow-400 text-xs text-black p-1 rounded-lg hover:bg-yellow-500 opacity-30">Site always under construction</button>
+        <div class="justif-center items-center">
+          <div class="bg-yellow-500 text-xs text-black p-1 rounded-lg hover:bg-yellow-500 opacity-30">Site always under construction</div>
         </div>
       </div>
       
@@ -36,8 +35,25 @@
         </ul>
       </div>
       
-      <div class="flex items-center md:hidden">
-        <button class=""><ion-icon name="menu" class="text-2xl cursor-pointer" onclick="toggleMenu(this)"></ion-icon></button>
+      <div class="flex items-center justify-center md:hidden">
+        <div class="flex items-center justify-center">
+          <i id="show" class="fa-solid fa-bars text-2xl cursor-pointer" onclick="toggleMenu(this)"></i>
+          <i id="hide" class="fa-solid fa-x text-2xl cursor-pointer" style="display:none" onclick="toggleMenu(this)"></i>
+          
+          <script>
+            const show = document.getElementById('show');
+            const hide = document.getElementById('hide');
+            
+            show.addEventListener('click', () => {
+              show.style.display = 'none'
+              hide.style.display = 'inline'
+            })
+            hide.addEventListener('click', () => {
+              hide.style.display = 'none'
+              show.style.display = 'inline'
+            })
+          </script>
+        </div>
       </div>
     </nav>
   </header>
@@ -409,8 +425,8 @@
           </div>
           <div class="">
             <div class="text-xl font-bold pb-0.5">Victory Osiobe</div>
-            <div class="text-sm normal-case py-0.5">
-              That go-to Web Developer with expertise in frontend development (UI, UX building), PWAs, backend development, and scripting & tool building.</div>
+            <div class="text-sm normal-case py-0.5 pt-1.5">
+              That go-to Web Developer with expertise in backend systems, automation scripts, tools, and microservices (APIaaS). I also handle frontend (UI/UX) development and build PWAs. Big on optimization, cost-cutting, and making sure stacks I work with, run with speed, security, and stability.</div>
           </div>
         </div>
         <div class="flex flex-wrap justify-center items-center gap-10 bg-red-">
@@ -445,18 +461,28 @@
     
   </main>
   
-  <footer class="bg-gray-900">
+  <footer class="">
     <section class="my-5 mt-2 p-5 pb-0 text-white" id="faq">
-      <div class="text-4xl font-bold text-center py-5 uppercase">
-        FAQ</div>
+      <div class="text-4xl font-bold text-center py-5 uppercase">FAQ</div>
+      
       <div class="space-y-4 bg-gray-800/80 p-5 rounded-2xl my-5">
+        <div class="border-b border-gray-700 overflow-hidden">
+          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+            <span>Good developer?</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+            <p>I get neck-dip in all this, that I'm ready to go the extra mile, ready to research, visualize, map things out, enlightened others, re-learn, give software its own uniqueness. I make things work, got the engineer’s traits and don't back out easily.</p>
+          </div>
+        </div>
+        
         <div class="border-b border-gray-700 overflow-hidden">
           <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
             <span>What Interests Me?</span>
             <span class="icon">+</span>
           </button>
           <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
-            <p>Focused on Artificial Intelligence, Natural Language Processing, Machine Learning, and Communication systems.</p>
+            <p>Artificial Intelligence, Natural Language Processing, Machine Learning, and Communication systems.</p>
             <p>My primary backend stack revolves around Node.js and Python.</p>
             <p>I do frontend when the vibes align. 😄</p>
           </div>
@@ -472,7 +498,6 @@
             <p>Experienced with React, TailwindCSS, and Bootstrap for building responsive interfaces.</p>
             <p>Specialize in backend development using Node.js and Express.</p>
             <p>Comfortable working with databases like Redis and MongoDB.</p>
-            
           </div>
         </div>
         
@@ -496,6 +521,7 @@
           </div>
         </div>
         
+        
       </div>
     </section>
     <section class="text-center text-xs mx-auto">
@@ -518,8 +544,6 @@
   const navMore = document.querySelector(".navMore");
   
   function toggleMenu(e) {
-    e.name = e.name === "close" ? "menu" : "close"
-    
     if (navMore.style.maxHeight) {
       navMore.style.maxHeight = null;
     } else {

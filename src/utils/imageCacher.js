@@ -1,4 +1,3 @@
-
 import { openDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const dbName = 'image-cache';
@@ -25,15 +24,20 @@ export async function saveImage(blob, tag) {
 
 // get image by tag
 export async function getImage(tag) {
+  await checkExpiry();
+  
   const db = await getDB();
   return db.get(storeName, tag);
 }
 
 // get all images
 export async function getAllImages() {
+  await checkExpiry();
+  
   const db = await getDB();
   const allKeys = await db.getAllKeys(storeName);
   const imageKeys = allKeys.filter(k => k !== metaKey);
+  if (imageKeys.length < 1) return []
   const images = await Promise.all(
     imageKeys.map(async tag => {
       const data = await db.get(storeName, tag);
@@ -48,7 +52,7 @@ export async function checkExpiry() {
   const db = await getDB();
   const savedTime = await db.get(storeName, metaKey);
   const oneHour = 60 * 60 * 1000;
-
+  
   if (!savedTime || Date.now() - savedTime > oneHour) {
     await db.clear(storeName);
     console.log('🧹 Cache cleared: expired.');
@@ -56,8 +60,6 @@ export async function checkExpiry() {
     console.log('✅ Cache valid.');
   }
 }
-
-checkExpiry();
 
 // usage example
 // const blob = await fetch('img.jpg').then(r => r.blob());

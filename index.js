@@ -1,4 +1,4 @@
-import { saveImage, getAllImages  } from "./src/utils/imageCacher.js"
+import { saveImage, getAllImages } from "./src/utils/imageCacher.js"
 
 const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 const rootStyle = getComputedStyle(document.documentElement);
@@ -61,6 +61,7 @@ async function updateImages(previewImageEls) {
   });
   
   await Promise.all(jobs);
+  showToast("Preview Images Loaded!", "success");
   console.log("✅ All images processed.");
 }
 

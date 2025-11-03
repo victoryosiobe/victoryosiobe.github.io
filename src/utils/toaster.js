@@ -69,20 +69,26 @@ function showToast(message, type = 'info') {
     animating = false;
     dragging = false;
     
-    if (Math.abs(currentX) > dragThres || Math.abs(currentY) > dragThres) {
+    if (Math.abs(currentX) > dragThres) {
       fadeOut(toast);
-    } else {
-      toast.style.transform = 'translateX(0px) translateY(0px)'; // Reset fully;
-      toast.style.opacity = 1;
-      currentX = 0; // Reset for potential re-drag
-      currentY = 0; //here, too
-      autoRemove = setTimeout(() => fadeOut(toast), 3000);
+      return
     }
+    if (Math.abs(currentY) > dragThres) {
+      fadeOut(toast);
+      return
+    }
+    
+    toast.style.transform = 'translateX(0px) translateY(0px)'; // Reset fully;
+    toast.style.opacity = 1;
+    currentX = 0; // Reset for potential re-drag
+    currentY = 0; //here, too
+    autoRemove = setTimeout(() => fadeOut(toast), 3000);
+    
   };
   
   const update = () => {
     toast.style.transform = `translateX(${currentX}px) translateY(${currentY}px)`;
-    toast.style.opacity = `${Math.max(0, 1 - Math.abs(currentX) / dragThres)}`;
+    toast.style.opacity = `${Math.max(0, 1 - Math.abs(currentX + currentY) / dragThres)}`;
     animating = false;
     if (dragging) {
       animating = true;

@@ -37,9 +37,9 @@
       </div>
       
       <div class="flex items-center justify-center md:hidden">
-        <div class="flex items-center justify-center">
-          <i id="show" class="fa-solid fa-bars text-2xl cursor-pointer" onclick="toggleMenu(this)"></i>
-          <i id="hide" class="fa-solid fa-x text-2xl cursor-pointer" style="display:none" onclick="toggleMenu(this)"></i>
+        <div id="menuIcon" class="flex items-center justify-center transition-transform duration-500">
+          <i id="show" class="fa-solid fa-bars text-2xl cursor-pointer " onclick="toggleMenu(this)"></i>
+          <i id="hide" class="fa-solid fa-x text-2xl cursor-pointer " style="display:none" onclick="toggleMenu(this)"></i>
           
           <script>
             const show = document.getElementById('show');
@@ -458,7 +458,7 @@
         </div>
         <div class="w-full">
           <div class="w-full flex items-center justify-end my-">
-            <div class="text-blue-500 text-xs cursor-pointer" onclick="toggleMailSection(this)">Reach via email?<i id="show-email-section" class="fa-solid fa-caret-down"></i></div>
+            <div class="text-blue-500 text-xs cursor-pointer" onclick="toggleMailSection(this)">Reach via email?<i id="show-mail-section" class="fa-solid fa-caret-down transition-transform duration-300"></i></div>
           </div>
           
           <div class="mailSection w-full">
@@ -566,9 +566,14 @@
 </body>
 <script>
   const navMore = document.querySelector(".navMore");
+  const menuIcon = document.getElementById("menuIcon");
+
   const mailSection = document.querySelector(".mailSection");
+  const mailSectionIcon = document.getElementById("show-mail-section");
   
   function toggleMenu(e) {
+    menuIcon.classList.toggle("rotate-180");
+    
     if (navMore.style.maxHeight) {
       navMore.style.maxHeight = null;
     } else {
@@ -578,6 +583,7 @@
   
   
   function toggleMailSection(mode) {
+    mailSectionIcon.classList.toggle("rotate-180");
     if (mode === "close") mailSection.style.maxHeight = null;
     else if (mode === "open") mailSection.style.maxHeight = mailSection.scrollHeight + "px";
     else if (mailSection.style.maxHeight) {

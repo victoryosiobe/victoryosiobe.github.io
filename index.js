@@ -96,3 +96,45 @@ document.querySelectorAll(".faq-toggle").forEach((btn, i) => {
   });
   if (i === 0) btn.click(); //open first section 
 });
+
+document.querySelectorAll(".swap-group-on-stacks").forEach(group => {
+  setInterval(() => {
+    const children = Array.from(group.children);
+    
+    // record positions
+    const firstRects = new Map(children.map(el => [el, el.getBoundingClientRect()]));
+    
+    // shuffle
+    for (let i = children.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [children[i], children[j]] = [children[j], children[i]];
+    }
+    
+    // batch append (no layout thrash)
+    const frag = document.createDocumentFragment();
+    children.forEach(c => frag.appendChild(c));
+    group.appendChild(frag);
+    
+    // measure new positions + animate
+    children.forEach(el => {
+      const last = el.getBoundingClientRect();
+      const first = firstRects.get(el);
+      const dx = first.left - last.left;
+      const dy = first.top - last.top;
+      
+      //reverse it to position it came from
+      el.style.transform = `translate(${dx}px, ${dy}px)`;
+      el.style.transition = "transform 0s";
+      requestAnimationFrame(() => {
+        //animate to position it is new at
+        el.style.transition = "transform 0.6s ease";
+        el.style.transform = "translate(0, 0)";
+      });
+    });
+  }, getRandomInterval(500, 3000))
+});
+
+// Returns a random integer between min and max (inclusive)
+function getRandomInterval(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}

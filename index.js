@@ -1,4 +1,5 @@
-import { saveImage, getAllImages } from "./src/utils/imageCacher.js"
+import { saveImage, getAllImages } from "./src/utils/imageCacher.js";
+import { getRandomInterval } from "./src/utils/cUtils.js";
 
 const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 const rootStyle = getComputedStyle(document.documentElement);
@@ -65,13 +66,6 @@ async function updateImages(previewImageEls) {
   console.log("✅ All images processed.");
 }
 
-function dater() {
-  const dateEl = document.getElementById("d-v-g");
-  const year = new Date().getFullYear();
-  year == "2023" ?
-    (dateEl.textContent = year) :
-    (dateEl.textContent = "2023—" + year);
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   dater();
@@ -135,8 +129,3 @@ document.querySelectorAll(".swap-group-on-stacks").forEach(group => {
   }
   setTimeout(flap, getRandomInterval(500, 3000))
 });
-
-// Returns a random integer between min and max (inclusive)
-function getRandomInterval(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}

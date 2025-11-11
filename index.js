@@ -98,7 +98,7 @@ document.querySelectorAll(".faq-toggle").forEach((btn, i) => {
 });
 
 document.querySelectorAll(".swap-group-on-stacks").forEach(group => {
-  setInterval(() => {
+  function flap() {
     const children = Array.from(group.children);
     
     // record positions
@@ -131,7 +131,9 @@ document.querySelectorAll(".swap-group-on-stacks").forEach(group => {
         el.style.transform = "translate(0, 0)";
       });
     });
-  }, getRandomInterval(500, 3000))
+    setTimeout(flap, getRandomInterval(500, 3000)) //recurse
+  }
+  setTimeout(flap, getRandomInterval(500, 3000))
 });
 
 // Returns a random integer between min and max (inclusive)

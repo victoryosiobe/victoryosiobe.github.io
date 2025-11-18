@@ -35,27 +35,67 @@ async function fetchImage(url, id) {
 }
 
 async function updateImages(previewImageEls) {
-  const dbImages = await getAllImages(); // from IndexedDB
-  const cacheMap = new Map(dbImages.map(({ tag, blob }) => [String(tag), blob]));
+  const dbImages = await getAllImages(); // [{ tag, blob }, ...]
+  // persistentMap: tag(string) -> Blob
+  const persistentMap = new Map(dbImages.map(({ tag, blob }) => [String(tag), blob]));
+  
+  // in-memory per-element cache + inflight dedupe
+  const weakCache = new WeakMap(); // Element -> Blob
+  const inflight = new Map(); // tagKey (data-link) -> Promise<imgURL|null>
   
   const jobs = previewImageEls.map(async (imageEl, index) => {
     const pLink = imageEl.getAttribute("data-link");
-    const tag = String(index); // use index per image
+    // canonical key for persistent storage / dedupe: prefer data-link
+    const tagKey = pLink || imageEl.dataset.tag || String(index);
     
-    // check cache first
-    if (cacheMap.has(tag)) {
-      const blob = cacheMap.get(tag);
+    // 1) quick weakmap hit (per-element)
+    if (weakCache.has(imageEl)) {
+      const blob = weakCache.get(imageEl);
       imageEl.src = URL.createObjectURL(blob);
-      console.log(`✅ Loaded cached image [${tag}]`);
+      console.log("✅ Loaded from weakCache", tagKey);
       return;
     }
     
-    // else fetch and auto-save inside fetchImage()
-    const imgURL = await fetchImage(SCREENSHOT_API_URL_READY + pLink, tag);
+    // 2) persistent IndexedDB cache hit (shared across elements)
+    if (persistentMap.has(tagKey)) {
+      const blob = persistentMap.get(tagKey);
+      imageEl.src = URL.createObjectURL(blob);
+      weakCache.set(imageEl, blob); // remember for this element
+      imageEl.dataset.tag = tagKey;
+      console.log(`✅ Loaded cached image [${tagKey}]`);
+      return;
+    }
+    
+    // 3) if there's already a fetch in-flight for this resource, reuse it
+    if (inflight.has(tagKey)) {
+      const imgURL = await inflight.get(tagKey);
+      if (imgURL) imageEl.src = imgURL;
+      return;
+    }
+    
+    // 4) fetch (deduped), save promise in inflight map
+    const promise = (async () => {
+      try {
+        // fetchImage should save to IndexedDB under tagKey and return a usable URL
+        const imgURL = await fetchImage(SCREENSHOT_API_URL_READY + pLink, tagKey);
+        return imgURL || null;
+      } catch (err) {
+        console.error("fetchImage error", err);
+        return null;
+      }
+    })();
+    
+    inflight.set(tagKey, promise);
+    
+    // wait, then clear inflight
+    const imgURL = await promise.finally(() => inflight.delete(tagKey));
     
     if (imgURL) {
       imageEl.src = imgURL;
-      console.log(`📸 Fetched + saved [${tag}]`);
+      imageEl.dataset.tag = tagKey;
+      // If the blob was already present in persistentMap we'd have set weakCache earlier.
+      // If you want to populate weakCache after fetch, you could re-read IndexedDB here.
+      console.log(`📸 Fetched + saved [${tagKey}]`);
     } else {
       console.warn(`Image failed for: ${pLink}`);
     }
@@ -65,7 +105,6 @@ async function updateImages(previewImageEls) {
   showToast("Preview Images Loaded!", "success");
   console.log("✅ All images processed.");
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   dater();

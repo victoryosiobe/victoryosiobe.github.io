@@ -188,205 +188,242 @@
       </div>
     </section>
     
-    <section class="my-5 p-2 text-white uppercase bg-gray-900" id="projects">
+    <section class="my-5 p-2 text-white uppercase bg-gray-950" id="projects">
       <div class="text-4xl font-bold text-center py-5">
         projects
       </div>
-      <div class="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 md:flex-row md:flex-wrap p-10 pt-5">
+      <div class="relative grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 p-10 py-0 my-5">
+        <!-- The continuous centered line (only one for the whole timeline) -->
+        <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-600/40 -translate-x-1/2 z-0"></div>
         
-        <div class="flex flex-col p-0">
-          <img class="preview-with-no-screenshot rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop" alt="Kingchop GitHub Stats Image" data-link="https://npmjs.com/package/kingchop" />
-          <div class="bg-gray-800/70 rounded-b-2xl p-5 relative z-[1]">
-            <div class="uppercase text-xl font-bold my-1">Kingchop</div>
-            <div class="normal-case text-sm my-1">
-              <p>
-                Kingchop, a library, is a flexible text tokenizer for
-                english text. It is built with node JavaScript, and still
-                maintained to date. I have been able to push more features
-                despite English inconsistencies.
-              </p>
-              <p>
-                Kingchop as of
-                <span class="px-1 py-0.5 rounded-md bg-white text-gray-800">v1.0.6 (Aurora)</span>, had
-                paragraph, sentence, sub-sentence, words, tokenizing
-                abilities, with an extra correct text method.
-              </p>
+        
+        
+        <div class="relative flex flex-col p-0 z-10 shadow-lg">
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="rounded-2xl overflow-hidden bg-gray-900">
+            <img class="preview-with-no-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop" alt="Kingchop Stats Image" data-link="https://npmjs.com/package/kingchop" />
+            <div class="relative p-5">
+              <div class="uppercase text-xl font-bold my-1">Kingchop</div>
+              <div class="normal-case text-sm my-1 z-[20]">
+                <p>
+                  Kingchop, a library, is a flexible text tokenizer for
+                  english text. It is built with node JavaScript, and still
+                  maintained to date. I have been able to push more features
+                  despite English inconsistencies.
+                </p>
+                <p>
+                  Kingchop as of
+                  <span class="px-1 py-0.5 rounded-md bg-white text-gray-800">v1.0.6 (Aurora)</span>, had
+                  paragraph, sentence, sub-sentence, words, tokenizing
+                  abilities, with an extra correct text method.
+                </p>
+              </div>
+              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/kingchop" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs on GitHub</a>
+                <a href="https://npmjs.com/package/kingchop" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On NPM</a>
+              </div>
+              <div class="absolute right-0 bottom-[-5px] -z-10 opacity-"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
             </div>
-            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
-              <a href="https://github.com/victoryosiobe/kingchop" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs on GitHub</a>
-              <a href="https://npmjs.com/package/kingchop" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On NPM</a>
-            </div>
-            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0  hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
           </div>
         </div>
         
-        <div class="flex flex-col p-0">
-          <img class="preview-with-no-screenshot rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/vanity" alt="Vanity GitHub Stats Image" data-link="https://npmjs.com/package/kingchop" />
-          <div class="bg-gray-800/70 rounded-b-2xl p-5 relative z-[1]">
-            <div class="uppercase text-xl font-bold my-1">Vanity</div>
-            <div class="normal-case text-sm my-1">
-              <p>
-                Vanity is a fast custom wallet generator that lets you create addresses with custom text at the beginning or end. It takes your desired prefix or (and) suffix through stdin using readline, then uses all available CPU cores to grind keys at maximum speed until it finds a match.
-              </p>
-              <p>
-                It currently supports the Solana, and EVM-chains. I'll add more chains as I get to understand them.
-              </p>
+        <div class="relative flex flex-col p-0 z-10 shadow-lg">
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="rounded-2xl overflow-hidden bg-gray-900">
+            <img class="preview-with-no-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/vanity" alt="Vanity Stats Image" data-link="https://github.com/victoryosiobe/vanity" />
+            <div class="relative p-5">
+              <div class="uppercase text-xl font-bold my-1">Vanity</div>
+              <div class="normal-case text-sm my-1">
+                <p>
+                  Vanity is a fast custom wallet generator that lets you create addresses with custom text at the beginning or end. It takes your desired prefix or (and) suffix through stdin using readline, then uses all available CPU cores to grind keys at maximum speed until it finds a match.
+                </p>
+                <p>
+                  It currently supports the Solana, and EVM-chains. I'll add more chains as I get to understand them.
+                </p>
+              </div>
+              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/vanity" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs on GitHub</a>
+              </div>
+              <div class="absolute right-0 bottom-[-5px] opacity-10 -z-10 hover:opacity-10 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
             </div>
-            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
-              <a href="https://github.com/victoryosiobe/vanity" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs on GitHub</a>
-            </div>
-            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0  hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
           </div>
         </div>
         
-        <div class="flex flex-col p-0">
-          <img class="preview-with-screenshot rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/peekabooo" alt="Peekaboo Preview Image" data-link="https://peekabooo.vercel.app" />
-          <div class="bg-gray-800/70 rounded-b-2xl p-5 relative z-[1]">
-            <div class="uppercase text-xl font-bold my-1">Peekabooo</div>
-            <div class="normal-case text-sm my-1">
-              <p>
-                Peekabooo will help you get the screenshot of a website in an image format. For accessibility, I made it an open API, and nope...no need to install anything. You, me, anyone can access it. Just don't abuse it, haha.
-              </p>
-              <p>
-                This API makes use of the puppeteer tool to open a browser, load the site you wanna take a screenshot of, does its stuff, and send it back to you. This could be used when trying to make a preview of a site in an image, without needing to worry about newer design changes to it. It is in use on this site.
-              </p>
+        
+        <div class="relative flex flex-col p-0 z-10 shadow-lg">
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="rounded-2xl overflow-hidden bg-gray-900">
+            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/peekabooo" alt="Peekabooo Stats Image" data-link="https://peekabooo.vercel.app" />
+            <div class="relative p-5">
+              <div class="uppercase text-xl font-bold my-1">Peekabooo</div>
+              <div class="normal-case text-sm my-1">
+                <p>
+                  Peekabooo will help you get the screenshot of a website in an image format. For accessibility, I made it an open API, and nope...no need to install anything. You, me, anyone can access it. Just don't abuse it, haha.
+                </p>
+                <p>
+                  This API makes use of the puppeteer tool to open a browser, load the site you wanna take a screenshot of, does its stuff, and send it back to you. This could be used when trying to make a preview of a site in an image, without needing to worry about newer design changes to it. It is in use on this site.
+                </p>
+              </div>
+              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/peekabooo" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+                <a href="https://peekabooo.vercel.app" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs On Vercel</a>
+              </div>
+              <div class="absolute right-0 bottom-[-5px] opacity-10 -z-10 hover:opacity-10 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
             </div>
-            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
-              <a href="https://github.com/victoryosiobe/peekabooo" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-              <a href="https://peekabooo.vercel.app" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs On Vercel</a>
-            </div>
-            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0  hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
           </div>
         </div>
         
-        <div class="flex flex-col p-0">
-          <img class="preview-with-screenshot rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/nrrverse" alt="Nrrvese GitHub Stats Image" data-link="https://nrrverse.vercel.app" />
-          <div class="bg-gray-800/70 rounded-b-2xl p-5 relative z-[1]">
-            <div class="uppercase text-xl font-bold my-1">Nrrverse</div>
-            <div class="normal-case text-sm my-1">
-              <p>
-                A react site, supposedly to be filled with elements designed by open source, and contributions. I thought ahead with all the competitions out there, no way this was going to be a success. Oh well, I built what it would be like, with some actual functioning parts.
-              </p>
-              <p>
-                The goal was for devs from all around including me to contribute to the project, showcasing their abilities, taking the opportunity to get sponsored on their “Buy me a coffee” links, or on socials.
-              </p>
-              <p>
-                I also needed to do some API for the application, that devs could use to show their designs on whatever site. But limited to frontend and no clue on how to pay for server operations, I achieved it on FRONTEND.
-              </p>
-              
-              <p>
-                Who does that? Me! Well, with the help of Vercel free hosting and domain, and config, so anyone could iframe their design to any site.
-              </p>
+        <div class="relative flex flex-col p-0 z-10 shadow-lg">
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="rounded-2xl overflow-hidden bg-gray-900">
+            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/nrrverse" alt="Nrrverse Stats Image" data-link="https://nrrverse.vercel.app" />
+            <div class="relative p-5">
+              <div class="uppercase text-xl font-bold my-1">Nrrverse</div>
+              <div class="normal-case text-sm my-1">
+                <p>
+                  A react site, supposedly to be filled with elements designed by open source, and contributions. I thought ahead with all the competitions out there, no way this was going to be a success. Oh well, I built what it would be like, with some actual functioning parts.
+                </p>
+                <p>
+                  The goal was for devs from all around including me to contribute to the project, showcasing their abilities, taking the opportunity to get sponsored on their “Buy me a coffee” links, or on socials.
+                </p>
+                <p>
+                  I also needed to do some API for the application, that devs could use to show their designs on whatever site. But limited to frontend and no clue on how to pay for server operations, I achieved it on FRONTEND.
+                </p>
+                
+                <p>
+                  Who does that? Me! Well, with the help of Vercel free hosting and domain, and config, so anyone could iframe their design to any site.
+                </p>
+              </div>
+              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/nrrverse" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+                <a href="https://nrrverse.vercel.app" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On Vercel</a>
+              </div>
+              <div class="absolute right-0 bottom-[-5px] opacity-10 -z-10 hover:opacity-10 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
             </div>
-            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
-              <a href="https://github.com/victoryosiobe/nrrverse" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-              <a href="https://nrrverse.vercel.app" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On Vercel</a>
-            </div>
-            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0  hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
           </div>
         </div>
         
-        <div class="flex flex-col p-0">
-          <img class="preview-with-screenshot rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/zrang" alt="Zrang GitHub Stats Image" data-link="https://victoryosiobe.github.io/zrang" />
-          <div class="bg-gray-800/70 rounded-b-2xl p-5 relative z-[1]">
-            <div class="uppercase text-xl font-bold my-1">Zrang</div>
-            <div class="normal-case text-sm my-1">
-              <p>
-                A web-based 2D game built with Canvas. The idea came from a game whose source code a friend shared with me, challenging me to recreate it from scratch. I did that, but this was no copy and paste. I only needed to understand the game’s rules, then wrote my own version for Zrang.
-              </p>
-              <p>
-                This game took me about 4 days to build despite not knowing anything about canvas. I was learning and doing. Try the game out, at least, before you continue with this site.
-              </p>
+        <div class="relative flex flex-col p-0 z-10 shadow-lg">
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="rounded-2xl overflow-hidden bg-gray-900">
+            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/zrang" alt="Zrang Stats Image" data-link="https://victoryosiobe.github.io/zrang" />
+            <div class="relative p-5">
+              <div class="uppercase text-xl font-bold my-1">Zrang</div>
+              <div class="normal-case text-sm my-1">
+                <p>
+                  A web-based 2D game built with Canvas. The idea came from a game whose source code a friend shared with me, challenging me to recreate it from scratch. I did that, but this was no copy and paste. I only needed to understand the game’s rules, then wrote my own version for Zrang.
+                </p>
+                <p>
+                  This game took me about 4 days to build despite not knowing anything about canvas. I was learning and doing. Try the game out, at least, before you continue with this site.
+                </p>
+              </div>
+              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/zrang" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+                <a href="https://victoryosiobe.github.io/zrang" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Play on Gitpages</a>
+              </div>
+              <div class="absolute right-0 bottom-[-5px] opacity-10 -z-10 hover:opacity-10 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
             </div>
-            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
-              <a href="https://github.com/victoryosiobe/zrang" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-              <a href="https://victoryosiobe.github.io/zrang" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Play On GitPages</a>
-            </div>
-            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0  hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
           </div>
         </div>
         
-        <div class="flex flex-col p-0">
-          <img class="preview-with-screenshot rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/betabi" alt="BetAbi GitHub Stats Image" data-link="https://victoryosiobe.github.io/betabi" />
-          <div class="bg-gray-800/70 rounded-b-2xl p-5 relative z-[1]">
-            <div class="uppercase text-xl font-bold my-1">BetAbi</div>
-            <div class="normal-case text-sm my-1">
-              <p>
-                An arbitrage calculator for betting across bookmakers. It shows whether you win, lose, or break even from two opposite dependent events based on odds.
-              </p>
-              <p>
-                <span class="px-1 py-0.5 rounded-md bg-white text-gray-800">General Advice:</span>
-                Gambling is rough. Arbitrage might sound smart but still risky. If you play, play smart, <span class="font-bold">not desperate</span>. Everything’s a low-key gamble anyway.
-              </p>
+        <div class="relative flex flex-col p-0 z-10 shadow-lg">
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="rounded-2xl overflow-hidden bg-gray-900">
+            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/betabi" alt="Betabi Stats Image" data-link="https://victoryosiobe.github.io/betabi" />
+            <div class="relative p-5">
+              <div class="uppercase text-xl font-bold my-1">Betabi</div>
+              <div class="normal-case text-sm my-1">
+                <p>
+                  An arbitrage calculator for betting across bookmakers. It shows whether you win, lose, or break even from two opposite dependent events based on odds.
+                </p>
+                <p>
+                  <span class="px-1 py-0.5 rounded-md bg-white text-gray-800">General Advice:</span>
+                  Gambling is rough. Arbitrage might sound smart but still risky. If you play, play smart, <span class="font-bold">not desperate</span>. Everything’s a low-key gamble anyway.
+                </p>
+              </div>
+              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/betabi" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+                <a href="https://victoryosiobe.github.io/betabi" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View on Gitpages</a>
+              </div>
+              <div class="absolute right-0 bottom-[-5px] opacity-10 -z-10 hover:opacity-10 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
             </div>
-            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
-              <a href="https://github.com/victoryosiobe/betabi" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-              <a href="https://victoryosiobe.github.io/betabi" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On GitPages</a>
-            </div>
-            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] scale-x-[-1] rotate-0  hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
           </div>
         </div>
         
-        <div class="flex flex-col p-0">
-          <img class="preview-with-screenshot rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/blueuniverse" alt="Blue Universe GitHub Stats Image" data-link="https://victoryosiobe.github.io/blueuniverse" />
-          <div class="bg-gray-800/70 rounded-b-2xl p-5 relative z-[1]">
-            <div class="uppercase text-xl font-bold my-1">Blue Universe</div>
-            <div class="normal-case text-sm my-1">
-              <p>
-                This one is a single-paged responsive site I put up when I
-                was starting out with web development. I didn't use any
-                library or framework for building it. It's only built with
-                vanilla HTML, CSS, and JavaScript.
-              </p>
+        <div class="relative flex flex-col p-0 z-10 shadow-lg">
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="rounded-2xl overflow-hidden bg-gray-900">
+            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/blueuniverse" alt="Blue Universe Stats Image" data-link="https://victoryosiobe.github.io/blueuniverse" />
+            <div class="relative p-5">
+              <div class="uppercase text-xl font-bold my-1">Blue Universe</div>
+              <div class="normal-case text-sm my-1">
+                <p>
+                  This one is a single-paged responsive site I put up when I
+                  was starting out with web development. I didn't use any
+                  library or framework for building it. It's only built with
+                  vanilla HTML, CSS, and JavaScript.
+                </p>
+              </div>
+              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/blueuniverse" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+                <a href="https://victoryosiobe.github.io/blueuniverse" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View on Gitpages</a>
+              </div>
+              <div class="absolute right-0 bottom-[-5px] opacity-10 -z-10 hover:opacity-10 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
             </div>
-            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
-              <a href="https://github.com/victoryosiobe/blueuniverse" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-              <a href="https://victoryosiobe.github.io/blueuniverse" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Vew On GitPages</a>
-            </div>
-            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0  hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
           </div>
         </div>
         
-        <div class="flex flex-col p-0">
-          <img class="preview-with-screenshot rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/copik" alt="Copik GitHub Stats Image" data-link="https://victoryosiobe.github.io/copik" />
-          <div class="bg-gray-800/70 rounded-b-2xl p-5 relative z-[1]">
-            <div class="uppercase text-xl font-bold my-1">Copik</div>
-            <div class="normal-case text-sm my-1">
-              <p>
-                I found it hard to write Hex color codes. Maybe I
-                was too lazy to learn how to, but since I've got the abilities, why not build a color picker?
-              </p>
-              <p>
-                See, that's how workarounds work.
-              </p>
+        
+        
+        <div class="relative flex flex-col p-0 z-10 shadow-lg">
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="rounded-2xl overflow-hidden bg-gray-900">
+            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/copik" alt="Copik Stats Image" data-link="https://victoryosiobe.github.io/copik" />
+            <div class="relative p-5">
+              <div class="uppercase text-xl font-bold my-1">Copik</div>
+              <div class="normal-case text-sm my-1">
+                <p>
+                  I found it hard to write Hex color codes. Maybe I
+                  was too lazy to learn how to, but since I've got the abilities, why not build a color picker?
+                </p>
+                <p>
+                  See, that's how workarounds work.
+                </p>
+              </div>
+              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/copik" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+                <a href="https://victoryosiobe.github.io/copik" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs On Vercel</a>
+              </div>
+              <div class="absolute right-0 bottom-[-5px] opacity-10 -z-10 hover:opacity-10 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
             </div>
-            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
-              <a href="https://github.com/victoryosiobe/copik" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-              <a href="https://victoryosiobe.github.io/copik" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Vew On GitPages</a>
-            </div>
-            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0  hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
           </div>
         </div>
         
-        <div class="flex flex-col p-0">
-          <img class="preview-with-screenshot rounded-t-2xl" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/repli" alt="Repli GitHub Stats Image" data-link="https://victoryosiobe.github.io/repli" />
-          <div class="bg-gray-800/70 rounded-b-2xl p-5 relative z-[1]">
-            <div class="uppercase text-xl font-bold my-1">Repli</div>
-            <div class="normal-case text-sm my-1">
-              <p>
-                An algorithm that checks 2 sentences to tell their
-                similarity. It's a basic static algorithm, with different
-                modes.
-              </p>
-              <p>
-                Amongst early projects on Natural Language Processing (NLP).
-              </p>
+        
+        
+        
+        <div class="relative flex flex-col p-0 z-10 shadow-lg">
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="rounded-2xl overflow-hidden bg-gray-900">
+            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/repli" alt="Repli Stats Image" data-link="https://victoryosiobe.github.io/repli" />
+            <div class="relative p-5">
+              <div class="uppercase text-xl font-bold my-1">Repli</div>
+              <div class="normal-case text-sm my-1">
+                <p>
+                  An algorithm that checks 2 sentences to tell their
+                  similarity. It's a basic static algorithm, with different
+                  modes.
+                </p>
+                <p>
+                  Amongst early projects on Natural Language Processing (NLP).
+                </p>
+              </div>
+              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/repli" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
+                <a href="https://victoryosiobe.github.io/repli" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View on Gitpages</a>
+              </div>
+              <div class="absolute right-0 bottom-[-5px] opacity-10 -z-10 hover:opacity-10 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
             </div>
-            <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm relative z-[2] w-fit">
-              <a href="https://github.com/victoryosiobe/repli" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-              <a href="https://victoryosiobe.github.io/repli" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Vew On GitPages</a>
-            </div>
-            <div class="absolute right-0 bottom-[-5px] opacity-5 z-[0] -z-1 scale-x-[-1] rotate-0  hover:opacity-20 transition duration-1000"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
           </div>
         </div>
         

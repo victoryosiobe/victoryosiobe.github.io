@@ -3,6 +3,8 @@ function showToast(message, type = 'info') {
   const toast = document.createElement('div');
   const theme = type === 'success' ? 'green' :
     type === 'error' ? 'red' :
+    type === 'error' ? 'red' :
+    type === 'warning' ? 'yellow' :
     'gray'
   
   toast.className = `

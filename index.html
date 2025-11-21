@@ -13,21 +13,20 @@
   <link rel="icon" href="../src/images/open/thevicko-lite.webp" type="image/webp">
   <script src="./src/renderEngine/tailwind@3.4.16.js"></script>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/1e399e86d6.js" crossorigin="anonymous"></script>
-  <header class="fixed top-0 w-full bg-gray-900/80 z-[100]">
-    <nav class="w-full flex justify-between items-center text-white mx-auto p-3 px-5">
-      <div class="flex justify-center items-center gap-2">
-        <div class="h-14 w-14 rounded-full overflow-hidden border-4 border-gray-600">
-          <img class="object-cover w-full h-full" src="../src/images/open/thevicko-lite.webp" alt="Image Of Victory Osiobe" />
-        </div>
-        <div class="justif-center items-center">
-          <div class="bg-yellow-500 text-xs text-black p-1 rounded-lg hover:bg-yellow-500 opacity-30">Site always under construction</div>
+  <header class="fixed top-0 w-full bg-transparent z-[100] backdrop-blur">
+    <nav class="w-full relative flex justify-between items-center text-white mx-auto p-3 px-5">
+      <div class="flex justify-center items-center w-full">
+        <div class="font-bold text-xl uppercase">
+          Victory Osiobe
         </div>
       </div>
       
-      <div class="navMore absolute flex md:static bg-gray-900/80 md:bg-transparent md:min-h-fit left-0 top-[5rem] w-full md:w-auto ">
-        <ul class="flex flex-col w-full h-full p-5 md:flex-row md:items-center md:gap-[2vw] gap-10">
+      <div class="navMore absolute flex md:static bg-transparent md:min-h-fit left-0 top-[2rem] w-full">
+        <ul class="flex flex-col w-full h-full p-5 md:p-0 md:flex-row md:items-center md:gap-[2vw] gap-10">
           <li><a class="hover:text-gray-500 block" href="#hero">Hero</a></li>
           <li><a class="hover:text-gray-500 block" href="#stack-n-tech">Stack & Tech</a></li>
           <li><a class="hover:text-gray-500 block" href="#projects">Projects</a></li>
@@ -36,9 +35,9 @@
         </ul>
       </div>
       
-      <div class="flex items-center justify-center md:hidden">
+      <div class="flex items-center justify-center md:hidden absolute right-5">
         <div id="menuIcon" class="flex items-center justify-center transition-transform duration-500">
-          <i id="show" class="fa-solid fa-bars text-lg cursor-pointer " onclick="toggleMenu(this)"></i>
+          <i id="show" class="fa-solid fa-bars text-lg cursor-pointer" onclick="toggleMenu(this)"></i>
           <i id="hide" class="fa-solid fa-x text-lg cursor-pointer " style="display:none" onclick="toggleMenu(this)"></i>
         </div>
       </div>
@@ -48,14 +47,17 @@
 
 <body class="body-gradient">
   <section id="hero">
-    <div class="relative min-h-svh flex flex-col gap-5 items-center justify-center text-white text-center abc">
-      <div class="text-lg font-bold uppercase">It's <span class="underline decoration-2 decoration-blue-300">H-I-M!</span></div>
-      <div class="text-6xl font-bold uppercase">Victory Osiobe</div>
-      <div class="flex flex-wrap items-center justify-center gap-5 m-3">
-        <div class="text-xl fobt-bold p-3 px-3 border-4  rounded-lg uppercase">I code</div>
-        <div class="text-xl fobt-bold p-3 px-2.5 border-4 border-blue-300 rounded-lg uppercase">I script</div>
-        <div class="text-xl fobt-bold p-3 px-2.5 border-4 border-blue-300 rounded-lg uppercase">I build</div>
-        <div class="text-2xl fobt-bold p-3 px-3 border-4 rounded-lg uppercase">I design</div>
+    <div class="relative min-h-svh flex flex-col gap-5 items-center justify-center text-white text-center abc px-10">
+      <div class="flex flex-col items-center justify-center bg-red-5000 w-full font-bold">
+        <!-- <div class="pb-10">Web Dev | Fullstack | Scripter</div> -->
+            <div class="text-6xl">
+              <span id="animated-word" class="uppercase">Develop</span><span class="text-cursor">|</span>
+            </div>
+            <div class="py-6 text-lg text-gray-400">
+              with <span class="text-xl uppercase">Victory Osiobe</span>
+            </div>
+        <div class=""></div>
+        
       </div>
     </div>
   </section>
@@ -199,7 +201,7 @@
         
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
             <img class="preview-with-no-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop" alt="Kingchop Stats Image" data-link="https://npmjs.com/package/kingchop" />
             <div class="relative p-5">
@@ -228,7 +230,7 @@
         </div>
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
             <img class="preview-with-no-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/vanity" alt="Vanity Stats Image" data-link="https://github.com/victoryosiobe/vanity" />
             <div class="relative p-5">
@@ -251,7 +253,7 @@
         
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
             <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/peekabooo" alt="Peekabooo Stats Image" data-link="https://peekabooo.vercel.app" />
             <div class="relative p-5">
@@ -274,7 +276,7 @@
         </div>
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
             <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/nrrverse" alt="Nrrverse Stats Image" data-link="https://nrrverse.vercel.app" />
             <div class="relative p-5">
@@ -304,7 +306,7 @@
         </div>
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
             <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/zrang" alt="Zrang Stats Image" data-link="https://victoryosiobe.github.io/zrang" />
             <div class="relative p-5">
@@ -327,7 +329,7 @@
         </div>
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
             <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/betabi" alt="Betabi Stats Image" data-link="https://victoryosiobe.github.io/betabi" />
             <div class="relative p-5">
@@ -351,7 +353,7 @@
         </div>
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
             <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/blueuniverse" alt="Blue Universe Stats Image" data-link="https://victoryosiobe.github.io/blueuniverse" />
             <div class="relative p-5">
@@ -376,7 +378,7 @@
         
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
             <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/copik" alt="Copik Stats Image" data-link="https://victoryosiobe.github.io/copik" />
             <div class="relative p-5">
@@ -403,7 +405,7 @@
         
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
             <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/repli" alt="Repli Stats Image" data-link="https://victoryosiobe.github.io/repli" />
             <div class="relative p-5">
@@ -546,11 +548,21 @@
         
         <div class="border-b border-gray-700 overflow-hidden">
           <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+            <span>On fullstack, which do I work on first? Frontend or Backend?</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+            <p>Depends. Usually both, but, I'm big on functionality, so backend is priority. If you priotize frontend, you may never get it all done. Again, this largely depends on the circumstances at the time.</p>
+          </div>
+        </div>
+        
+        <div class="border-b border-gray-700 overflow-hidden">
+          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
             <span>40 hours a week?</span>
             <span class="icon">+</span>
           </button>
           <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
-            <p>Not currently. 30 hours a week is perfect. Fewer hours, less burnout, better output.</p>
+            <p>Not currently. 25 hours a week is perfect. Fewer hours, less burnout, better output.</p>
           </div>
         </div>
         
@@ -584,6 +596,7 @@
   <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
 </body>
 
+<script src="src/utils/animation.js"></script>
 <script src="src/utils/helpers.js"></script>
 <script src="src/utils/toaster.js"></script>
 <script type="module" src="src/utils/imageCacher.js"></script>

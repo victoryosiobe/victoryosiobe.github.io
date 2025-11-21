@@ -8,6 +8,9 @@ if (metaThemeColor) metaThemeColor.setAttribute('content', themeColor);
 
 const SCREENSHOT_API_URL_READY = "https://peekabooo.vercel.app/screenshot?url=";
 
+
+  showToast("Site Is Always Under Construction!", "warning");
+
 async function fetchImage(url, id) {
   try {
     const res = await fetch(url);

@@ -8,8 +8,22 @@ body {
   scroll-behavior: smooth;
 }
 
-.inter-font {
-  font-family: 'Inter', sans-serif;
+@font-face {
+  font-family: "SmFont";
+  src: url("./src/fonts/font.woff2") format("woff2");
+}
+
+.sm-font {
+  font-family: 'SmFont', "Varela Round", sans-serif;
+}
+
+
+#animated-word {
+  color: white;
+  text-shadow:
+    -3px 3px 0px rgba(125, 125, 125, 1),
+    -6px 6px 0px rgba(105, 105, 105, 0.5),
+    -9px 9px 0px rgba(85, 85, 85, 0.25);
 }
 
 .text-cursor {
@@ -17,7 +31,7 @@ body {
 }
 
 @keyframes blink {
-
+  
   0%,
   49% {
     opacity: 1;

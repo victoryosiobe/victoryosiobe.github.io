@@ -1,4 +1,4 @@
-const words = ['Develop', 'Create', 'Design', 'Build', 'Innovate', 'Scale'];
+const words = ['Develop', 'Create', 'Design', 'Build', 'Ship', 'Innovate', 'Scale'];
 let wordIndex = 0; //set to second word, as first word is in html too.
 let charIndex = words[0].length -1;
 let isDeleting = true; //delete first word already in html

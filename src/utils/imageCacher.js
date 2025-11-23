@@ -1,4 +1,4 @@
-import { openDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
+import { openDB } from '/src/lib/idb@8.js';
 
 const dbName = 'image-cache';
 const storeName = 'images';

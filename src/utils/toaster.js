@@ -9,7 +9,7 @@ function showToast(message, type = 'info') {
   
   toast.className = `
     relative flex items-center gap-3 px-4 py-2 bg-black/50 border-2 border-${theme}-500/40 rounded-xl shadow-lg
-    text-white select-none transition-all duration-300 ease-out
+    text-white select-none
   `;
   toast.innerHTML = `
     <span class="flex-1">${message}</span>
@@ -23,7 +23,7 @@ function showToast(message, type = 'info') {
   container.appendChild(toast);
   requestAnimationFrame(() => {
     toast.style.opacity = 1;
-    toast.style.transition = 'all 0.3s ease';
+    toast.style.transition = 'transform 0.3s ease-out';
     toast.style.transform = 'translateY(0)';
   });
   

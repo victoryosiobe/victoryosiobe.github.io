@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "SmFont";
+  src: url("./src/fonts/font.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./src/fonts/varelaround.ttf") format('truetype');
+}
+
 html,
 body {
   height: 100%;
@@ -6,11 +18,6 @@ body {
   font-family: "Varela Round";
   color-scheme: dark;
   scroll-behavior: smooth;
-}
-
-@font-face {
-  font-family: "SmFont";
-  src: url("./src/fonts/font.woff2") format("woff2");
 }
 
 .sm-font {

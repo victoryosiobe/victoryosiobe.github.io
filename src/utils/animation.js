@@ -1,6 +1,6 @@
 const words = ['Develop', 'Create', 'Design', 'Build', 'Ship', 'Innovate', 'Scale'];
 let wordIndex = 0; //set to second word, as first word is in html too.
-let charIndex = words[0].length -1;
+let charIndex = words[0].length - 1;
 let isDeleting = true; //delete first word already in html
 let isWaiting = false;
 
@@ -44,5 +44,7 @@ function typeEffect() {
     }
 }
 
-// Start animation after a brief delay
-setTimeout(typeEffect, 1000);
+document.addEventListener("DOMContentLoaded", () => {
+    // Start animation after a brief delay
+    setTimeout(typeEffect, 1000); //running inside here to have the html loaded before it starts. if not it glitches a little at start.
+});

@@ -1,15 +1,16 @@
 import { saveImage, getAllImages } from "./src/utils/imageCacher.js";
-import { getRandomInterval } from "./src/utils/cUtils.js";
+import { getRandomInterval, inViewPercent } from "./src/utils/cUtils.js";
 
 const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 const rootStyle = getComputedStyle(document.documentElement);
 const themeColor = rootStyle.getPropertyValue('--secColor');
 if (metaThemeColor) metaThemeColor.setAttribute('content', themeColor);
+const heroContain = document.getElementById("hero");
 
 const SCREENSHOT_API_URL_READY = "https://peekabooo.vercel.app/screenshot?url=";
 
 
-  showToast("Site Is Always Under Construction!", "warning");
+showToast("Site Is Always Under Construction!", "warning");
 
 async function fetchImage(url, id) {
   try {
@@ -171,3 +172,21 @@ document.querySelectorAll(".swap-group-on-stacks").forEach(group => {
   }
   setTimeout(flap, getRandomInterval(500, 3000))
 });
+
+window.addEventListener("load", () => {
+  if (inViewPercent(heroContain, 0.98)) {
+    setTimeout(() => {
+      window.scrollBy({
+        top: 100,
+        behavior: "smooth"
+      });
+    }, 1000);
+    
+    setTimeout(() => {
+      window.scrollBy({
+        top: -100,
+        behavior: "smooth"
+      });
+    }, 2000);
+  }
+})

@@ -5,8 +5,6 @@
 
 @font-face {
   font-family: 'Varela Round';
-  font-style: normal;
-  font-weight: 400;
   src: url("./src/fonts/varelaround.ttf") format('truetype');
 }
 
@@ -18,12 +16,26 @@ body {
   font-family: "Varela Round";
   color-scheme: dark;
   scroll-behavior: smooth;
+  user-select: none;
 }
 
 .sm-font {
   font-family: 'SmFont', "Varela Round", sans-serif;
 }
 
+.Iint {
+  opacity: 1 !important;
+  background: rgba(0, 0, 0, 0.6);
+  display: inline;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+#post-hero:hover .Iint {
+  background: rgba(0, 0, 0, 0.9);
+}
 
 #animated-word {
   color: white;

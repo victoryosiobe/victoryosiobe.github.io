@@ -5,37 +5,157 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="Cache-control" content="public">
-  <meta name="description" content="Explore the port and projects of the mystique, Victory Osiobe, a software developer, who is actively on Web Tech.">
+  <meta name="description"
+    content="Explore the port and projects of the mystique, Victory Osiobe, a software developer, who is actively on Web Tech.">
   <meta name="theme-color" content="#00171F">
-  <meta name="google-site-verification" content="iHNEF5NrEFBqonCLJc2xlHlQM-mCkwzQE4irl3GqW-Y" />
+  <meta name="google-site-verification"
+    content="iHNEF5NrEFBqonCLJc2xlHlQM-mCkwzQE4irl3GqW-Y" />
   <title>Victory Osiobe’s Portfolio</title>
   <script src="src/utils/consoleIntercept.js"></script>
-  <link rel="icon" href="../src/images/open/thevicko-lite.webp" type="image/webp">
+  <script src="src/utils/pre-cUtils.js"></script>
+  
+  <link rel="icon" href="../src/images/open/thevicko-lite.webp"
+    type="image/webp">
   <script src="./src/lib/tailwind@3.4.16.js"></script>
   <link rel="stylesheet" href="style.css" />
   <script src="./src/lib/fontawesomekit@7.1.0.js"></script>
   <header class="fixed top-0 w-full bg-transparent z-[100] backdrop-blur">
-    <nav class="w-full relative flex justify-between items-center text-white mx-auto p-3 px-5">
+    <nav
+      class="w-full relative flex justify-between items-center text-white mx-auto p-3 px-5">
       <div class="flex justify-center items-center w-full">
         <div class="font-bold text-xl uppercase">
           Victory Osiobe
         </div>
       </div>
       
-      <div class="navMore absolute flex md:static bg-transparent md:min-h-fit left-0 top-[2rem] w-full">
+      <!-- Off-canvas menu -->
+      <!--   <div id="offCanvas" class="fixed md:static top-0 left-0 min-h-svh w-[65%] bg-gray-100/95 ">
+        </div>-->
+      
+      
+      <!-- Off-canvas menu -->
+      <div id="offCanvas"
+        class="fixed md:static top-0 left-[-70%] min-h-dvh w-[70%] bg-gray-900/95 backdrop-blur-lg md:hidden md:w-auto transition-all duration-300 ease-in-out z-10 pt-5 overflow-hidden">
+        <div class="relative min-h-dvh">
+          
+          <div class="relative p-2 m-5 my-0.5">
+            <div class="text-gray-500 font-bold text-md">In-Navigations</div>
+            <div class="left-5 relative text-sm">
+              <div
+                class="absolute -left-3 top-0 bottom-0 w-0.5 bg-gray-600/40 z-0">
+              </div>
+              <ul>
+                <li><a class="hover:text-gray-500 block" href="#hero">Hero</a>
+                </li>
+                <li><a class="hover:text-gray-500 block"
+                    href="#stack-n-tech">Stack & Tech</a></li>
+                <li><a class="hover:text-gray-500 block"
+                    href="#projects">Projects</a></li>
+                <li><a class="hover:text-gray-500 block" href="#who">Who</a>
+                </li>
+                <li><a class="hover:text-gray-500 block" href="#faq">Faq</a>
+                </li>
+              </ul>
+            </div>
+            
+            
+          </div>
+          
+          <div class="relative p-2 m-5 my-0.5">
+            <div class="text-gray-500 font-bold text-md">Highlights</div>
+            <div class="left-5 relative text-sm">
+              <div
+                class="absolute -left-3 top-0 bottom-0 w-0.5 bg-gray-600/40 z-0">
+              </div>
+              <ul>
+                <li><a class="hover:text-gray-500 block"
+                    href="https://npmjs.com/package/kingchop">Kingchop</a>
+                </li>
+                <li><a class="hover:text-gray-500 block"
+                    href="https://github.com/victoryosiobe/vanity">Vanity</a></li>
+            </div>
+            
+            
+          </div>
+          
+          <div
+            class="absolute flex flex-wrap justify-center items-center gap-5 bottom-10 w-full">
+            <div><a class="hover:text-gray-500 block"
+                href="https://github.com/victoryosiobe">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"
+                  alt="github icon">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                </svg>
+              </a>
+            </div>
+            
+            <div><a class="hover:text-gray-500 block"
+                href="https://stackoverflow.com/users/20313640/victory-osiobe">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-stack-overflow"
+                  viewBox="0 0 16 16" alt="stack overflow icon">
+                  <path
+                    d="M12.412 14.572V10.29h1.428V16H1v-5.71h1.428v4.282h9.984z" />
+                  <path
+                    d="M3.857 13.145h7.137v-1.428H3.857zM10.254 0 9.108.852l4.26 5.727 1.146-.852zm-3.54 3.377 5.484 4.567.913-1.097L7.627 2.28l-.914 1.097zM4.922 6.55l6.47 3.013.603-1.294-6.47-3.013-.603 1.294zm-.925 3.344 6.985 1.469.294-1.398-6.985-1.468-.294 1.397z" />
+                </svg>
+              </a></div>
+            
+            <div><a class="hover:text-gray-500 block"
+                href="https://facebook.com/victoryosiobe.official">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"
+                  alt="facebook icon">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                </svg>
+              </a>
+            </div>
+            <div><a class="hover:text-gray-500 block"
+                href="https://x.com/victoryosiobe">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                  width="16" height="16" fill="currentColor"
+                  viewBox="0 0 30 30">
+                  <path
+                    d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z">
+                  </path>
+                </svg></a>
+            </div>
+            
+            <div><a class="hover:text-gray-500 block"
+                onclick="scrollAndAction('#who',     toggleMailSection, 'open')">
+                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                  fill="currentColor"
+                  viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                  <path
+                    d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z" />
+                </svg></a>
+            </div>
+          </div>
+          
+          
+          
+          <!--
         <ul class="flex flex-col w-full h-full p-5 md:p-0 md:flex-row md:items-center md:gap-[2vw] gap-10">
           <li><a class="hover:text-gray-500 block" href="#hero">Hero</a></li>
           <li><a class="hover:text-gray-500 block" href="#stack-n-tech">Stack & Tech</a></li>
           <li><a class="hover:text-gray-500 block" href="#projects">Projects</a></li>
           <li><a class="hover:text-gray-500 block" href="#who">Who</a></li>
           <li><a class="hover:text-gray-500 block" href="#faq">Faq</a></li>
-        </ul>
+        </ul>-->
+        </div>
       </div>
       
+      
       <div class="flex items-center justify-center md:hidden absolute right-5">
-        <div id="menuIcon" class="flex items-center justify-center transition-transform duration-500">
-          <i id="show" class="fa-solid fa-bars text-lg cursor-pointer" onclick="toggleMenu(this)"></i>
-          <i id="hide" class="fa-solid fa-x text-lg cursor-pointer " style="display:none" onclick="toggleMenu(this)"></i>
+        <div id="menuIcon"
+          class="flex items-center justify-center transition-transform duration-500">
+          <i id="show" class="fa-solid fa-bars text-lg cursor-pointer"
+            onclick="toggleMenu(this)"></i>
+          <i id="hide" class="fa-solid fa-x text-lg cursor-pointer "
+            style="display:none" onclick="toggleMenu(this)"></i>
         </div>
       </div>
     </nav>
@@ -44,19 +164,29 @@
 
 <body class="body-gradient">
   <section id="hero">
-    <div class="relative min-h-svh flex flex-col gap-5 items-center justify-center text-white text-center abc px-10">
-      <div class="flex flex-col items-center justify-center bg-red-5000 w-full font-bold">
+    <div
+      class="relative min-h-svh flex flex-col gap-5 items-center justify-center text-white text-center abc px-10">
+      <div
+        class="flex flex-col items-center justify-center bg-red-5000 w-full font-bold">
         <!-- <div class="pb-10">Web Dev | Fullstack | Scripter</div> -->
         <div class="text-7xl">
-          <span id="animated-word" class="uppercase font-bolder sm-font">Develop</span><span class="text-cursor">|</span>
+          <span id="animated-word"
+            class="uppercase font-bolder sm-font">Develop</span><span
+            class="text-cursor">|</span>
         </div>
         <div class="py-6 text-lg text-gray-400">
-          with <span class="text-2xl uppercase text-gray-300">Victory Osiobe</span>
+          with <span class="text-2xl uppercase text-gray-300">Victory
+            Osiobe</span>
         </div>
         
       </div>
-      <div class="absolute bottom-5 left-5 border-2 border-gray-700 shadow-lg bg-gray-800/90 p-1 rounded-full text-xs">
-        <div class="flex flex-row items-center gap-x-1 text-center"><span class="font-bold capitalize text-gray-300/80">Available For Hire</span> <span class="h-2 w-2 inline-block bg-green-500/90 rounded-full"></span></div>
+      <div
+        class="absolute bottom-5 left-5 border-2 border-gray-700 shadow-lg bg-gray-800/90 p-1 rounded-full text-xs">
+        <div class="flex flex-row items-center gap-x-1 text-center"><span
+            class="font-bold capitalize text-gray-300/80">Available For
+            Hire</span> <span
+            class="h-2 w-2 inline-block bg-green-500/90 rounded-full"></span>
+        </div>
       </div>
       
     </div>
@@ -64,18 +194,34 @@
   <hr>
   <section id="post-hero">
     <div class="relative group">
-      <div class="absolute h-full w-full opacity-[0.25] group-hover:opacity-[0.4]  transition duration-1000 overflow-hidden pointer-events-none z-[-1]"><img class="object-cover w-full h-full group-hover:scale-110 transition duration-1000" src="./src/images/open/skills-college.webp" alt="Image Of Skills-college" onerror="this.classList.add('hidden')" />
+      <div
+        class="absolute h-full w-full opacity-[0.25] group-hover:opacity-[0.4]  transition duration-1000 overflow-hidden pointer-events-none z-[-1]">
+        <img
+          class="object-cover w-full h-full group-hover:scale-110 transition duration-1000"
+          src="./src/images/open/skills-college.webp"
+          alt="Image Of Skills-college"
+          onerror="this.classList.add('hidden')" />
       </div>
       <div class="text-gray-300 text-center p-2">
         
         <p class="mx-8"> <span class="Iint">
-            <span class="text-white font-bold ">I'm a fullstack web developer who actually cares.</span> Need to launch new ideas, upgrade existing platforms, build tools and services, showcase your brand, or fix the problems slowing you down? <span class="text-white font-bold ">I've got you</span>.
+            <span class="text-white font-bold ">I'm a fullstack web developer
+              who actually cares.</span> Need to launch new ideas, upgrade
+            existing platforms, build tools and services, showcase your brand,
+            or fix the problems slowing you down? <span
+              class="text-white font-bold ">I've got you</span>.
           </span></p>
         <p class="mx-16"> <span class="Iint">
-            I bring <span class="text-white font-bold ">3+ years</span> of hands-on experience, with a strong focus on <span class="text-white font-bold ">security</span>, <span class="text-white font-bold ">speed</span>, and <span class="text-white font-bold ">stability</span>.
+            I bring <span class="text-white font-bold ">3+ years</span> of
+            hands-on experience, with a strong focus on <span
+              class="text-white font-bold ">security</span>, <span
+              class="text-white font-bold ">speed</span>, and <span
+              class="text-white font-bold ">stability</span>.
           </span> </p>
         <p class="mx-24"> <span class="Iint">
-            I'm <span class="text-white font-bold ">solution-driven</span>, passionate about clean engineering, and always building with intention.
+            I'm <span class="text-white font-bold ">solution-driven</span>,
+            passionate about clean engineering, and always building with
+            intention.
           </span></p>
       </div>
     </div>
@@ -87,77 +233,95 @@
         Stack & Tech
       </div>
       <div class="">
-        <div class="flex flex-col flex-wrap md:flex-row justify-around items-center gap-5 text-center">
+        <div
+          class="flex flex-col flex-wrap md:flex-row justify-around items-center gap-5 text-center">
           
-          <div class="flex flex-row flex-wrap justify-center gap-10 text-center p-5 px-10 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
+          <div
+            class="flex flex-row flex-wrap justify-center gap-10 text-center p-5 px-10 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
             
             <div>
-              <img class="s-img" src="./src/images/stack/html5.svg" alt="Html Image">
+              <img class="s-img" src="./src/images/stack/html5.svg"
+                alt="Html Image">
               <div class=" pt-2">HTML</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/css3.svg" alt="Css Image">
+              <img class="s-img" src="./src/images/stack/css3.svg"
+                alt="Css Image">
               <div class=" pt-2">CSS</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/js.svg" alt="JavaScript Image">
+              <img class="s-img" src="./src/images/stack/js.svg"
+                alt="JavaScript Image">
               <div class=" pt-2">JS</div>
             </div>
           </div>
           
           <!-- <div class="my-5 text-sm">Then I took a leap to learn...</div> -->
           
-          <div class="flex flex-row flex-wrap justify-center gap-10 text-center  p-5 px-10 mx-5 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
+          <div
+            class="flex flex-row flex-wrap justify-center gap-10 text-center  p-5 px-10 mx-5 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
             
             <div>
-              <img class="s-img" src="./src/images/stack/nodejs.svg" alt="NodeJs Image">
+              <img class="s-img" src="./src/images/stack/nodejs.svg"
+                alt="NodeJs Image">
               <div class=" pt-2">nodeJs</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/expressjs.svg" alt="Express Image">
+              <img class="s-img" src="./src/images/stack/expressjs.svg"
+                alt="Express Image">
               <div class=" pt-2">expressJS</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/nextjs.svg" alt="NextJs Image">
+              <img class="s-img" src="./src/images/stack/nextjs.svg"
+                alt="NextJs Image">
               <div class=" pt-2">nextjs</div>
             </div>
           </div>
           
           <!-- <div class="my-5 text-sm">Afterwards, came back to...</div> -->
           
-          <div class="flex flex-row flex-wrap justify-center gap-10 text-center  p-5 px-10 mx-5 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
+          <div
+            class="flex flex-row flex-wrap justify-center gap-10 text-center  p-5 px-10 mx-5 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
             
             <div>
-              <img class="s-img" src="./src/images/stack/bootstrap.svg" alt="Bootstrap Image">
+              <img class="s-img" src="./src/images/stack/bootstrap.svg"
+                alt="Bootstrap Image">
               <div class=" pt-2">bootstrap</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/tailwind.svg" alt="Tailwind Image">
+              <img class="s-img" src="./src/images/stack/tailwind.svg"
+                alt="Tailwind Image">
               <div class=" pt-2">tailwind</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/react.svg" alt="React Image">
+              <img class="s-img" src="./src/images/stack/react.svg"
+                alt="React Image">
               <div class=" pt-2">reactJs</div>
             </div>
           </div>
           <!-- <div class="my-5 text-sm">While not in active usage, I also picked up...</div> -->
           
-          <div class="flex flex-row flex-wrap justify-center gap-10 text-center  p-5 px-10 mx-5 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
+          <div
+            class="flex flex-row flex-wrap justify-center gap-10 text-center  p-5 px-10 mx-5 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
             
             <div>
-              <img class="s-img" src="./src/images/stack/typescript.svg" alt="Typescript Image">
+              <img class="s-img" src="./src/images/stack/typescript.svg"
+                alt="Typescript Image">
               <div class=" pt-2">typescript</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/mongoose.svg" alt="Mongoose Image">
+              <img class="s-img" src="./src/images/stack/mongoose.svg"
+                alt="Mongoose Image">
               <div class=" pt-2">mongoose</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/redis.svg" alt="Redis Image">
+              <img class="s-img" src="./src/images/stack/redis.svg"
+                alt="Redis Image">
               <div class=" pt-2">Redis</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/python.svg" alt="Python Image">
+              <img class="s-img" src="./src/images/stack/python.svg"
+                alt="Python Image">
               <div class=" pt-2">python</div>
             </div>
           </div>
@@ -165,43 +329,53 @@
           
           <!-- <div class="my-5 text-sm">And all these led me to tools like...</div> -->
           
-          <div class="flex flex-row flex-wrap justify-center gap-10 text-center  p-5 px-10 mx-5 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
+          <div
+            class="flex flex-row flex-wrap justify-center gap-10 text-center  p-5 px-10 mx-5 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
             
             <div>
-              <img class="s-img" src="./src/images/stack/vite.svg" alt="Vite Image">
+              <img class="s-img" src="./src/images/stack/vite.svg"
+                alt="Vite Image">
               <div class=" pt-2">vite</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/git.svg" alt="Git Image">
+              <img class="s-img" src="./src/images/stack/git.svg"
+                alt="Git Image">
               <div class=" pt-2">git</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/github.svg" alt="Github Image">
+              <img class="s-img" src="./src/images/stack/github.svg"
+                alt="Github Image">
               <div class=" pt-2">github</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/render.svg" alt="Render Image">
+              <img class="s-img" src="./src/images/stack/render.svg"
+                alt="Render Image">
               <div class=" pt-2">render</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/vercel.svg" alt="Vercel Image">
+              <img class="s-img" src="./src/images/stack/vercel.svg"
+                alt="Vercel Image">
               <div class=" pt-2">vercel</div>
             </div>
           </div>
           
           
-          <div class="flex flex-row flex-wrap justify-center gap-10 text-center  p-5 px-10 mx-5 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
+          <div
+            class="flex flex-row flex-wrap justify-center gap-10 text-center  p-5 px-10 mx-5 rounded-xl hover:bg-gray-900/50 swap-group-on-stacks">
             
             <div>
-              <img class="s-img" src="./src/images/stack/telegram.svg" alt="Telegram Image">
+              <img class="s-img" src="./src/images/stack/telegram.svg"
+                alt="Telegram Image">
               <div class=" pt-2">telegram bot API</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/ngrok.svg" alt="Ngrok Image">
+              <img class="s-img" src="./src/images/stack/ngrok.svg"
+                alt="Ngrok Image">
               <div class=" pt-2">Ngrok</div>
             </div>
             <div>
-              <img class="s-img" src="./src/images/stack/solana.svg" alt="Solana Image">
+              <img class="s-img" src="./src/images/stack/solana.svg"
+                alt="Solana Image">
               <div class=" pt-2">Solana web3 API</div>
             </div>
           </div>
@@ -213,16 +387,24 @@
       <div class="text-4xl font-bold text-center py-5">
         projects
       </div>
-      <div class="relative grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 p-10 py-0 my-5">
+      <div
+        class="relative grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10 p-10 py-0 my-5">
         <!-- The continuous centered line (only one for the whole timeline) -->
-        <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-600/40 -translate-x-1/2 z-0"></div>
+        <div
+          class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-600/40 -translate-x-1/2 z-0">
+        </div>
         
         
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div
+            class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20">
+          </div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
-            <img class="preview-with-no-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop" alt="Kingchop Stats Image" data-link="https://npmjs.com/package/kingchop" />
+            <img class="preview-with-no-screenshot"
+              src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/kingchop"
+              alt="Kingchop Stats Image"
+              data-link="https://npmjs.com/package/kingchop" />
             <div class="relative p-5">
               <div class="uppercase text-xl font-bold my-1">Kingchop</div>
               <div class="normal-case text-sm my-1 z-[20]">
@@ -234,36 +416,59 @@
                 </p>
                 <p>
                   Kingchop as of
-                  <span class="px-1 py-0.5 rounded-md bg-white text-gray-800">v1.0.6 (Aurora)</span>, had
+                  <span
+                    class="px-1 py-0.5 rounded-md bg-white text-gray-800">v1.0.6
+                    (Aurora)</span>, had
                   paragraph, sentence, sub-sentence, words, tokenizing
                   abilities, with an extra correct text method.
                 </p>
               </div>
-              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
-                <a href="https://github.com/victoryosiobe/kingchop" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs on GitHub</a>
-                <a href="https://npmjs.com/package/kingchop" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On NPM</a>
+              <div
+                class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/kingchop"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs
+                  on GitHub</a>
+                <a href="https://npmjs.com/package/kingchop"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View
+                  On NPM</a>
               </div>
-              <div class="absolute right-0 bottom-[-5px] -z-10 opacity-"><img class="h-32 w-32" src="src/images/open/drago.png" alt="Drago Background Image" onerror="this.classList.add('hidden')"></div>
+              <div class="absolute right-0 bottom-[-5px] -z-10 opacity-"><img
+                  class="h-32 w-32" src="src/images/open/drago.png"
+                  alt="Drago Background Image"
+                  onerror="this.classList.add('hidden')"></div>
             </div>
           </div>
         </div>
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div
+            class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20">
+          </div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
-            <img class="preview-with-no-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/vanity" alt="Vanity Stats Image" data-link="https://github.com/victoryosiobe/vanity" />
+            <img class="preview-with-no-screenshot"
+              src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/vanity"
+              alt="Vanity Stats Image"
+              data-link="https://github.com/victoryosiobe/vanity" />
             <div class="relative p-5">
               <div class="uppercase text-xl font-bold my-1">Vanity</div>
               <div class="normal-case text-sm my-1">
                 <p>
-                  Vanity is a fast custom wallet generator that lets you create addresses with custom text at the beginning or end. It takes your desired prefix or (and) suffix through stdin using readline, then uses all available CPU cores to grind keys at maximum speed until it finds a match.
+                  Vanity is a fast custom wallet generator that lets you create
+                  addresses with custom text at the beginning or end. It takes
+                  your desired prefix or (and) suffix through stdin using
+                  readline, then uses all available CPU cores to grind keys at
+                  maximum speed until it finds a match.
                 </p>
                 <p>
-                  It currently supports the Solana, and EVM-chains. I'll add more chains as I get to understand them.
+                  It currently supports the Solana, and EVM-chains. I'll add
+                  more chains as I get to understand them.
                 </p>
               </div>
-              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
-                <a href="https://github.com/victoryosiobe/vanity" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs on GitHub</a>
+              <div
+                class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/vanity"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs
+                  on GitHub</a>
               </div>
               
             </div>
@@ -272,22 +477,39 @@
         
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div
+            class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20">
+          </div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
-            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/peekabooo" alt="Peekabooo Stats Image" data-link="https://peekabooo.vercel.app" />
+            <img class="preview-with-screenshot"
+              src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/peekabooo"
+              alt="Peekabooo Stats Image"
+              data-link="https://peekabooo.vercel.app" />
             <div class="relative p-5">
               <div class="uppercase text-xl font-bold my-1">Peekabooo</div>
               <div class="normal-case text-sm my-1">
                 <p>
-                  Peekabooo will help you get the screenshot of a website in an image format. For accessibility, I made it an open API, and nope...no need to install anything. You, me, anyone can access it. Just don't abuse it, haha.
+                  Peekabooo will help you get the screenshot of a website in an
+                  image format. For accessibility, I made it an open API, and
+                  nope...no need to install anything. You, me, anyone can access
+                  it. Just don't abuse it, haha.
                 </p>
                 <p>
-                  This API makes use of the puppeteer tool to open a browser, load the site you wanna take a screenshot of, does its stuff, and send it back to you. This could be used when trying to make a preview of a site in an image, without needing to worry about newer design changes to it. It is in use on this site.
+                  This API makes use of the puppeteer tool to open a browser,
+                  load the site you wanna take a screenshot of, does its stuff,
+                  and send it back to you. This could be used when trying to
+                  make a preview of a site in an image, without needing to worry
+                  about newer design changes to it. It is in use on this site.
                 </p>
               </div>
-              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
-                <a href="https://github.com/victoryosiobe/peekabooo" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-                <a href="https://peekabooo.vercel.app" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs On Vercel</a>
+              <div
+                class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/peekabooo"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source
+                  on GitHub</a>
+                <a href="https://peekabooo.vercel.app"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Docs
+                  On Vercel</a>
               </div>
               
             </div>
@@ -295,22 +517,40 @@
         </div>
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div
+            class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20">
+          </div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
-            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/syntaxx" alt="Syntaxx Stats Image" data-link="https://syntaxxx.vercel.app?skipNewUserModal" />
+            <img class="preview-with-screenshot"
+              src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/syntaxx"
+              alt="Syntaxx Stats Image"
+              data-link="https://syntaxxx.vercel.app?skipNewUserModal" />
             <div class="relative p-5">
               <div class="uppercase text-xl font-bold my-1">Syntaxx</div>
               <div class="normal-case text-sm my-1">
                 <p>
-                  In 2022, when ChatGPT was launched, I set out to build a chatbot, aiming for something better, despite the limited info at the time. Syntaxx was designed to be an offline web chatbot for chatting directly in the browser, using indexedDB to locally store chat,
-                  allowing creation, deletion, and getting right back, without any server involvement.
+                  In 2022, when ChatGPT was launched, I set out to build a
+                  chatbot, aiming for something better, despite the limited info
+                  at the time. Syntaxx was designed to be an offline web chatbot
+                  for chatting directly in the browser, using indexedDB to
+                  locally store chat,
+                  allowing creation, deletion, and getting right back, without
+                  any server involvement.
                 </p>
-                <p>My approach was on flexible-static rules for replies, without context from previous messages, so it was nowhere near GPT-3's capabilities.</p>
-                <p>I paused to learn more, but realized soon, that it was too much for me alone, so I let it go. I could revamp it now for today's use, but I'm leaving it as an archive of my early attempt.
+                <p>My approach was on flexible-static rules for replies, without
+                  context from previous messages, so it was nowhere near GPT-3's
+                  capabilities.</p>
+                <p>I paused to learn more, but realized soon, that it was too
+                  much for me alone, so I let it go. I could revamp it now for
+                  today's use, but I'm leaving it as an archive of my early
+                  attempt.
                 </p>
               </div>
-              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
-                <a href="https://syntaxxx.vercel.app" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On Vercel</a>
+              <div
+                class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://syntaxxx.vercel.app"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View
+                  On Vercel</a>
               </div>
               
             </div>
@@ -319,29 +559,51 @@
         
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div
+            class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20">
+          </div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
-            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/nrrverse" alt="Nrrverse Stats Image" data-link="https://nrrverse.vercel.app" />
+            <img class="preview-with-screenshot"
+              src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/nrrverse"
+              alt="Nrrverse Stats Image"
+              data-link="https://nrrverse.vercel.app" />
             <div class="relative p-5">
               <div class="uppercase text-xl font-bold my-1">Nrrverse</div>
               <div class="normal-case text-sm my-1">
                 <p>
-                  A react site, supposedly to be filled with elements designed by open source, and contributions. I thought ahead with all the competitions out there, no way this was going to be a success. Oh well, I built what it would be like, with some actual functioning parts.
+                  A react site, supposedly to be filled with elements designed
+                  by open source, and contributions. I thought ahead with all
+                  the competitions out there, no way this was going to be a
+                  success. Oh well, I built what it would be like, with some
+                  actual functioning parts.
                 </p>
                 <p>
-                  The goal was for devs from all around including me to contribute to the project, showcasing their abilities, taking the opportunity to get sponsored on their “Buy me a coffee” links, or on socials.
+                  The goal was for devs from all around including me to
+                  contribute to the project, showcasing their abilities, taking
+                  the opportunity to get sponsored on their “Buy me a coffee”
+                  links, or on socials.
                 </p>
                 <p>
-                  I also needed to do some API for the application, that devs could use to show their designs on whatever site. But limited to frontend and no clue on how to pay for server operations, I achieved it on FRONTEND.
+                  I also needed to do some API for the application, that devs
+                  could use to show their designs on whatever site. But limited
+                  to frontend and no clue on how to pay for server operations, I
+                  achieved it on FRONTEND.
                 </p>
                 
                 <p>
-                  Who does that? Me! Well, with the help of Vercel free hosting and domain, and config, so anyone could iframe their design to any site.
+                  Who does that? Me! Well, with the help of Vercel free hosting
+                  and domain, and config, so anyone could iframe their design to
+                  any site.
                 </p>
               </div>
-              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
-                <a href="https://github.com/victoryosiobe/nrrverse" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-                <a href="https://nrrverse.vercel.app" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On Vercel</a>
+              <div
+                class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/nrrverse"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source
+                  on GitHub</a>
+                <a href="https://nrrverse.vercel.app"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View
+                  On Vercel</a>
               </div>
               
             </div>
@@ -349,22 +611,38 @@
         </div>
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div
+            class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20">
+          </div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
-            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/zrang" alt="Zrang Stats Image" data-link="https://victoryosiobe.github.io/zrang" />
+            <img class="preview-with-screenshot"
+              src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/zrang"
+              alt="Zrang Stats Image"
+              data-link="https://victoryosiobe.github.io/zrang" />
             <div class="relative p-5">
               <div class="uppercase text-xl font-bold my-1">Zrang</div>
               <div class="normal-case text-sm my-1">
                 <p>
-                  A web-based 2D game built with Canvas. The idea came from a game whose source code a friend shared with me, challenging me to recreate it from scratch. I did that, but this was no copy and paste. I only needed to understand the game’s rules, then wrote my own version for Zrang.
+                  A web-based 2D game built with Canvas. The idea came from a
+                  game whose source code a friend shared with me, challenging me
+                  to recreate it from scratch. I did that, but this was no copy
+                  and paste. I only needed to understand the game’s rules, then
+                  wrote my own version for Zrang.
                 </p>
                 <p>
-                  This game took me about 4 days to build despite not knowing anything about canvas. I was learning and doing. Try the game out, at least, before you continue with this site.
+                  This game took me about 4 days to build despite not knowing
+                  anything about canvas. I was learning and doing. Try the game
+                  out, at least, before you continue with this site.
                 </p>
               </div>
-              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
-                <a href="https://github.com/victoryosiobe/zrang" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-                <a href="https://victoryosiobe.github.io/zrang" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Play on Gitpages</a>
+              <div
+                class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/zrang"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source
+                  on GitHub</a>
+                <a href="https://victoryosiobe.github.io/zrang"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Play
+                  on Gitpages</a>
               </div>
               
             </div>
@@ -372,23 +650,39 @@
         </div>
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div
+            class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20">
+          </div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
-            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/betabi" alt="Betabi Stats Image" data-link="https://victoryosiobe.github.io/betabi" />
+            <img class="preview-with-screenshot"
+              src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/betabi"
+              alt="Betabi Stats Image"
+              data-link="https://victoryosiobe.github.io/betabi" />
             <div class="relative p-5">
               <div class="uppercase text-xl font-bold my-1">Betabi</div>
               <div class="normal-case text-sm my-1">
                 <p>
-                  An arbitrage calculator for betting across bookmakers. It shows whether you win, lose, or break even from two opposite dependent events based on odds.
+                  An arbitrage calculator for betting across bookmakers. It
+                  shows whether you win, lose, or break even from two opposite
+                  dependent events based on odds.
                 </p>
                 <p>
-                  <span class="px-1 py-0.5 rounded-md bg-white text-gray-800">General Advice:</span>
-                  Gambling is rough. Arbitrage might sound smart but still risky. If you play, play smart, <span class="font-bold">not desperate</span>. Everything’s a low-key gamble anyway.
+                  <span
+                    class="px-1 py-0.5 rounded-md bg-white text-gray-800">General
+                    Advice:</span>
+                  Gambling is rough. Arbitrage might sound smart but still
+                  risky. If you play, play smart, <span class="font-bold">not
+                    desperate</span>. Everything’s a low-key gamble anyway.
                 </p>
               </div>
-              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
-                <a href="https://github.com/victoryosiobe/betabi" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-                <a href="https://victoryosiobe.github.io/betabi" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View on Gitpages</a>
+              <div
+                class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/betabi"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source
+                  on GitHub</a>
+                <a href="https://victoryosiobe.github.io/betabi"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View
+                  on Gitpages</a>
               </div>
               
             </div>
@@ -396,9 +690,14 @@
         </div>
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div
+            class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20">
+          </div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
-            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/blueuniverse" alt="Blue Universe Stats Image" data-link="https://victoryosiobe.github.io/blueuniverse" />
+            <img class="preview-with-screenshot"
+              src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/blueuniverse"
+              alt="Blue Universe Stats Image"
+              data-link="https://victoryosiobe.github.io/blueuniverse" />
             <div class="relative p-5">
               <div class="uppercase text-xl font-bold my-1">Blue Universe</div>
               <div class="normal-case text-sm my-1">
@@ -409,9 +708,14 @@
                   vanilla HTML, CSS, and JavaScript.
                 </p>
               </div>
-              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
-                <a href="https://github.com/victoryosiobe/blueuniverse" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-                <a href="https://victoryosiobe.github.io/blueuniverse" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View on Gitpages</a>
+              <div
+                class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/blueuniverse"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source
+                  on GitHub</a>
+                <a href="https://victoryosiobe.github.io/blueuniverse"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View
+                  on Gitpages</a>
               </div>
               
             </div>
@@ -421,23 +725,34 @@
         
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div
+            class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20">
+          </div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
-            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/copik" alt="Copik Stats Image" data-link="https://victoryosiobe.github.io/copik" />
+            <img class="preview-with-screenshot"
+              src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/copik"
+              alt="Copik Stats Image"
+              data-link="https://victoryosiobe.github.io/copik" />
             <div class="relative p-5">
               <div class="uppercase text-xl font-bold my-1">Copik</div>
               <div class="normal-case text-sm my-1">
                 <p>
                   I found it hard to write Hex color codes. Maybe I
-                  was too lazy to learn how to, but since I've got the abilities, why not build a color picker?
+                  was too lazy to learn how to, but since I've got the
+                  abilities, why not build a color picker?
                 </p>
                 <p>
                   See, that's how workarounds work.
                 </p>
               </div>
-              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
-                <a href="https://github.com/victoryosiobe/copik" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-                <a href="https://victoryosiobe.github.io/copik" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View On Vercel</a>
+              <div
+                class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/copik"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source
+                  on GitHub</a>
+                <a href="https://victoryosiobe.github.io/copik"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View
+                  On Vercel</a>
               </div>
               
             </div>
@@ -448,9 +763,14 @@
         
         
         <div class="relative flex flex-col p-0 z-10 shadow-lg">
-          <div class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20"></div>
+          <div
+            class="absolute left-1/2 top-0 w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900 shadow-lg shadow-blue-500 -translate-x-1/2 -translate-y-1/2 z-20">
+          </div>
           <div class="rounded-2xl overflow-hidden bg-gray-900">
-            <img class="preview-with-screenshot" src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/repli" alt="Repli Stats Image" data-link="https://victoryosiobe.github.io/repli" />
+            <img class="preview-with-screenshot"
+              src="https://opengraph.githubassets.com/ac3292535c045c67c124b64d7593409c4e1e32a9003c72d43c709b3f084c415d/victoryosiobe/repli"
+              alt="Repli Stats Image"
+              data-link="https://victoryosiobe.github.io/repli" />
             <div class="relative p-5">
               <div class="uppercase text-xl font-bold my-1">Repli</div>
               <div class="normal-case text-sm my-1">
@@ -463,9 +783,14 @@
                   Amongst early projects on Natural Language Processing (NLP).
                 </p>
               </div>
-              <div class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
-                <a href="https://github.com/victoryosiobe/repli" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source on GitHub</a>
-                <a href="https://victoryosiobe.github.io/repli" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View on Gitpages</a>
+              <div
+                class="flex flex-row gap-5 justify-start text-center mt-3 text-sm w-fit">
+                <a href="https://github.com/victoryosiobe/repli"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">Source
+                  on GitHub</a>
+                <a href="https://victoryosiobe.github.io/repli"
+                  class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">View
+                  on Gitpages</a>
               </div>
               
             </div>
@@ -479,66 +804,100 @@
       <div class="text-4xl uppercase font-bold text-center py-5">
         Who?
       </div>
-      <div class="relative flex flex-col gap-4 m-5 p-5 justify-center items-center bg-gray-900 rounded-xl shadow-lg group">
+      <div
+        class="relative flex flex-col gap-4 m-5 p-5 justify-center items-center bg-gray-900 rounded-xl shadow-lg group">
         
-        <div class="absolute h-full w-full opacity-[0.11] group-hover:opacity-[0.15]  transition duration-1000 overflow-hidden pointer-events-none"><img class="object-cover w-full h-full group-hover:scale-110 transition duration-1000" src="./src/images/open/pending.jpg" alt="Image Of Codes" onerror="this.classList.add('hidden')" />
+        <div
+          class="absolute h-full w-full opacity-[0.11] group-hover:opacity-[0.15]  transition duration-1000 overflow-hidden pointer-events-none">
+          <img
+            class="object-cover w-full h-full group-hover:scale-110 transition duration-1000"
+            src="./src/images/open/pending.jpg" alt="Image Of Codes"
+            onerror="this.classList.add('hidden')" />
         </div>
         
         <div class="relative flex flex-wrap gap-2 items-center">
           <div class="">
-            <div class="h-24 w-24 rounded-full overflow-hidden border-4 border-gray-600">
-              <img class="object-cover w-full h-full" src="../src/images/open/thevicko-lite.webp" alt="Image Of Victory Osiobe" />
+            <div
+              class="h-24 w-24 rounded-full overflow-hidden border-4 border-gray-600">
+              <img class="object-cover w-full h-full"
+                src="../src/images/open/thevicko-lite.webp"
+                alt="Image Of Victory Osiobe" />
             </div>
           </div>
           <div class="">
             <div class="text-xl font-bold pb-0.5">Victory Osiobe</div>
             <div class="text-sm normal-case py-0.5 pt-1.5">
-              That go-to Web Developer with expertise in backend systems, automation scripts, tools, and microservices (APIaaS). I also handle frontend (UI/UX) development and build PWAs. Big on optimization, cost-cutting, and making sure stacks I work with, run with speed, security, and stability.</div>
+              That go-to Web Developer with expertise in backend systems,
+              automation scripts, tools, and microservices (APIaaS). I also
+              handle frontend (UI/UX) development and build PWAs. Big on
+              optimization, cost-cutting, and making sure stacks I work with,
+              run with speed, security, and stability.</div>
           </div>
         </div>
         <div class="flex flex-wrap justify-center items-center gap-10 gap-y-5">
           <div>
             <a href="https://github.com/victoryosiobe">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16" alt="github icon">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"
+                alt="github icon">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8" />
               </svg>
             </a>
           </div>
           
           <div>
             <a href="https://stackoverflow.com/users/20313640/victory-osiobe">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stack-overflow" viewBox="0 0 16 16" alt="stack overflow icon">
-                <path d="M12.412 14.572V10.29h1.428V16H1v-5.71h1.428v4.282h9.984z" />
-                <path d="M3.857 13.145h7.137v-1.428H3.857zM10.254 0 9.108.852l4.26 5.727 1.146-.852zm-3.54 3.377 5.484 4.567.913-1.097L7.627 2.28l-.914 1.097zM4.922 6.55l6.47 3.013.603-1.294-6.47-3.013-.603 1.294zm-.925 3.344 6.985 1.469.294-1.398-6.985-1.468-.294 1.397z" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-stack-overflow"
+                viewBox="0 0 16 16" alt="stack overflow icon">
+                <path
+                  d="M12.412 14.572V10.29h1.428V16H1v-5.71h1.428v4.282h9.984z" />
+                <path
+                  d="M3.857 13.145h7.137v-1.428H3.857zM10.254 0 9.108.852l4.26 5.727 1.146-.852zm-3.54 3.377 5.484 4.567.913-1.097L7.627 2.28l-.914 1.097zM4.922 6.55l6.47 3.013.603-1.294-6.47-3.013-.603 1.294zm-.925 3.344 6.985 1.469.294-1.398-6.985-1.468-.294 1.397z" />
               </svg>
             </a>
           </div>
           
           <div>
             <a href="https://facebook.com/victoryosiobe.official">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16" alt="facebook icon">
-                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"
+                alt="facebook icon">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
               </svg>
             </a>
           </div>
         </div>
         <div class="w-full">
           <div class="w-full flex items-center justify-end my-">
-            <div class="text-blue-500 text-xs cursor-pointer" onclick="toggleMailSection(this)">Reach via email?<i id="show-mail-section" class="fa-solid fa-caret-down transition-transform duration-300"></i></div>
+            <div class="text-blue-500 text-xs cursor-pointer"
+              onclick="toggleMailSection(this)">Reach via email?<i
+                id="show-mail-section"
+                class="fa-solid fa-caret-down transition-transform duration-300"></i>
+            </div>
           </div>
           
           <div class="mailSection w-full">
-            <form id="mail-form" class="w-full p-1 flex flex-col items-end justify-start gap-3">
+            <form id="mail-form"
+              class="w-full p-1 flex flex-col items-end justify-start gap-3">
               <!-- Email -->
               <!-- <label for="email" class="font-bold">Email:</label> -->
-              <input name="email" type="email" class="w-1/2 p-2 rounded-xl border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your email..." required />
+              <input name="email" type="email"
+                class="w-1/2 p-2 rounded-xl border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Your email..." required />
               
               <!-- Message -->
               <!-- <label for="message" class="font-bold">Message:</label> -->
-              <textarea name="message" class="w-full p-2 rounded-xl border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Your message to me..." required></textarea>
+              <textarea name="message"
+                class="w-full p-2 rounded-xl border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                rows="3" placeholder="Your message to me..."
+                required></textarea>
               
               <!-- Submit button -->
-              <button type="submit" class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">
+              <button type="submit"
+                class="border-2 border-blue-500 bg-gray-900/50 rounded-lg p-2 transition duration-300 hover:bg-blue-500 hover:scale-105">
                 <i class="fa-solid fa-arrow-right"> </i>
               </button>
             </form>
@@ -557,67 +916,89 @@
       
       <div class="space-y-4 bg-gray-900 p-5 rounded-2xl my-5">
         <div class="border-b border-gray-700 overflow-hidden">
-          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+          <button
+            class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
             <span>Good developer?</span>
             <span class="icon">+</span>
           </button>
-          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
-            <p>I get neck-dip in all this, that I'm ready to go the extra mile, ready to research, visualize, map things out, enlightened others, re-learn, give software its own uniqueness. I make things work, got the engineer’s traits and don't back out easily.</p>
+          <div
+            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+            <p>I get neck-dip in all this, that I'm ready to go the extra mile,
+              ready to research, visualize, map things out, enlightened others,
+              re-learn, give software its own uniqueness. I make things work,
+              got the engineer’s traits and don't back out easily.</p>
           </div>
         </div>
         
         <div class="border-b border-gray-700 overflow-hidden">
-          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+          <button
+            class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
             <span>What Interests Me?</span>
             <span class="icon">+</span>
           </button>
-          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
-            <p>Artificial Intelligence, Natural Language Processing, Machine Learning, and Communication systems.</p>
+          <div
+            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+            <p>Artificial Intelligence, Natural Language Processing, Machine
+              Learning, and Communication systems.</p>
             <p>My primary backend stack revolves around Node.js and Python.</p>
             <p>I do frontend when the vibes align. 😄</p>
           </div>
         </div>
         
         <div class="border-b border-gray-700 overflow-hidden">
-          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+          <button
+            class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
             <span>What Are My Main Stacks?</span>
             <span class="icon">+</span>
           </button>
-          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+          <div
+            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
             <p>Proficient in HTML, CSS, JavaScript, and TypeScript.</p>
-            <p>Experienced with React, TailwindCSS, and Bootstrap for building responsive interfaces.</p>
+            <p>Experienced with React, TailwindCSS, and Bootstrap for building
+              responsive interfaces.</p>
             <p>Specialize in backend development using Node.js and Express.</p>
             <p>Comfortable working with databases like Redis and MongoDB.</p>
           </div>
         </div>
         
         <div class="border-b border-gray-700 overflow-hidden">
-          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+          <button
+            class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
             <span>On fullstack, which first? Frontend or Backend?</span>
             <span class="icon">+</span>
           </button>
-          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
-            <p>Depends. Usually both, but, I'm big on functionality, so backend is priority. If you priotize frontend, you may never get it all done. Again, this largely depends on the circumstances at the time.</p>
+          <div
+            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+            <p>Depends. Usually both, but, I'm big on functionality, so backend
+              is priority. If you priotize frontend, you may never get it all
+              done. Again, this largely depends on the circumstances at the
+              time.</p>
           </div>
         </div>
         
         <div class="border-b border-gray-700 overflow-hidden">
-          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+          <button
+            class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
             <span>40 hours a week?</span>
             <span class="icon">+</span>
           </button>
-          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
-            <p>Not currently. 25 hours a week is perfect. Fewer hours, less burnout, better output.</p>
+          <div
+            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+            <p>Not currently. 25 hours a week is perfect. Fewer hours, less
+              burnout, better output.</p>
           </div>
         </div>
         
         <div class="border-b border-gray-700 overflow-hidden">
-          <button class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
+          <button
+            class="flex items-center justify-between w-full py-3 text-left text-white hover:text-blue-400 faq-toggle">
             <span>Able to work with a team?</span>
             <span class="icon">+</span>
           </button>
-          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
-            <p>Sure. If the team is proactive, I know what my role’s about, and communication’s good, I’ll catch up in no time.</p>
+          <div
+            class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
+            <p>Sure. If the team is proactive, I know what my role’s about, and
+              communication’s good, I’ll catch up in no time.</p>
           </div>
         </div>
         
@@ -626,9 +1007,13 @@
     </section>
     <section class="text-center text-xs mx-auto">
       <div class="flex flex-row flex-wrap justify-center text-gray-400">
-        <a class="hover:text-blue-400" href="https://github.com/victoryosiobe/victoryosiobe.github.io">Site Repo</a>
+        <a class="hover:text-blue-400"
+          href="https://github.com/victoryosiobe/victoryosiobe.github.io">Site
+          Repo</a>
         <span class="inline mx-2">&middot;</span>
-        <a class="hover:text-blue-400" href="https://github.com/victoryosiobe/victoryosiobe.github.io/issues">Report Issue</a>
+        <a class="hover:text-blue-400"
+          href="https://github.com/victoryosiobe/victoryosiobe.github.io/issues">Report
+          Issue</a>
       </div>
       <div class="uppercase leading-none">
         <p>Designed by Victory Osiobe</p>
@@ -638,7 +1023,8 @@
     
   </footer>
   
-  <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
+  <div id="toast-container"
+    class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
 </body>
 
 <script src="src/utils/animation.js"></script>

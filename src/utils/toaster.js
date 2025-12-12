@@ -8,8 +8,8 @@ function showToast(message, type = 'info') {
     'gray'
   
   toast.className = `
-    relative flex items-center gap-3 px-4 py-2 bg-black/50 border-2 border-${theme}-500/40 rounded-xl shadow-lg
-    text-white select-none
+    relative flex items-center gap-2 px-3 py-2 bg-black/50 border-2 border-${theme}-500/40 rounded-xl shadow-lg
+    text-white text-sm select-none
   `;
   toast.innerHTML = `
     <span class="flex-1">${message}</span>

@@ -8,7 +8,7 @@ function dater() {
 
 //
 //
-const navMore = document.querySelector(".navMore");
+const navMore = document.querySelector("#offCanvas");
 const menuIcon = document.getElementById("menuIcon");
 
 const mailSection = document.querySelector(".mailSection");
@@ -16,19 +16,16 @@ const mailSectionIcon = document.getElementById("show-mail-section");
 
 function toggleMenu(e) {
   menuIcon.classList.toggle("rotate-180");
+  navMore.classList.toggle("left-0");
   
-  if (navMore.style.maxHeight) {
-    navMore.style.maxHeight = null;
-  } else {
-    navMore.style.maxHeight = navMore.scrollHeight + "px";
-  }
 }
 
 
 function toggleMailSection(mode) {
   mailSectionIcon.classList.toggle("rotate-180");
   if (mode === "close") mailSection.style.maxHeight = null;
-  else if (mode === "open") mailSection.style.maxHeight = mailSection.scrollHeight + "px";
+  else if (mode === "open") mailSection.style.maxHeight = mailSection
+    .scrollHeight + "px";
   else if (mailSection.style.maxHeight) {
     mailSection.style.maxHeight = null;
   } else {

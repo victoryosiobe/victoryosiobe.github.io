@@ -14,3 +14,4 @@ export function inViewPercent(el, percent = 0.5) {
   
   return visible / elemHeight >= percent;
 }
+

@@ -51,7 +51,7 @@ export async function getAllImages() {
 export async function checkExpiry() {
   const db = await getDB();
   const savedTime = await db.get(storeName, metaKey);
-  const oneHour = 60 * 60 * 1000;
+  const oneHour = 48 * 60 * 60 * 1000;
   
   if (!savedTime || Date.now() - savedTime > oneHour) {
     await db.clear(storeName);

@@ -1,4 +1,3 @@
-import { saveImage, getAllImages } from "./src/utils/imageCacher.js";
 import { getRandomInterval, inViewPercent } from "./src/utils/cUtils.js";
 
 const metaThemeColor = document.querySelector('meta[name="theme-color"]');
@@ -9,12 +8,27 @@ const heroContain = document.getElementById("hero");
 
 const SCREENSHOT_API_URL_READY = "https://peekabooo.vercel.app/screenshot?url=";
 
+if ('serviceWorker' in navigator) { // Listen for messages from service worker
+  navigator.serviceWorker.addEventListener('message', event => {
+    if (event.data.type === 'SW_LOG') {
+      console.log(...event.data.args);
+    }
+  });
+  
+  navigator.serviceWorker.register('./service-worker-for-caching-images.js')
+    .then(reg => console.log('Service Worker registered', reg))
+    .catch(err => console.error('Service Worker registration failed', err));
+}
 
 showToast("Site Is Always Under Construction!", "warning");
 
-async function fetchImage(url, id) {
+async function fetchImage(url) {
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, {
+      headers: {
+        "sw-type-classification": "asset"
+      }
+    });
     
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
@@ -26,7 +40,6 @@ async function fetchImage(url, id) {
     }
     
     const blob = await res.blob();
-    await saveImage(blob, id);
     
     const imgURL = URL.createObjectURL(blob);
     
@@ -39,74 +52,24 @@ async function fetchImage(url, id) {
 }
 
 async function updateImages(previewImageEls) {
-  const dbImages = await getAllImages(); // [{ tag, blob }, ...]
-  // persistentMap: tag(string) -> Blob
-  const persistentMap = new Map(dbImages.map(({ tag, blob }) => [String(tag), blob]));
-  
-  // in-memory per-element cache + inflight dedupe
-  const weakCache = new WeakMap(); // Element -> Blob
-  const inflight = new Map(); // tagKey (data-link) -> Promise<imgURL|null>
-  
   const jobs = previewImageEls.map(async (imageEl, index) => {
+    
     const pLink = imageEl.getAttribute("data-link");
-    // canonical key for persistent storage / dedupe: prefer data-link
-    const tagKey = pLink || imageEl.dataset.tag || String(index);
     
-    // 1) quick weakmap hit (per-element)
-    if (weakCache.has(imageEl)) {
-      const blob = weakCache.get(imageEl);
-      imageEl.src = URL.createObjectURL(blob);
-      console.log("✅ Loaded from weakCache", tagKey);
-      return;
-    }
-    
-    // 2) persistent IndexedDB cache hit (shared across elements)
-    if (persistentMap.has(tagKey)) {
-      const blob = persistentMap.get(tagKey);
-      imageEl.src = URL.createObjectURL(blob);
-      weakCache.set(imageEl, blob); // remember for this element
-      imageEl.dataset.tag = tagKey;
-      console.log(`✅ Loaded cached image [${tagKey}]`);
-      return;
-    }
-    
-    // 3) if there's already a fetch in-flight for this resource, reuse it
-    if (inflight.has(tagKey)) {
-      const imgURL = await inflight.get(tagKey);
-      if (imgURL) imageEl.src = imgURL;
-      return;
-    }
-    
-    // 4) fetch (deduped), save promise in inflight map
-    const promise = (async () => {
-      try {
-        // fetchImage should save to IndexedDB under tagKey and return a usable URL
-        const imgURL = await fetchImage(SCREENSHOT_API_URL_READY + pLink, tagKey);
-        return imgURL || null;
-      } catch (err) {
-        console.error("fetchImage error", err);
-        return null;
-      }
-    })();
-    
-    inflight.set(tagKey, promise);
-    
-    // wait, then clear inflight
-    const imgURL = await promise.finally(() => inflight.delete(tagKey));
+    // fetchImage should save to IndexedDB under tagKey and return a usable URL
+    const imgURL = await fetchImage(SCREENSHOT_API_URL_READY + pLink);
     
     if (imgURL) {
       imageEl.src = imgURL;
-      imageEl.dataset.tag = tagKey;
-      // If the blob was already present in persistentMap we'd have set weakCache earlier.
-      // If you want to populate weakCache after fetch, you could re-read IndexedDB here.
       console.log(`📸 Fetched + saved [${tagKey}]`);
     } else {
       console.warn(`Image failed for: ${pLink}`);
     }
-  });
+  })
   
-  await Promise.all(jobs);
-  showToast("Preview Images Loaded!", "success");
+  await Promise.allSettled(jobs);
+  showToast("Preview Images Loaded!",
+    "success");
   console.log("✅ All images processed.");
 }
 
@@ -139,7 +102,9 @@ document.querySelectorAll(".swap-group-on-stacks").forEach(group => {
     const children = Array.from(group.children);
     
     // record positions
-    const firstRects = new Map(children.map(el => [el, el.getBoundingClientRect()]));
+    const firstRects = new Map(children.map(el => [el, el
+      .getBoundingClientRect()
+    ]));
     
     // shuffle
     for (let i = children.length - 1; i > 0; i--) {

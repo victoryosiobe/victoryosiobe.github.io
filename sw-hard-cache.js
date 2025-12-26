@@ -41,7 +41,7 @@ self.addEventListener("fetch", (event) => {
   try {
     let req;
     const req1 = event.request;
-    if (!isMediaRequest(req1)) return;
+    if (!isAssetRequest(req1)) return;
     
     if (req1.headers.has("range")) {
       const newHeaders = new Headers(); //has to be empty
@@ -125,7 +125,7 @@ self.addEventListener("fetch", (event) => {
   }
 });
 
-function isMediaRequest(req) {
+function isAssetRequest(req) {
   // 0. Explicit app-level intent (authoritative)
   if (req.headers.get("sw-type-classification") === "asset") {
     return true;

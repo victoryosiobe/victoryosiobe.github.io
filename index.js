@@ -15,10 +15,23 @@ if ('serviceWorker' in navigator) { // Listen for messages from service worker
     }
   });
   
-  navigator.serviceWorker.register('./service-worker-for-caching-images.js')
+  navigator.serviceWorker.register('./sw-hard-cache.js')
     .then(reg => console.log('Service Worker registered', reg))
     .catch(err => console.error('Service Worker registration failed', err));
 }
+
+/* 
+// Run this in the browser console exit all service workers, and clear caches.
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(r => r.unregister());
+  });
+}
+
+caches.keys().then(names => {
+  names.forEach(name => caches.delete(name));
+});
+*/
 
 showToast("Site Is Always Under Construction!", "warning");
 

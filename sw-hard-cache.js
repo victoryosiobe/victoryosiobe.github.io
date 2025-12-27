@@ -1,4 +1,4 @@
-const SW_VERSION = "v1"; // + Date.now(); // bump this to clear cache
+const SW_VERSION = "v0" //  + Date.now(); // bump this to clear cache
 const ASSET_CACHE = `asset-cache-${SW_VERSION}`;
 const MAX_AGE = 48 * 60 * 60 * 1000; // 48h
 

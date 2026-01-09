@@ -1,4 +1,4 @@
-const SW_VERSION = "v0" //  + Date.now(); // bump this to clear cache
+const SW_VERSION = "v0" // bump this to clear cache
 const ASSET_CACHE = `asset-cache-${SW_VERSION}`;
 const MAX_AGE = 48 * 60 * 60 * 1000; // 48h
 
@@ -14,8 +14,6 @@ function logToPage(...args) {
   });
 }
 
-logToPage("Service Worker: Script loaded, version " + SW_VERSION);
-
 self.addEventListener("install", (event) => {
   logToPage("Service Worker: Install event fired");
   self.skipWaiting();
@@ -24,25 +22,33 @@ self.addEventListener("install", (event) => {
 self.addEventListener("activate", (event) => {
   logToPage("Service Worker: Activate event fired");
   
-  self.addEventListener("activate", (event) => {
-    event.waitUntil(
-      (async () => {
-        const keys = await caches.keys();
-        const oldCaches = keys.filter((k) => k.startsWith(
-          "asset-cache") && k !== ASSET_CACHE);
-        await Promise.all(oldCaches.map((k) => caches.delete(k)));
-        await self.clients.claim(); // claim after cleanup
-      })()
-    );
-  });
+  event.waitUntil(
+    (async () => {
+      const keys = await caches.keys();
+      const oldCaches = keys.filter((k) => k.startsWith("asset-cache") && k !== ASSET_CACHE);
+      await Promise.all(oldCaches.map((k) => caches.delete(k)));
+      logToPage("Service Worker: Deleted old caches", oldCaches);
+      await self.clients.claim();
+    })()
+  );
 });
 
-self.addEventListener("fetch", (event) => {
+self.addEventListener("fetch", async (event) => {
+  let req;
+  const req1 = event.request;
+  const url = new URL(req1.url)
+  const isAsset = isAssetRequest(req1);
+  
+  logToPage(`Fetch: ${url.href
+  } | isAsset: ${isAsset}`);
+  
+  if (!isAsset) {
+    logToPage("Service Worker: HOT resource: fetching from network", url.href);
+    event.respondWith(fetch(url)); // Explicitly fetch from network
+    return;
+  }
+  
   try {
-    let req;
-    const req1 = event.request;
-    if (!isAssetRequest(req1)) return;
-    
     if (req1.headers.has("range")) {
       const newHeaders = new Headers(); //has to be empty
       // newHeaders.delete("range"); // won't remove forbidden Range header, but okay for others
@@ -76,14 +82,14 @@ self.addEventListener("fetch", (event) => {
         
         if (cached) {
           // Check metadata stored separately
-          const metaCache = await caches.open(ASSET_CACHE + "-meta");
+          const metaCache = await caches.open(ASSET_CACHE +
+            "-meta");
           const metaResponse = await metaCache.match(metaKey);
           
           if (metaResponse) {
             const meta = await metaResponse.json();
             if (Date.now() - meta.cachedAt < MAX_AGE) {
-              logToPage("Service Worker: Serving from cache", req
-                .url);
+              logToPage("Service Worker: Serving from cache", req.url);
               return cached;
             } else {
               logToPage("Service Worker: Cache expired", req.url);
@@ -95,10 +101,11 @@ self.addEventListener("fetch", (event) => {
         const network = await fetch(req);
         
         if (network.status !== 200) {
-          logToPage("Service Worker: Network fetch failed", network, {
-            url: req.url,
-            status: network.status,
-          });
+          logToPage("Service Worker: Network fetch failed",
+            network, {
+              url: req.url,
+              status: network.status,
+            });
           return network;
         }
         
@@ -131,31 +138,35 @@ function isAssetRequest(req) {
     return true;
   }
   
-  // 1. Native browser signal
+  // 1. Native browser signal (most reliable)
   if (["image", "video", "audio", "font"].includes(req.destination)) {
     return true;
   }
   
-  // 2. Accept header intent (JS fetch fallback)
+  // 2. For navigation/document requests, always return false
+  if (req.mode === "navigate" || req.destination === "document") {
+    return false;
+  }
+  
+  // 3. Accept header intent (fetch fallback) 
   const accept = req.headers.get("accept") || "";
   
+  // Only match if image/ is the PRIMARY accept type (starts with it)
   if (
-    accept.includes("image/") ||
-    accept.includes("video/") ||
-    accept.includes("audio/") ||
-    accept.includes("font/") ||
+    accept.startsWith("image/") ||
+    accept.startsWith("video/") ||
+    accept.startsWith("audio/") ||
+    accept.startsWith("font/") ||
     accept.includes("application/octet-stream")
   ) {
     return true;
   }
   
-  // 3. URL-based heuristic (last resort)
+  // 4. URL-based heuristic (last resort)
   try {
     const { pathname } = new URL(req.url);
     return /\.(png|jpe?g|gif|webp|svg|mp4|webm|mp3|wav|ogg|woff2?|ttf|otf)$/i
-      .test(
-        pathname,
-      );
+      .test(pathname);
   } catch {
     return false;
   }

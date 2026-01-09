@@ -46,7 +46,7 @@ body {
 }
 
 .text-cursor {
-  animation: blink 1s infinite;
+  animation: blink 0.9s infinite;
 }
 
 @keyframes blink {

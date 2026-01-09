@@ -15,12 +15,13 @@ if ('serviceWorker' in navigator) { // Listen for messages from service worker
     }
   });
   
-  navigator.serviceWorker.register('./sw-hard-cache.js')
+  navigator.serviceWorker.register(
+    './sw-hard-cache.js', { updateViaCache: 'none' })
     .then(reg => console.log('Service Worker registered', reg))
     .catch(err => console.error('Service Worker registration failed', err));
 }
 
-/* 
+/*
 // Run this in the browser console exit all service workers, and clear caches.
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.getRegistrations().then(regs => {

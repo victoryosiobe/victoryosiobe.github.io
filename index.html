@@ -19,24 +19,52 @@
   <script src="./src/lib/tailwind@3.4.16.js"></script>
   <link rel="stylesheet" href="style.css" />
   <script src="./src/lib/fontawesomekit@7.1.0.js"></script>
-  <header class="fixed top-0 w-full bg-transparent z-[100] backdrop-blur">
-    <nav
-      class="w-full relative flex justify-between items-center text-white mx-auto p-3 px-5">
-      <div class="flex justify-center items-center w-full">
-        <div class="font-bold text-xl uppercase">
-          Victory osiobe
+  <header class="fixed top-0 w-full bg-transparent z-[100]">
+    <div class="backdrop-blur">
+      <nav
+        class="w-full relative flex justify-between items-center text-white mx-auto p-3 px-5">
+        <div class="flex justify-center items-center w-full">
+          <div class="font-bold text-xl uppercase">
+            Victory osiobe
+          </div>
         </div>
-      </div>
-      
-      <!-- Off-canvas menu -->
-      <!--   <div id="offCanvas" class="fixed md:static top-0 left-0 min-h-svh w-[65%] bg-gray-100/95 ">
+        
+        <!-- Off-canvas menu -->
+        <!--   <div id="offCanvas" class="fixed md:static top-0 left-0 min-h-svh w-[65%] bg-gray-100/95 ">
         </div>-->
-      
-      
+        <div
+          class="hidden relative flex justify-center items-center md:flex absolute right-5">
+          
+          <div class="absolute" onclick="toggleInNavMenu(this)">
+            <!--absolute to remove from flow, fucking important-->
+            
+            <i class="fa-solid fa-angle-down transition-transform duration-500"
+              id="tog-in-nav"></i>
+          </div>
+          
+          
+          
+        </div>
+        
+        
+        <div
+          class="flex items-center justify-center md:hidden absolute right-5">
+          <div id="menuIcon"
+            class="flex items-center justify-center transition-transform duration-500">
+            <i id="show" class="fa-solid fa-bars text-lg cursor-pointer"
+              onclick="toggleMenu(this)"></i>
+            <i id="hide" class="fa-solid fa-x text-lg cursor-pointer "
+              style="display:none" onclick="toggleMenu(this)"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+    <div class="relative flex justify-end items-center md:mx-5">
       <!-- Off-canvas menu -->
-<div id="offCanvas"
-  class="fixed top-0 left-[-70%] min-h-lvh w-[70%] bg-gray-900/95 backdrop-blur-lg transition-all duration-300 ease-in-out z-10 pt-5 overflow-hidden z-1 border-r-2 border-white md:absolute  md:left-auto md:right-0 md:min-h-auto md:w-auto md:bg-transparent md:backdrop-blur-none md:z-auto md:pt-0 md:overflow-visible md:border-r-0 md:border-transparent">
-        <div class="relative min-h-dvh">
+      <div id="offCanvas"
+        class="fixed top-0 left-[-50%] h-lvh w-[50%] bg-gray-900/95 backdrop-blur-lg transition-all duration-500 ease-in-out z-10 pt-5 overflow-hidden z-1 border-r-2 border-white md:absolute md:left-auto md:right-0 md:w-auto md:h-fit md:bg-transparent md:backdrop-blur-none md:z-auto md:pt-0 md:overflow-hidden md:border-r-0 md:border-transparent">
+        <div class="relative h-dvh md:h-fit">
           
           <div class="relative p-2 m-5 my-0.5">
             <div class="text-gray-500 font-bold text-md">In-Navigations</div>
@@ -74,7 +102,7 @@
                 <li><a class="hover:text-gray-500 block"
                     href="https://github.com/victoryosiobe/vanity">Vanity</a>
                 </li>
-                </ul>
+              </ul>
             </div>
             
             
@@ -127,7 +155,7 @@
             </div>
             
             <div><a class="hover:text-gray-500 block"
-                onclick="scrollAndAction('#who',     toggleMailSection, 'open')">
+                onclick="scrollAndAction('#who', toggleMailSection, 'open')">
                 <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
                   fill="currentColor"
                   viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
@@ -149,18 +177,7 @@
         </ul>-->
         </div>
       </div>
-      
-      
-      <div class="flex items-center justify-center md:hidden absolute right-5">
-        <div id="menuIcon"
-          class="flex items-center justify-center transition-transform duration-500">
-          <i id="show" class="fa-solid fa-bars text-lg cursor-pointer"
-            onclick="toggleMenu(this)"></i>
-          <i id="hide" class="fa-solid fa-x text-lg cursor-pointer "
-            style="display:none" onclick="toggleMenu(this)"></i>
-        </div>
-      </div>
-    </nav>
+    </div>
   </header>
 </head>
 
@@ -184,8 +201,11 @@
       </div>
       <div
         class="absolute bottom-5 left-5 border-2 border-gray-700 shadow-lg bg-gray-800/90 p-1 rounded-full text-xs">
-        <div class="flex flex-row items-center justify-center gap-x-1 text-center "><span
-            class="font-bold inline-block infline-flex items-center justify-center capitalize text-gray-300/80">Available For
+        <div
+          class="flex flex-row items-center justify-center gap-x-1 text-center ">
+          <span
+            class="font-bold inline-block infline-flex items-center justify-center capitalize text-gray-300/80">Available
+            For
             Hire</span> <span
             class="h-2 w-2 inline-block infline-flex items-center justify-center bg-green-500/90 rounded-full"></span>
         </div>
@@ -885,11 +905,11 @@
           </div>
         </div>
         <div class="w-full">
-          <div class="w-full flex items-center justify-end my-">
+          <div class="w-full flex items-center justify-end">
             <div class="text-blue-500 text-xs cursor-pointer"
               onclick="toggleMailSection(this)">Reach via email?<i
                 id="show-mail-section"
-                class="fa-solid fa-caret-down transition-transform duration-300"></i>
+                class="fa-solid fa-caret-down transition-transform duration-500"></i>
             </div>
           </div>
           
@@ -937,9 +957,9 @@
           </button>
           <div
             class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
-            <p>I get neck-dip in all this, that I'm ready to go the extra mile,
+            <p>I get neck dip in all this, that I'm ready to go the extra mile,
               ready to research, visualize, map things out, enlightened others,
-              re-learn, give software its own uniqueness. I make things work,
+              re-learn, make software impeccable. I make things work,
               got the engineer’s traits and don't back out easily.</p>
           </div>
         </div>
@@ -998,7 +1018,7 @@
           </button>
           <div
             class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-sm text-gray-300 space-y-2 pl-2">
-            <p>Not currently. 25 hours a week is perfect. Fewer hours, less
+            <p>Not currently. 30 hours a week is perfect. Fewer hours, less
               burnout, better output.</p>
           </div>
         </div>

@@ -44,7 +44,7 @@ self.addEventListener("fetch", async (event) => {
   
   if (!isAsset) {
     logToPage("Service Worker: HOT resource: fetching from network", url.href);
-    event.respondWith(fetch(url)); // Explicitly fetch from network
+    event.respondWith(fetch(req1)); // Explicitly fetch from network
     return;
   }
   

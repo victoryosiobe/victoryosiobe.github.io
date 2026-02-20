@@ -15,7 +15,6 @@ form.addEventListener('submit', async (e) => {
         'Accept': 'application/json'
       }
     });
-    
     const json = await response.json();
     
     if (response.ok) {

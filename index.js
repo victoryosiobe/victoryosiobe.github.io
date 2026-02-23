@@ -169,3 +169,36 @@ window.addEventListener("load", () => {
     }, 2000);
   }
 })
+
+
+
+
+
+function makeImageResilient(img, maxRetries = 5) {
+  let attempts = 0;
+  
+  img.addEventListener("error", function retry() {
+    if (attempts >= maxRetries) return;
+    
+    const delay = Math.pow(2, attempts) * 500; // 500ms, 1s, 2s, 4s, 8s
+    attempts++;
+    
+    setTimeout(() => {
+      const url = new URL(img.src, location.href);
+      url.searchParams.set("_retry", attempts);
+      img.src = url.toString();
+    }, delay);
+  });
+}
+
+function applyToAll() {
+  document.querySelectorAll("img:not([data-resilient])").forEach(img => {
+    img.dataset.resilient = true;
+    makeImageResilient(img);
+  });
+}
+
+applyToAll(); // Handle existing images
+
+const observer = new MutationObserver(applyToAll);
+observer.observe(document.body, { childList: true, subtree: true }); //observe doc for any update of ui, introducung future img elems.

@@ -152,6 +152,7 @@ document.querySelectorAll(".swap-group-on-stacks").forEach(group => {
   setTimeout(flap, getRandomInterval(500, 3000))
 });
 
+/*
 window.addEventListener("load", () => {
   if (inViewPercent(heroContain, 0.98)) {
     setTimeout(() => {
@@ -169,8 +170,7 @@ window.addEventListener("load", () => {
     }, 2000);
   }
 })
-
-
+*/
 
 
 

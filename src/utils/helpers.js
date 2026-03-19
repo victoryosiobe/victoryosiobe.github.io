@@ -125,5 +125,4 @@ show.addEventListener('click', () => {
 hide.addEventListener('click', () => {
   hide.style.display = 'none'
   show.style.display = 'inline'
-  on
 })

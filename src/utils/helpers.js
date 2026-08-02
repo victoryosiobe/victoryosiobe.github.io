@@ -1,3 +1,23 @@
+(function() {
+  // One of my dev env is hardcoded at 13.6px font size. Major development was done on that size. I can't tweak everything back, so, a helper function to fix this.
+  
+  //Temporary element to see what the browser wants to set natively
+  const div = document.createElement('div');
+  div.style.fontSize = '1rem';
+  document.documentElement.appendChild(div);
+  const actualBase = parseFloat(window.getComputedStyle(div).fontSize);
+  document.documentElement.removeChild(div);
+  
+  // If the browser base is ALREADY around 13.6px (faulty dev env), do nothing (100%).
+  // If the browser base is 16px (the usual), we are scaling it down to 85%. (13.6)
+  if (actualBase > 13.6) {
+    document.documentElement.style.fontSize = '85%';
+  } else {
+    document.documentElement.style.fontSize = '100%';
+  }
+  
+})();
+
 function dater() {
   const dateEl = document.getElementById("d-v-g");
   const year = new Date().getFullYear();
